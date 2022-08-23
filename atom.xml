@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="https://beaumon.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://beaumon.github.io/"/>
+  <updated>2022-08-23T03:20:09.394Z</updated>
+  <id>https://beaumon.github.io/</id>
+  
+  <author>
+    <name>Beaumon</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-theme-matery 主题美化</title>
+    <link href="https://beaumon.github.io/2022/08/23/hexo-theme-matery-zhu-ti-mei-hua/"/>
+    <id>https://beaumon.github.io/2022/08/23/hexo-theme-matery-zhu-ti-mei-hua/</id>
+    <published>2022-08-23T02:41:21.000Z</published>
+    <updated>2022-08-23T03:20:09.394Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;hexo测试内容 &lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;img src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://beaumon.github.io/categories/Markdown/"/>
+    
+    
+    <category term="theme主题" scheme="https://beaumon.github.io/tags/theme%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://beaumon.github.io/2022/08/23/hello-world/"/>
+    <id>https://beaumon.github.io/2022/08/23/hello-world/</id>
+    <published>2022-08-23T00:43:27.792Z</published>
+    <updated>2022-08-23T00:43:27.793Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
