@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="hexo图片配置, Hexo">
+    <meta name="description" content="Introduction to several methods of hexo image setup.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>hexo图片配置 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -38,9 +38,7 @@
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
-
 
 
 
@@ -447,12 +445,12 @@ charset="utf-8"></script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250857879.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">hexo图片配置</h1>
                 </div>
             </div>
         </div>
@@ -462,24 +460,39 @@ charset="utf-8"></script>
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
+                                <span class="chip bg-color">theme主题</span>
+                            </a>
+                        
+                            <a href="/tags/PicGo/">
+                                <span class="chip bg-color">PicGo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -488,28 +501,28 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-23
+                    2022-08-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-23
+                    2022-08-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    2.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    9 分
                 </div>
                 
 
@@ -532,19 +545,122 @@ charset="utf-8"></script>
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="hexo图片配置"><a href="#hexo图片配置" class="headerlink" title="hexo图片配置"></a><strong>hexo图片配置</strong></h1><h2 id="1-img路径方法插入图片"><a href="#1-img路径方法插入图片" class="headerlink" title="1.img路径方法插入图片"></a>1.img路径方法插入图片</h2><p>markdown是支持html语句的，直接插入就可以使用了。所以该方法用到了HTML的标签，采用img标签相对链接的方式引入图片。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img src='url或图片路径' height=400px'&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="1-1优缺点"><a href="#1-1优缺点" class="headerlink" title="1.1优缺点"></a>1.1优缺点</h3><p>优点：灵活，可以进行样式控制。</p>
+<p>缺点：稍微麻烦了点。</p>
+<h3 id="1-2适用环境"><a href="#1-2适用环境" class="headerlink" title="1.2适用环境"></a>1.2适用环境</h3><p>用于顶部导航选项的页面（如：关于、标签、分类）中引入图片。<br>因为在hexo生成静态界面时，同一篇文章会在多处页面生成，例如首页、文章详情页等，而不同页面与图片的相对位置是不一样的，而该方式hexo不会自动处理图片引用，所以使用该方式引用本地图片时必须以“/”开头，表示地址都是基于主目录定位的，不会出现有的界面图片显示错误的情况。不是“/”开头表相对当前文档位置进行定位。而顶部导航页只会在一处地方生成，所以不带“/”开头不会出现失效，建议也统一使用“/”，开头。</p>
+<h3 id="1-3使用方法"><a href="#1-3使用方法" class="headerlink" title="1.3使用方法"></a>1.3使用方法</h3><p>在source中新建一个“images”目录用于存放图片，然后再使用“/images/图片名”引用图片。也可以分文章存放图片，会稍微麻烦点。</p>
+<h2 id="2-方式插入图片"><a href="#2-方式插入图片" class="headerlink" title="2.!+[]+()方式插入图片"></a>2.!+[]+()方式插入图片</h2><p>!+[]+()是markdown的默认插入图片语句，采用了Base64方法插入本地图片。</p>
+<p>使用markdown图片插入语句插入本地图片时可以使用Base64方法，base64方法只需要将图片转换为base64格式，将Base64字符串输入图片路径位置即可。网上可以找到在线图片转Base64的工具。</p>
+<pre class="line-numbers language-none"><code class="language-none">![图片说明]('url或图片路径')<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-1优缺点"><a href="#2-1优缺点" class="headerlink" title="2.1优缺点"></a>2.1优缺点</h3><p>优点：插入图片简便。</p>
+<p>缺点：不能控制图片样式。</p>
+<h3 id="2-2适用环境"><a href="#2-2适用环境" class="headerlink" title="2.2适用环境"></a>2.2适用环境</h3><p>1.给普通文章插入图片，且无须样式控制；<br>2.给顶部导航选项的页面（如：关于、标签、分类）中插入图片，且无须样式控制。</p>
+<p>3.使用该方法引入本地图片同样需要以“/”，开头定位，否则有的界面将会无法正常显示图片，也可以将引图片转换为Base64字符串，然后再引用Base64字符串，Base64字符串太长，写文章时很影响阅读，例如在使用githubpage+Gitalk时候，github的issure最大支持50个长度的字符，如将中文作为标题Base64字符串长度就超出了。</p>
+<h3 id="2-3使用方法"><a href="#2-3使用方法" class="headerlink" title="2.3使用方法"></a>2.3使用方法</h3><p>插入网络图片比较简单，直接在图片链接中写入图片的网络链接就好。</p>
+<p>示例：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208241728032.jpg"></p>
+<h2 id="3-通过模板引擎语法插入本地图片"><a href="#3-通过模板引擎语法插入本地图片" class="headerlink" title="3.通过模板引擎语法插入本地图片"></a>3.通过模板引擎语法插入本地图片</h2><h3 id="3-1优缺点"><a href="#3-1优缺点" class="headerlink" title="3.1优缺点"></a>3.1优缺点</h3><p>优点：插入较为便捷，图片按文章存储</p>
+<p>缺点：不能控制样式，不能在顶部导航选项的页面（如：关于、标签、分类）中插入图片。</p>
+<h3 id="3-2适用环境"><a href="#3-2适用环境" class="headerlink" title="3.2适用环境"></a>3.2适用环境</h3><p>普通文章中插入本地图片<br>在顶部导航选项的页面中使用该方法，什么都不会显示（不知道是不是我使用的主题的原因），总之是失败了，什么都没显示，在普通文章中可以正常显示。不能用于插入网络图片。</p>
+<h3 id="3-3使用方法"><a href="#3-3使用方法" class="headerlink" title="3.3使用方法"></a>3.3使用方法</h3><p>要使用该方法首先要修改博客的配置文件“_config.yml”,把配置文件里的post_asset_folder:设置为true，表示启动Asset资源文件夹。这时候新建文章就会自动添加一个同名的文件夹，用于存放资源文件。</p>
+<p>这时候我们把图片放入对应的文件夹即可，但是我们使用“!+[]+()”的格式插入图片却不能成功，因为只是将图片放入文件夹，hexo生成静态界面时并没有处理该图片，所以运行后就找不到图片了。</p>
+<p>所以我们需要使用</p>
+<pre class="line-numbers language-none"><code class="language-none">{%%}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>方法，使用该方法必须将图片放在新建文件时生成的与该文件同名的目录下，然后使用以下命令格式即可。</p>
+<p>示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">{% asset_img 图片文件名 图片加载失败的描述 %}
+我文章文件为
+--index.md
+图片目录为
+--images/logo.png
+插入语句为
+{% asset_img logo.png 这是一张图片 %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="4-搭建图床方式"><a href="#4-搭建图床方式" class="headerlink" title="4.搭建图床方式"></a>4.搭建图床方式</h2><p>创建图床的目的是为本地图片等资源生成一个超链，然后将此连接嵌入到 <code>markdown</code> 编写的博客文章中，以此来解决博客中图片等资源的显示问题。本文介绍一种 PicGo + <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Github&amp;spm=1001.2101.3001.7020">Github</a> 搭建的免费图床。本文采用PicGo+Github图床搭建。测试图片地址见2.3示例图，图片地址：</p>
+<pre class="line-numbers language-none"><code class="language-none">https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208241728032.jpg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-1创建Github仓库"><a href="#4-1创建Github仓库" class="headerlink" title="4.1创建Github仓库"></a>4.1创建Github仓库</h3><p>首先打开浏览器访问github的官网。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250827870.png" alt="image-20220825082449581"></p>
+<p>点击右上角的+号新建仓库</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250827106.png" alt="image-20220825082645630"></p>
+<p>输入仓库名，点击创建仓库</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250829906.png" alt="image-20220825082856239"></p>
+<h3 id="4-2生成Github-Token"><a href="#4-2生成Github-Token" class="headerlink" title="4.2生成Github Token"></a>4.2生成Github Token</h3><p>依次点击Settings -&gt; Developer settings-&gt;Personal access tokens</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250857730.png" alt="image-20220825083114015"></p>
+<p>需要注意的是要勾选repo选项</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250857268.png" alt="image-20220825083245715"></p>
+<p>创建成功后，会生成一串token，<strong>这串token之后不会再显示</strong>，请认真保存</p>
+<h3 id="4-3下载-PicGo"><a href="#4-3下载-PicGo" class="headerlink" title="4.3下载 PicGo"></a>4.3下载 PicGo</h3><p>PicGo 是一款图片上传的工具，目前支持 SM.MS图床、微博图床，七牛图床，腾讯云COS，阿里云OSS，又拍云图床，Github 等图床，未来将支持更多图床。</p>
+<p>点击 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">这里</a> 下载 PicGo 工具。根据操作系统选择对应的版本，安装到指定目录。</p>
+<p>温馨提示：较低版本的PicGo不支持设置server等功能。当我下载了PicGo2.0.4版本时候是这个样子的。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250858951.png" alt="PicGo版本不支持server"></p>
+<p>所以我选择了下载当前的最新版本2.3.0。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250857802.png" alt="PicGo 2.3.0"></p>
+<p>由于是国外网站，下载不便，因此这里为大家提供了网盘地址。</p>
+<p>下载完成再行打开发现server选项出现了</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250857879.png" alt="PicGo有了"></p>
+<h3 id="4-4配置-PicGo"><a href="#4-4配置-PicGo" class="headerlink" title="4.4配置 PicGo"></a>4.4配置 PicGo</h3><h4 id="4-4-1-github图床"><a href="#4-4-1-github图床" class="headerlink" title="4.4.1 github图床"></a>4.4.1 github图床</h4><p>选择github图床，配置如下：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208242043314.png" alt="image-20220824204355709"></p>
+<p>如果有需要的话可以设置为默认图床，接下来就可以上传图片并同步到你的GitHub仓库了。此时图床已经建立完成，之后的图片以Markdown的格式上传进行引用就大功告成了。</p>
+<h4 id="4-4-2-开启server"><a href="#4-4-2-开启server" class="headerlink" title="4.4.2 开启server"></a>4.4.2 开启server</h4><p>PicGo-Server的默认端口是36677，点击开即可。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250858740.png" alt="image-20220825084500728"></p>
+<h3 id="4-5配置-Markdown"><a href="#4-5配置-Markdown" class="headerlink" title="4.5配置 Markdown"></a>4.5配置 Markdown</h3><p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式，其目标是实现易读易写，说人话就是删减版的HTML语言 。</p>
+<h3 id="4-5-1Typora简介"><a href="#4-5-1Typora简介" class="headerlink" title="4.5.1Typora简介"></a>4.5.1Typora简介</h3><p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Typora&amp;spm=1001.2101.3001.7020">Typora</a>是一个跨平台的markdown编辑器，使用markdown编辑器写文章优点是排版简洁，痛点则是无法像Word那样直接嵌入图片，插入的图片实际上插入的是图片的路径（可以是本地路径也可以是网络路径），使用网络路径的优点是文档可以跨平台跨设备浏览，需要注意的是早期免费版Typora不支持图床的功能，有人说下载最后一个免费版本0.11.18，当我下载安装完成时候，typora打开报错：This beta version of Typora is expired, please download and install a newer version.也就是说，使用的是0.11.18版本，获取系统时间停止免费版本使用，人家想要你用收费的。网上也提供了两种解决方案，一种是改系统时间，但是修改系统时间后其他软件和功能的时间冲突。另一种是重装低版本的typora，很显然，更低版本的Typora不可能支持图床功能。因此，需要更新Typora版本，推荐大家购买正版支持。这里也为大家提供一个版本，亲测可用，亲测可用，亲测可用。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208242031850.png" alt="image-20220824203128807"></p>
+<h3 id="4-5-2错误解决"><a href="#4-5-2错误解决" class="headerlink" title="4.5.2错误解决"></a>4.5.2错误解决</h3><p>Failed to fetch</p>
+<pre class="line-numbers language-none"><code class="language-none">Failed to fetch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个错误一般是由<strong>端口设置错误</strong>造成的，至于我为什么知道，你看看log文件就懂了。打开picgo的log文件。错误提示是端口繁忙。</p>
+<p><code>解决方法</code>：打开picgo设置，点击设置代理选项，<strong>将端口改为36677端口</strong>，这是picgo推荐的默认端口号，然后保存，成功。</p>
+<p>有的时候，我们的老朋友Failed to fetch还是如约而至，打开端口设置一看，怎么变成了366771呢，问题在于端口冲突，如果你打开了多个picgo程序，就会端口冲突，<strong>picgo自动帮你把36677端口改为366771端口</strong>，导致错误。log文件里也写得很清楚。</p>
+<pre class="line-numbers language-none"><code class="language-none">错误二：{“success”,false}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个错误相信也有很多小伙伴遇到了，原因是<strong>文件名冲突</strong>了，如果你上传过一张image1.jpg的图片，再上传名称一样的图片就会失败，查看log文件里也写到了。</p>
+<p>办法也很简单，打开picgo设置，将<strong>上传前重命名或者时间戳重命名打开</strong>。如图所示：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208242036804.png" alt="image-20220824203657532"></p>
+<p>再次上传文件，出现一个确认文件名称的对话框，点击确定，上传成功！</p>
+<p><strong>授人以鱼不如授人以渔</strong>，上面的三种情况解决方法教给大家了，但是错误总是千奇百怪层出不穷的，如果下次出现上传错误的提示，请大家找到picgo的log文件，自己查看问题的原因嗷。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208242038555.png" alt="image-20220824203834034"></p>
+<h2 id="5-hexo-asset-image插件"><a href="#5-hexo-asset-image插件" class="headerlink" title="5.hexo-asset-image插件"></a>5.hexo-asset-image插件</h2><p>毕竟是存储在github仓库里面的，网络不佳根本加载不出来，所以大部分人还是选择使用了hexo-asset-image插件来上传图片，Hexo 本地图片插件: 就是转换 图片相对路径 为 asset_img，能够在 Typora 等 Markdown 编辑器预览 与 Hexo 发布预览 时均能正常显示图片。</p>
+<p>首先下载插件</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-asset-image --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>对应的文件结构是这样的</p>
+<pre class="line-numbers language-none"><code class="language-none">article-Publish
+├── banner.jpg
+├── logo.jpg
+└── rules.jpg
+article-Publish.md<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其次，需要修改hexo根目录 <code>_config.yml</code>文件 <code>post_asset_folder: true</code></p>
+<p>此外，还需要配置Typora的偏好设置，详见4.5.1图。</p>
+<p>完成之后只需要使用</p>
+<pre class="line-numbers language-none"><code class="language-none">![]()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>方法引用图片，无论是网络图片还是本地图片，插件都会自动帮助我们将图片下载到source/image目录，然后自动更新图片引用，在发布到github上时候，会自动在当前目录下生成一个于文章同名的文件夹，可以说非常方便。</p>
+<p>例如：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208242025209.png" alt="image-20220824202521064"></p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208242025989.png" alt="image-20220824202439164"></p>
+<p>另外hexo-theme-matery也提供了cdn加速功能，只需在主题的_config.yml文件中配置</p>
+<pre class="line-numbers language-none"><code class="language-none">https://cdn.jsdelivr.net/gh/用户名/githubpages地址@分支名/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>浏览器输入即可访问到</p>
+<p>同样能够查看到插件生成的目录hexo-theme-matery-主题美化。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250933131.png" alt="jddelivr 图片"></p>
+<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">方案一
+<span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">'url或图片路径'</span> <span class="token assign-left variable">height</span><span class="token operator">=</span>400px<span class="token string">'&gt;
+方案二
+![图片说明]('</span>url或图片路径'<span class="token punctuation">)</span>
+方案三
+<span class="token punctuation">{</span>% asset_img logo.png 这是一张图片 %<span class="token punctuation">}</span>
+方案四
+搭建图床
+大家可根据自己的喜好自行选择使用哪一种图片引用方式<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -571,7 +687,7 @@ charset="utf-8"></script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://beaumon.github.io/2022/08/23/hello-world/">https://beaumon.github.io/2022/08/23/hello-world/</a>
+                    <a href="https://beaumon.github.io/2022/08/25/hexo-tu-pian-pei-zhi/">https://beaumon.github.io/2022/08/25/hexo-tu-pian-pei-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -608,7 +724,15 @@ charset="utf-8"></script>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
+                                    <span class="chip bg-color">theme主题</span>
+                                </a>
+                            
+                                <a href="/tags/PicGo/">
+                                    <span class="chip bg-color">PicGo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -684,7 +808,7 @@ charset="utf-8"></script>
         repo: '',
         owner: '',
         admin: null,
-        id: '2022-08-23T08-43-27',
+        id: '2022-08-25T10-10-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -714,9 +838,10 @@ charset="utf-8"></script>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/08/25/hexo-tu-pian-pei-zhi/">
                     <div class="card-image">
@@ -733,9 +858,9 @@ charset="utf-8"></script>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -748,6 +873,7 @@ charset="utf-8"></script>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -767,7 +893,7 @@ charset="utf-8"></script>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/08/23/hello-world/">
@@ -797,7 +923,6 @@ charset="utf-8"></script>
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -832,87 +957,6 @@ charset="utf-8"></script>
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 

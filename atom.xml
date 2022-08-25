@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-08-24T10:43:08.635Z</updated>
+  <updated>2022-08-25T02:11:37.045Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo-theme-matery 主题美化</title>
-    <link href="https://beaumon.github.io/2022/08/23/hexo-theme-matery-zhu-ti-mei-hua/"/>
-    <id>https://beaumon.github.io/2022/08/23/hexo-theme-matery-zhu-ti-mei-hua/</id>
-    <published>2022-08-23T02:41:21.000Z</published>
-    <updated>2022-08-24T10:43:08.635Z</updated>
+    <title>hexo图片配置</title>
+    <link href="https://beaumon.github.io/2022/08/25/hexo-tu-pian-pei-zhi/"/>
+    <id>https://beaumon.github.io/2022/08/25/hexo-tu-pian-pei-zhi/</id>
+    <published>2022-08-25T02:10:07.000Z</published>
+    <updated>2022-08-25T02:11:37.045Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;hexo测试内容 &lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;img src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;hexo图片配置&quot;&gt;&lt;a href=&quot;#hexo图片配置&quot; class=&quot;headerlink&quot; title=&quot;hexo图片配置&quot;&gt;&lt;/a&gt;&lt;strong&gt;hexo图片配置&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-img路径方法插入图片&quot;&gt;&lt;a</summary>
         
       
     
@@ -38,6 +38,8 @@
     
     
     <category term="theme主题" scheme="https://beaumon.github.io/tags/theme%E4%B8%BB%E9%A2%98/"/>
+    
+    <category term="PicGo" scheme="https://beaumon.github.io/tags/PicGo/"/>
     
   </entry>
   
