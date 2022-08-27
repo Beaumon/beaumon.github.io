@@ -1,0 +1,9 @@
+ body {
+  cursor: url("https://raw.githubusercontent.com/beaumon/cloud-picture/master/ico/cursor.ico"),
+         default;
+ }
+ a,
+ img {
+   cursor: url("https://raw.githubusercontent.com/beaumon/cloud-picture/master/ico/cursor.ico"),
+         default;
+}
