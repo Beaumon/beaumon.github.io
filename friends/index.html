@@ -456,7 +456,24 @@ charset="utf-8"></script>
 
             <div class="description center-align">
                 
-					<span id="jinrishici-sentence">正在加载今日诗词....</span>
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/gh/beaumon/beaumon.github.io@master//libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
                 
             </div>
         </div>
@@ -467,7 +484,7 @@ charset="utf-8"></script>
 <script>
 	// 
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/beaumon/beaumon.github.io@master//medias/banner/" + new Date().getDay() + '.jpg';
+    var bannerUrl = "https://cdn.jsdelivr.net/gh/beaumon/beaumon.github.io@master//medias/banner/" + new Date().getDate() + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -680,16 +697,37 @@ charset="utf-8"></script>
                             <div class="card frind-card1">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
+                                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/blog-avatar.jpg" alt="img">
                                         <div>
-                                            <h1 class="friend-name">码酱</h1>
+                                            <h1 class="friend-name">辛勤的farmer</h1>
+                                            <p style="position: relative;top: -35px;">越努力,越幸运</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://blog.csdn.net/weixin_44834205?spm=1000.2115.3001.5343" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            CSDN
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card2">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/blog-avatar.jpg" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">beaumon</h1>
                                             <p style="position: relative;top: -35px;">我不是大佬，只是在追寻大佬的脚步</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
-                                        <a href="https://blog.csdn.net/weixin_44834205/article/details/126437316?spm=1001.2014.3001.5502" target="_blank"
+                                        <a href="https://github.com/Beaumon" target="_blank"
                                             class="button button-glow button-rounded button-caution">
-                                            前去学习
+                                            Github
                                         </a>
                                     </div>
                                 </div>
