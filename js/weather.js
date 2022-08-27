@@ -1,0 +1,2 @@
+document.writeln("<iframe width=\'600\' scrolling=\'no\' height=\'75\' frameborder=\'0\' allowtransparency=\'true\' src=\'http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=5\'></iframe>");
+document.writeln("");
