@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="movies, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地">
+    <meta name="keywords" content="聊聊数据库建表的15个小技巧, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="分享数据库建表的15个小技巧">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>movies | 是Beaumon的小博客鸭</title>
+    <title>聊聊数据库建表的15个小技巧 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -489,12 +489,12 @@ charset="utf-8"></script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">movies</h1>
+                    <h1 class="description center-align post-title">聊聊数据库建表的15个小技巧</h1>
                 </div>
             </div>
         </div>
@@ -516,12 +516,29 @@ charset="utf-8"></script>
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/java/" class="post-category">
+                                java
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -530,28 +547,28 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-23
+                    2022-08-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-23
+                    2022-08-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    4.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    16 分
                 </div>
                 
 
@@ -574,7 +591,258 @@ charset="utf-8"></script>
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="数据库建表的15个小技巧"><a href="#数据库建表的15个小技巧" class="headerlink" title="数据库建表的15个小技巧"></a>数据库建表的15个小技巧</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于后端开发同学来说，访问数据库，是代码中必不可少的一个环节。</p>
+<p>系统中收集到用户的核心数据，为了安全性，我们一般会存储到数据库，比如：mysql，oracle等。</p>
+<p>后端开发的日常工作，需要不断的建库和建表，来满足业务需求。</p>
+<p>通常情况下，建库的频率比建表要低很多，所以，我们这篇文章主要讨论建表相关的内容。</p>
+<p>如果我们在建表的时候不注意细节，等后面系统上线之后，表的维护成本变得非常高，而且很容易踩坑。</p>
+<p>今天就跟大家一起聊聊，数据库建表的15个小技巧，希望对你会有所帮助。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292154327.png" alt="img"></p>
+<h2 id="1-名字"><a href="#1-名字" class="headerlink" title="1.名字"></a>1.名字</h2><p>建表的时候，给<code>表</code>、<code>字段</code>和<code>索引</code>起个好名字，真的太重要了。</p>
+<h3 id="1-1-见名知意"><a href="#1-1-见名知意" class="headerlink" title="1.1 见名知意"></a><strong>1.1 见名知意</strong></h3><p>名字就像<code>表</code>、<code>字段</code>和<code>索引</code>的一张脸，可以给人留下第一印象。</p>
+<p>好的名字，言简意赅，见名知意，让人心情愉悦，能够提高沟通和维护成本。</p>
+<p>坏的名字，模拟两可，不知所云。而且显得杂乱无章，看得让人抓狂。</p>
+<p><strong>反例：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">用户名称字段定义成：yong_hu_ming、用户_name、name、user_name_123456789<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>你看了可能会一脸懵逼，这是什么骚操作？</p>
+<p><strong>正例：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">用户名称字段定义成：user_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>温馨提醒一下，名字也不宜过长，尽量控制在<code>30</code>个字符以内。</p>
+</blockquote>
+<h3 id="1-2-大小写"><a href="#1-2-大小写" class="headerlink" title="1.2 大小写"></a><strong>1.2 大小写</strong></h3><p>名字尽量都用<code>小写字母</code>，因为从视觉上，小写字母更容易让人读懂。</p>
+<p><strong>反例：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">字段名：PRODUCT_NAME、PRODUCT_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>全部大写，看起来有点不太直观。而一部分大写，一部分小写，让人看着更不爽。</p>
+<p><strong>正例：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">字段名：product_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>名字还是使用全小写字母，看着更舒服。</p>
+<h3 id="1-3-分隔符"><a href="#1-3-分隔符" class="headerlink" title="1.3 分隔符"></a><strong>1.3 分隔符</strong></h3><p>很多时候，名字为了让人好理解，有可能会包含多个单词。</p>
+<p>那么，多个单词间的<code>分隔符</code>该用什么呢？</p>
+<p><strong>反例：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">字段名：productname、productName、product name、product@name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>单词间没有分隔，或者单词间用驼峰标识，或者单词间用空格分隔，或者单词间用@分隔，这几种方式都不太建议。</p>
+<p><strong>正例：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">字段名：product_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>强烈建议大家在单词间用<code>_</code>分隔。</p>
+<h3 id="1-4-表名"><a href="#1-4-表名" class="headerlink" title="1.4 表名"></a><strong>1.4 表名</strong></h3><p>对于表名，在言简意赅，见名知意的基础之上，建议带上<code>业务前缀</code>。</p>
+<p>如果是订单相关的业务表，可以在表名前面加个前缀：<code>order_</code>。</p>
+<p>例如：order_pay、order_pay_detail等。</p>
+<p>如果是商品相关的业务表，可以在表名前面加个前缀：<code>product_</code>。</p>
+<p>例如：product_spu，product_sku等。</p>
+<p>这样做的好处是为了方便归类，把相同业务的表，可以非常快速的聚集到一起。</p>
+<p>另外，还有有个好处是，如果哪天有非订单的业务，比如：金融业务，也需要建一个名字叫做pay的表，可以取名：finance_pay，就能非常轻松的区分。</p>
+<p>这样就不会出现<code>同名表</code>的情况。</p>
+<h3 id="1-5-字段名称"><a href="#1-5-字段名称" class="headerlink" title="1.5 字段名称"></a><strong>1.5 字段名称</strong></h3><p><code>字段名称</code>是开发人员发挥空间最大，但也最容易发生混乱的地方。</p>
+<p>比如有些表，使用flag表示状态，另外的表用status表示状态。</p>
+<p>可以统一一下，使用status表示状态。</p>
+<p>如果一个表使用了另一个表的主键，可以在另一张表的名后面，加<code>_id</code>或<code>_sys_no</code>，例如：</p>
+<p>在product_sku表中有个字段，是product_spu表的主键，这时候可以取名：product_spu_id或product_spu_sys_no。</p>
+<p>还有创建时间，可以统一成：create_time，修改时间统一成：update_time。</p>
+<p>删除状态固定为：delete_status。</p>
+<p>其实还有很多公共字段，在不同的表之间，可以使用全局统一的命名规则，定义成相同的名称，以便于大家好理解。</p>
+<h3 id="1-6-索引名"><a href="#1-6-索引名" class="headerlink" title="1.6 索引名"></a><strong>1.6 索引名</strong></h3><p>在数据库中，索引有很多种，包括：主键、普通索引、唯一索引、联合索引等。</p>
+<p>每张表的主键只有一个，一般使用：<code>id</code>或者<code>sys_no</code>命名。</p>
+<p>普通索引和联合索引，其实是一类。在建立该类索引时，可以加<code>ix_</code>前缀，比如：ix_product_status。</p>
+<p>唯一索引，可以加<code>ux_</code>前缀，比如：ux_product_code。</p>
+<h2 id="2-字段类型"><a href="#2-字段类型" class="headerlink" title="2.字段类型"></a>2.字段类型</h2><p>在设计表时，我们在选择<code>字段类型</code>时，可发挥空间很大。</p>
+<p>时间格式的数据有：date、datetime和timestamp等等可以选择。</p>
+<p>字符类型的数据有：varchar、char、text等可以选择。</p>
+<p>数字类型的数据有：int、bigint、smallint、tinyint等可以选择。</p>
+<p>说实话，选择很多，有时候是一件好事，也可能是一件坏事。</p>
+<p>如何选择一个<code>合适</code>的字段类型，变成了我们不得不面对的问题。</p>
+<p>如果字段类型选大了，比如：原本只有1-10之间的10个数字，结果选了<code>bigint</code>，它占<code>8</code>个字节。</p>
+<p>其实，1-10之间的10个数字，每个数字<code>1</code>个字节就能保存，选择<code>tinyint</code>更为合适。</p>
+<p>这样会白白浪费7个字节的空间。</p>
+<p>如果字段类型择小了，比如：一个18位的id字段，选择了<code>int</code>类型，最终数据会保存失败。</p>
+<p>所以选择一个合适的字段类型，还是非常重要的一件事情。</p>
+<p>以下原则可以参考一下：</p>
+<ol>
+<li>尽可能选择占用存储空间小的字段类型，在满足正常业务需求的情况下，从小到大，往上选。</li>
+<li>如果字符串长度固定，或者差别不大，可以选择char类型。如果字符串长度差别较大，可以选择varchar类型。</li>
+<li>是否字段，可以选择bit类型。</li>
+<li>枚举字段，可以选择tinyint类型。</li>
+<li>主键字段，可以选择bigint类型。</li>
+<li>金额字段，可以选择decimal类型。</li>
+<li>时间字段，可以选择timestamp或datetime类型。</li>
+</ol>
+<h2 id="3-字段长度"><a href="#3-字段长度" class="headerlink" title="3.字段长度"></a>3.字段长度</h2><p>前面我们已经定义好了<code>字段名称</code>，选择了合适的<code>字段类型</code>，接下来，需要重点关注的是<code>字段长度</code>了。</p>
+<p>比如：varchar(20)，biginit(20)等。</p>
+<p>那么问题来了，<code>varchar</code>代表的是<code>字节</code>长度，还是<code>字符</code>长度呢？</p>
+<p>答：在mysql中除了<code>varchar</code>和<code>char</code>是代表<code>字符</code>长度之外，其余的类型都是代表<code>字节</code>长度。</p>
+<p>biginit(n) 这个<code>n</code>表示什么意思呢？</p>
+<p>假如我们定义的字段类型和长度是：bigint(4)，bigint实际长度是<code>8</code>个字节。</p>
+<p>现在有个数据a=1，a显示4个字节，所以在不满4个字节时前面填充0（前提是该字段设置了zerofill属性），比如：0001。</p>
+<p>当满了4个字节时，比如现在数据是a=123456，它会按照实际的长度显示，比如：123456。</p>
+<p>但需要注意的是，有些mysql客户端即使满了4个字节，也可能只显示4个字节的内容，比如会显示成：1234。</p>
+<p>所以bigint(4)，这里的4表示显示的长度为4个字节，实际长度还是占8个字节。</p>
+<h2 id="4-字段个数"><a href="#4-字段个数" class="headerlink" title="4.字段个数"></a>4.字段个数</h2><p>我们在建表的时候，一定要对<code>字段个数</code>做一些限制。</p>
+<p>我之前见过有人创建的表，有几十个，甚至上百个字段，表中保存的数据非常大，查询效率很低。</p>
+<p>如果真有这种情况，可以将一张<code>大表</code>拆成多张<code>小表</code>，这几张表的主键相同。</p>
+<p>建议每表的字段个数，不要超过<code>20</code>个。</p>
+<h2 id="5-主键"><a href="#5-主键" class="headerlink" title="5. 主键"></a>5. 主键</h2><p>在创建表时，一定要创建<code>主键</code>。</p>
+<p>因为主键自带了主键索引，相比于其他索引，主键索引的查询效率最高，因为它不需要回表。</p>
+<p>此外，主键还是天然的<code>唯一索引</code>，可以根据它来判重。</p>
+<p>在<code>单个</code>数据库中，主键可以通过<code>AUTO_INCREMENT</code>，设置成<code>自动增长</code>的。</p>
+<p>但在<code>分布式</code>数据库中，特别是做了分库分表的业务库中，主键最好由外部算法(比如：雪花算法）生成，它能够保证生成的id是全局唯一的。</p>
+<p>除此之外，主键建议保存跟业务无关的值，减少业务耦合性，方便今后的扩展。</p>
+<p>不过我也见过，有些一对一的表关系，比如：用户表和用户扩展表，在保存数据时是一对一的关系。</p>
+<p>这样，用户扩展表的主键，可以直接保存用户表的主键。</p>
+<h2 id="6-存储引擎"><a href="#6-存储引擎" class="headerlink" title="6.存储引擎"></a>6.存储引擎</h2><p>在<code>mysql5.1</code>以前的版本，默认的存储引擎是<code>myslam</code>，而<code>mysql5.1</code>以后的版本，默认的存储引擎变成了<code>innodb</code>。</p>
+<p>之前我们还在创建表时，还一直纠结要选哪种存储引擎？</p>
+<p><code>myslam</code>的索引和数据分开存储，而有利于查询，但它不支持事务和外键等功能。</p>
+<p>而<code>innodb</code>虽说查询性能，稍微弱一点，但它支持事务和外键等，功能更强大一些。</p>
+<p>以前的建议是：读多写少的表，用myslam存储引擎。而写多读多的表，用innodb。</p>
+<p>但虽说mysql对innodb存储引擎性能的不断优化，现在myslam和innodb查询性能相差已经越来越小。</p>
+<p>所以，建议我们在使用<code>mysql8</code>以后的版本时，直接使用默认的<code>innodb</code>存储引擎即可，无需额外修改存储引擎。</p>
+<h2 id="7-NOT-NULL"><a href="#7-NOT-NULL" class="headerlink" title="7. NOT NULL"></a>7. NOT NULL</h2><p>在创建字段时，需要选择该字段是否允许为<code>NULL</code>。</p>
+<p>我们在定义字段时，应该尽可能明确该字段<code>NOT NULL</code>。</p>
+<p>为什么呢？</p>
+<p>我们主要以innodb存储引擎为例，myslam存储引擎没啥好说的。</p>
+<p>主要有以下原因：</p>
+<ol>
+<li>在innodb中，需要额外的空间存储null值，需要占用更多的空间。</li>
+<li>null值可能会导致索引失效。</li>
+<li>null值只能用<code>is null</code>或者<code>is not null</code>判断，用<code>=号</code>判断永远返回false。</li>
+</ol>
+<p>因此，建议我们在定义字段时，能定义成NOT NULL，就定义成NOT NULL。</p>
+<p>但如果某个字段直接定义成NOT NULL，万一有些地方忘了给该字段写值，就会<code>insert</code>不了数据。</p>
+<p>这也算合理的情况。</p>
+<p>但有一种情况是，系统有新功能上线，新增了字段。上线时一般会先执行sql脚本，再部署代码。</p>
+<p>由于老代码中，不会给新字段赋值，则insert数据时，也会报错。</p>
+<p>由此，非常有必要给NOT NULL的字段设置默认值，特别是后面新增的字段。</p>
+<p>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">alter table product_sku add column  brand_id int(10) not null default 0;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="8-外键"><a href="#8-外键" class="headerlink" title="8.外键"></a>8.外键</h2><p>在mysql中，是存在<code>外键</code>的。</p>
+<p>外键存在的主要作用是：保证数据的<code>一致性</code>和<code>完整性</code>。</p>
+<p>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">create table class (
+  id int(10) primary key auto_increment,
+  cname varchar(15)
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>有个班级表class。</p>
+<p>然后有个student表：</p>
+<pre class="line-numbers language-none"><code class="language-none">create table student(
+  id int(10) primary key auto_increment,
+  name varchar(15) not null,
+  gender varchar(10) not null,
+  cid int,
+  foreign key(cid) references class(id)
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中student表中的cid字段，保存的class表的id，这时通过<code>foreign key</code>增加了一个外键。</p>
+<p>这时，如果你直接通过student表的id删除数据，会报异常：</p>
+<pre class="line-numbers language-none"><code class="language-none">a foreign key constraint fails<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>必须要先删除class表对于的cid那条数据，再删除student表的数据才行，这样能够保证数据的一致性和完整性。</p>
+<blockquote>
+<p>顺便说一句：只有存储引擎是innodb时，才能使用外键。</p>
+</blockquote>
+<p>如果只有两张表的关联还好，但如果有十几张表都建了外键关联，每删除一次主表，都需要同步删除十几张子表，很显然性能会非常差。</p>
+<p>因此，互联网系统中，一般建议不使用外键。因为这类系统更多的是为了性能考虑，宁可牺牲一点数据一致性和完整性。</p>
+<p>除了<code>外键</code>之外，<code>存储过程</code>和<code>触发器</code>也不太建议使用，他们都会影响性能。</p>
+<h2 id="9-索引"><a href="#9-索引" class="headerlink" title="9. 索引"></a>9. 索引</h2><p>在建表时，除了指定<code>主键索引</code>之外，还需要创建一些<code>普通索引</code>。</p>
+<p>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">create table product_sku(
+  id int(10) primary key auto_increment,
+  spu_id int(10) not null,
+  brand_id int(10) not null,
+  name varchar(15) not null
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在创建商品表时，使用spu_id（商品组表）和brand_id（品牌表）的id。</p>
+<p>像这类保存其他表id的情况，可以增加普通索引：</p>
+<pre class="line-numbers language-none"><code class="language-none">create table product_sku (
+  id int(10) primary key auto_increment,
+  spu_id int(10) not null,
+  brand_id int(10) not null,
+  name varchar(15) not null,
+  KEY `ix_spu_id` (`spu_id`) USING BTREE,
+  KEY `ix_brand_id` (`brand_id`) USING BTREE
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>后面查表的时候，效率更高。</p>
+<p>但索引字段也不能建的太多，可能会影响保存数据的效率，因为索引需要额外的存储空间。</p>
+<p>建议单表的索引个数不要超过：<code>5</code>个。</p>
+<p>如果在建表时，发现索引个数超过5个了，可以删除部分<code>普通索引</code>，改成<code>联合索引</code>。</p>
+<p>顺便说一句：在创建联合索引的时候，需要使用注意<code>最左匹配原则</code>，不然，建的联合索引效率可能不高。</p>
+<p>对于数据重复率非常高的字段，比如：状态，不建议单独创建普通索引。因为即使加了索引，如果mysql发现<code>全表扫描</code>效率更高，可能会导致索引失效。</p>
+<h2 id="10-时间字段"><a href="#10-时间字段" class="headerlink" title="10.时间字段"></a>10.时间字段</h2><p><code>时间字段</code>的类型，我们可以选择的范围还是比较多的，目前mysql支持：date、datetime、timestamp、varchar等。</p>
+<p><code>varchar</code>类型可能是为了跟接口保持一致，接口中的时间类型是String。</p>
+<p>但如果哪天我们要通过时间范围查询数据，效率会非常低，因为这种情况没法走索引。</p>
+<p><code>date</code>类型主要是为了保存<code>日期</code>，比如：2022-08-29，不适合保存<code>日期和时间</code>，比如：2022-08-29 21:55:20。</p>
+<p>而<code>datetime</code>和<code>timestamp</code>类型更适合我们保存<code>日期和时间</code>。</p>
+<p>但它们有略微区别。</p>
+<ul>
+<li><code>timestamp</code>：用4个字节来保存数据，它的取值范围为<code>1970-01-01 00:00:01</code> UTC ~ <code>2038-01-19 03:14:07</code>。此外，它还跟时区有关。</li>
+<li><code>datetime</code>：用8个字节来保存数据，它的取值范围为<code>1000-01-01 00:00:00</code> ~ <code>9999-12-31 23:59:59</code>。它跟时区无关。</li>
+</ul>
+<p>优先推荐使用<code>datetime</code>类型保存日期和时间，可以保存的时间范围更大一些。</p>
+<blockquote>
+<p>温馨提醒一下，在给时间字段设置默认值是，建议不要设置成：<code>0000-00-00 00:00:00</code>，不然查询表时可能会因为转换不了，而直接报错。</p>
+</blockquote>
+<h2 id="11-金额字段"><a href="#11-金额字段" class="headerlink" title="11.金额字段"></a>11.金额字段</h2><p>mysql中有多个字段可以表示浮点数：float、double、decimal等。</p>
+<p>而<code>float</code>和<code>double</code>可能会丢失精度，因此推荐大家使用<code>decimal</code>类型保存金额。</p>
+<p>一般我们是这样定义浮点数的：decimal(m,n)。</p>
+<p>其中<code>n</code>是指<code>小数</code>的长度，而<code>m</code>是指<code>整数加小数</code>的总长度。</p>
+<p>假如我们定义的金额类型是这样的：decimal(10,2)，则表示整数长度是8位，并且保留2位小数。</p>
+<h2 id="12-唯一索引"><a href="#12-唯一索引" class="headerlink" title="12.唯一索引"></a>12.唯一索引</h2><p><code>唯一索引</code>在我们实际工作中，使用频率相当高。</p>
+<p>你可以给单个字段，加唯一索引，比如：组织机构code。</p>
+<p>也可以给多个字段，加一个联合的唯一索引，比如：分类编号、单位、规格等。</p>
+<p>单个的唯一索引还好，但如果是联合的唯一索引，字段值出现null时，则唯一性约束可能会失效。</p>
+<blockquote>
+<p>创建唯一索引时，相关字段一定不能包含null值，否则唯一性会失效。</p>
+</blockquote>
+<h2 id="13-字符集"><a href="#13-字符集" class="headerlink" title="13.字符集"></a>13.字符集</h2><p>mysql中支持的<code>字符集</code>有很多，常用的有：latin1、utf-8、utf8mb4、GBK等。</p>
+<p>这4种字符集情况如下：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292155161.png" alt="img"></p>
+<p><code>latin1</code>容易出现乱码问题，在实际项目中使用比较少。</p>
+<p>而<code>GBK</code>支持中文，但不支持国际通用字符，在实际项目中使用也不多。</p>
+<p>从目前来看，mysql的字符集使用最多的还是：<code>utf-8</code>和<code>utf8mb4</code>。</p>
+<p>其中<code>utf-8</code>占用3个字节，比<code>utf8mb4</code>的4个字节，占用更小的存储空间。</p>
+<p>但utf-8有个问题：即无法存储emoji表情，因为emoji表情一般需要4个字节。</p>
+<p>由此，使用utf-8字符集，保存emoji表情时，数据库会直接报错。</p>
+<p>所以，建议在建表时字符集设置成：<code>utf8mb4</code>，会省去很多不必要的麻烦。</p>
+<h2 id="14-排序规则"><a href="#14-排序规则" class="headerlink" title="14. 排序规则"></a>14. 排序规则</h2><p>不知道，你关注过没，在mysql中创建表时，有个<code>COLLATE</code>参数可以设置。</p>
+<p>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">CREATE TABLE `order` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `code` varchar(20) COLLATE utf8mb4_bin NOT NULL,
+  `name` varchar(30) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `un_code` (`code`),
+  KEY `un_code_name` (`code`,`name`) USING BTREE,
+  KEY `idx_name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>它是用来设置<code>排序规则</code>的。</p>
+<p>字符排序规则跟字符集有关，比如：字符集如果是<code>utf8mb4</code>，则字符排序规则也是以：<code>utf8mb4_</code>开头的，常用的有：<code>utf8mb4_general_ci</code>、<code>utf8mb4_bin</code>等。</p>
+<p>其中utf8mb4_general_ci排序规则，对字母的大小写不敏感。说得更直白一点，就是不区分大小写。</p>
+<p>而utf8mb4_bin排序规则，对字符大小写敏感，也就是区分大小写。</p>
+<p>说实话，这一点还是非常重要的。</p>
+<p>假如order表中现在有一条记录，name的值是大写的YOYO，但我们用小写的yoyo去查，例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">select * from order where name='yoyo';<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果字符排序规则是utf8mb4_general_ci，则可以查出大写的YOYO的那条数据。</p>
+<p>如果字符排序规则是utf8mb4_bin，则查不出来。</p>
+<p>由此，字符排序规则一定要根据实际的业务场景选择，否则容易出现问题。</p>
+<h2 id="15-大字段"><a href="#15-大字段" class="headerlink" title="15.大字段"></a>15.大字段</h2><p>我们在创建表时，对一些特殊字段，要额外关注，比如：<code>大字段</code>，即占用较多存储空间的字段。</p>
+<p>比如：用户的评论，这就属于一个大字段，但这个字段可长可短。</p>
+<p>但一般会对评论的总长度做限制，比如：最多允许输入500个字符。</p>
+<p>如果直接定义成<code>text</code>类型，可能会浪费存储空间，所以建议将这类字段定义成<code>varchar</code>类型的存储效率更高。</p>
+<p>当然，我还见过更大的字段，即该字段直接保存合同数据。</p>
+<p>一个合同可能会占<code>几Mb</code>。</p>
+<p>在mysql中保存这种数据，从系统设计的角度来说，本身就不太合理。</p>
+<p>像合同这种非常大的数据，可以保存到<code>mongodb</code>中，然后在mysql的业务表中，保存mongodb表的id。</p>
+
                 
             </div>
             <hr/>
@@ -600,7 +868,7 @@ charset="utf-8"></script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://beaumon.github.io/movies/index.html">https://beaumon.github.io/movies/index.html</a>
+                    <a href="https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/">https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,7 +905,15 @@ charset="utf-8"></script>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -713,7 +989,7 @@ charset="utf-8"></script>
         repo: 'beaumon.github.io',
         owner: 'Beaumon',
         admin: ["Beaumon"],
-        id: '2022-08-23T10-12-00',
+        id: '2022-08-29T21-51-17',
         distractionFreeMode: false  // Facebook-like distraction free mode,
     });
 
@@ -748,34 +1024,50 @@ charset="utf-8"></script>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/movies/index.html">
+                <a href="/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="movies">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="聊聊数据库建表的15个小技巧">
                         
-                        <span class="card-title">movies</span>
+                        <span class="card-title">聊聊数据库建表的15个小技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            分享数据库建表的15个小技巧
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-29
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Beaumon
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category">
+                                    java
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -783,37 +1075,51 @@ charset="utf-8"></script>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/movies/index.html">
+                <a href="/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/">
                     <div class="card-image">
                         
+                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292129016.png" class="responsive-img" alt="不蒜子统计不显示问题">
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="movies">
-                        
-                        <span class="card-title">movies</span>
+                        <span class="card-title">不蒜子统计不显示问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            busuanzi统计不显示的根本原因及解决办法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-29
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Beaumon
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
+                        <span class="chip bg-color">theme主题</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">
+                        <span class="chip bg-color">不蒜子</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

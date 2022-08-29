@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-08-29T13:29:49.361Z</updated>
+  <updated>2022-08-29T13:58:52.362Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聊聊数据库建表的15个小技巧</title>
+    <link href="https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/"/>
+    <id>https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/</id>
+    <published>2022-08-29T13:51:17.000Z</published>
+    <updated>2022-08-29T13:58:52.362Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;数据库建表的15个小技巧&quot;&gt;&lt;a href=&quot;#数据库建表的15个小技巧&quot; class=&quot;headerlink&quot; title=&quot;数据库建表的15个小技巧&quot;&gt;&lt;/a&gt;数据库建表的15个小技巧&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/tags/java/"/>
+    
+    <category term="mysql" scheme="https://beaumon.github.io/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>不蒜子统计不显示问题</title>
