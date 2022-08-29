@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="books, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地">
+    <meta name="keywords" content="不蒜子统计不显示问题, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="busuanzi统计不显示的根本原因及解决办法">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>books | 是Beaumon的小博客鸭</title>
+    <title>不蒜子统计不显示问题 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -489,12 +489,12 @@ charset="utf-8"></script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292129016.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">books</h1>
+                    <h1 class="description center-align post-title">不蒜子统计不显示问题</h1>
                 </div>
             </div>
         </div>
@@ -516,12 +516,29 @@ charset="utf-8"></script>
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
+                                <span class="chip bg-color">theme主题</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">
+                                <span class="chip bg-color">不蒜子</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -530,28 +547,28 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-23
+                    2022-08-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-23
+                    2022-08-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -574,7 +591,104 @@ charset="utf-8"></script>
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="不蒜子-busuanzi统计不显示的根本原因及解决办法"><a href="#不蒜子-busuanzi统计不显示的根本原因及解决办法" class="headerlink" title="不蒜子(busuanzi统计不显示的根本原因及解决办法)"></a>不蒜子(busuanzi统计不显示的根本原因及解决办法)</h1><h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h1><p>我使用的 Hexo 博客遇到了的 busuanzi 访问量统计不显示问题，搜索了csdn，知乎，githubstackoverflow，等等也没找到解决办法，直到我发现了大佬的文章(链接见文章末尾)。</p>
+<p>经过一番研究发现是 busuanzi 代码的一处问题和 <a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d">live2d看板娘插件</a>的一处问题凑在一起导致的。</p>
+<p>今天在写博客之前先搜了一下“busuanzi live2d”，发现搜出来一堆结果，我还以为我白研究了..结果点进去一看，第一页结果里没有一个指出了问题的根本原因，而且修复方法基本上都是删 feature 或者换组件，但实际上只要知道问题的根本原因就可以在不妨碍正常功能运作的前提下进行修复。</p>
+<h1 id="2-问题描述"><a href="#2-问题描述" class="headerlink" title="2.问题描述"></a>2.问题描述</h1><p>在一个同时启用了 busuanzi 访问量统计和 live2d 插件的 Hexo 博客里，访问或刷新博客时有大概率 busuanzi 会被隐藏。</p>
+<p>被隐藏的具体表现为，刷新的瞬间 id 为 <code>busuanzi_container_*</code> 的容器是显示的，然后容器的样式很快被设为 <code>display: none</code>。</p>
+<p>查看 F12 的 Network，busuanzi 相关请求正常返回；console 中没有报错。</p>
+<h1 id="3-问题定位"><a href="#3-问题定位" class="headerlink" title="3.问题定位"></a>3.问题定位</h1><h3 id="3-1标签对比："><a href="#3-1标签对比：" class="headerlink" title="3.1标签对比："></a>3.1标签对比：</h3><p><strong>对比发现出现了多余的style=”display: none”;</strong></p>
+<blockquote>
+<p>正常时</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">&lt;span id="busuanzi_container_site_pv"&gt;
+    |&amp;nbsp;&lt;i class="far fa-eye"&gt;&lt;/i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id="busuanzi_value_site_pv"
+        class="white-color"&gt;&lt;/span&gt;&amp;nbsp;次
+    &lt;/span&gt;
+&lt;span id="busuanzi_container_site_uv"&gt;
+    |&amp;nbsp;&lt;i class="fas fa-users"&gt;&lt;/i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id="busuanzi_value_site_uv"
+        class="white-color"&gt;&lt;/span&gt;&amp;nbsp;人
+    &lt;/span&gt;
+&lt;/span&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>异常时</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">&lt;span id="busuanzi_container_site_pv" style="display: none;"&gt;
+    |&amp;nbsp;&lt;i class="far fa-eye"&gt;&lt;/i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id="busuanzi_value_site_pv" 
+        class="white-color"&gt;2303950&lt;/span&gt;&amp;nbsp;次
+&lt;/span&gt;
+&lt;span id="busuanzi_container_site_uv" style="display: none;"&gt;
+    |&amp;nbsp;&lt;i class="fas fa-users"&gt;&lt;/i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id="busuanzi_value_site_uv" 
+        class="white-color"&gt;160644&lt;/span&gt;&amp;nbsp;人
+&lt;/span&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2查看display-none的定位"><a href="#3-2查看display-none的定位" class="headerlink" title="3.2查看display: none的定位"></a><strong>3.2查看display: none的定位</strong></h3><p>查看 <a target="_blank" rel="noopener" href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">busuanzi.pure.mini.js</a>，发现 <code>display: none</code> 在 <code>hides</code> 函数中被设置：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function-variable function">hides</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span> <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    b <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>而 hides 函数仅在一处被调用：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+  <span class="token function">a</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span> scriptTag<span class="token punctuation">.</span>parentElement<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  bszTag<span class="token punctuation">.</span><span class="token function">hides</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>所以是在 <code>a(b), scriptTag.parentElement.removeChild(scriptTag)</code> 抛出异常时容器被隐藏。</p>
+<h3 id="3-3异常原因的定位"><a href="#3-3异常原因的定位" class="headerlink" title="3.3异常原因的定位"></a>3.3异常原因的定位</h3><p>由于在其它地方的 busuanzi 不会出现这一问题，而问题的原因还完全不清楚，为了尽可能还原原始环境以复现问题，我选择了使用 <a target="_blank" rel="noopener" href="https://addons.mozilla.org/zh-CN/firefox/addon/header-editor/">Firefox 的 Header Editor 插件</a> 直接在原博客进行测试。具体来说，就是在本地复制一份 busuanzi 的代码，然后跑一个 http server，在 Header Editor 里把 busuanzi 代码的请求重定向到本地的 http server。</p>
+<p>首先，在 <code>catch</code> 中添加 <code>console.error(c)</code>，得到错误内容 <code>TypeError: scriptTag.parentElement is null</code>。</p>
+<p>查看代码中 <code>scriptTag</code> 相关的部分：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">scriptTag = document.createElement("SCRIPT"), scriptTag.type = "text/javascript", scriptTag.defer = !0, scriptTag.src = a, scriptTag.referrerPolicy = "no-referrer-when-downgrade", document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>所以，再在 <code>catch</code> 中添加 <code>s = document.querySelector("[src*=BusuanziCallback]"); console.log(s.parentElement);</code>，发现 <code>s.parentElement</code> 不是 <code>null</code>。</p>
+<p>再添加 <code>console.log(s === scriptTag)</code>，发现结果是 <code>s</code> 和 <code>scriptTag</code> 不同，所以原因在于此时的 <code>scriptTag</code> 变量已经不指向 DOM 中的这个元素了。</p>
+<h3 id="3-4定位到-live2d-插件"><a href="#3-4定位到-live2d-插件" class="headerlink" title="3.4定位到 live2d 插件"></a>3.4定位到 live2d 插件</h3><p>此时我原本是没有任何头绪的，但我发现，并不是每次刷新页面都会触发这一问题，所以没有触发问题时和触发问题时的差别就成了问题的突破口。</p>
+<p>经过多次刷新，我发现，有一串 console 输出，在出现问题时总位于我在 <code>catch</code> 中添加的调试信息之前，而在没出现问题时则位于调试信息之后：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">Live2D 2.1.00_1 live2d.core.js:5925:16
+profile : Desktop live2d.core.js:5913:16
+  [PROFILE_NAME] = Desktop live2d.core.js:5918:20
+  [USE_ADJUST_TRANSLATION] = false live2d.core.js:5918:20
+  [USE_CACHED_POLYGON_IMAGE] = false live2d.core.js:5918:20
+  [EXPAND_W] = 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>多亏了 live2d 的这串输出，我得以将问题定位到 live2d 插件上。</p>
+<p>实际上，如果没有这些 console 输出，也可以通过 <code>&lt;head&gt;</code> 中 <code>L2Dwidget.0.min.js</code> 和 <code>busuanzi?jsonpCallback=BusuanziCallback</code> 两个 <code>&lt;script&gt;</code> 的相对位置发现问题，只不过这样的话就更隐蔽更难发现了。</p>
+<h3 id="3-5在-live2d-插件中定位问题"><a href="#3-5在-live2d-插件中定位问题" class="headerlink" title="3.5在 live2d 插件中定位问题"></a>3.5在 live2d 插件中定位问题</h3><p>在 <code>L2Dwidget.min.js</code> 的第一行有源码地址以及时间：<code>/*! https://github.com/xiazeyu/live2d-widget.js built@2019-4-6 09:38:17 */</code></p>
+<p>因为注释中给出的时间不是最新版本，先查看 git log 并 checkout 到相应时间的版本。</p>
+<p>既然问题在于 <code>&lt;script&gt;</code> 元素被重新创建而导致原变量不指向 DOM 中元素，就在代码中 grep <code>head</code>，然后发现 <a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget.js/blob/fa8f2d831a1a9e96cd85bd1ef593a3336aeac720/src/dialog/index.js#L4-L38">问题代码</a>：<code>document.head.innerHTML += ……</code></p>
+<p>至此，问题原因已发现，就是 live2d 插件通过修改 <code>document.head.innerHTML</code> 来添加样式，导致 busuanzi 的 <code>scriptTag</code> 变量指向的不再是 DOM 中的 <code>&lt;script&gt;</code> 元素。</p>
+<p>实际上，live2d 插件的这一问题 <a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget.js/pull/61">已经修复</a>，但需要使用新版才行。</p>
+<h3 id="3-6解决方法"><a href="#3-6解决方法" class="headerlink" title="3.6解决方法"></a>3.6解决方法</h3><h4 id="3-6-1修改-busuanzi-的解决方法"><a href="#3-6-1修改-busuanzi-的解决方法" class="headerlink" title="3.6.1修改 busuanzi 的解决方法"></a>3.6.1修改 busuanzi 的解决方法</h4><p>因为 busuanzi 的代码较短，而且本来就是用的外部的代码，改起来比较容易。</p>
+<p>把 <code>scriptTag.parentElement.removeChild(scriptTag)</code> 修改为 <code>s=document.querySelector('[src*=BusuanziCallback]'),s.parentElement.removeChild(s)</code> 即可。可以把修改后的静态文件放在博客里，然后修改 busuanzi <code>&lt;script&gt;</code> 的 <code>src</code>。</p>
+<blockquote>
+<p>相关代码</p>
+<p>busuanzi.js的位置为\themes\hexo-theme-matery\source\libs\others\busuanzi.pure.mini.js</p>
+<p>修改后的 busuanzi 代码（还在 catch 里加了个 console.error）：</p>
+<pre class="line-numbers language-none"><code class="language-none">var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a||"interactive"===document.readyState||"complete"===document.readyState?c.call(document):b.push(function(){return c.call(this)}),this},d=function(){for(var a=0,c=b.length;c&gt;a;a++)b[a].apply(document);b=[]},e=function(){a||(a=!0,d.call(window),document.removeEventListener?document.removeEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.detachEvent("onreadystatechange",e),window==window.top&amp;&amp;(clearInterval(c),c=null)))},document.addEventListener?document.addEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.attachEvent("onreadystatechange",function(){/loaded|complete/.test(document.readyState)&amp;&amp;e()}),window==window.top&amp;&amp;(c=setInterval(function(){try{a||document.documentElement.doScroll("left")}catch(b){return}e()},5)))}(),bszCaller={fetch:function(a,b){var c="BusuanziCallback_"+Math.floor(1099511627776*Math.random());window[c]=this.evalCall(b),a=a.replace("=BusuanziCallback","="+c),scriptTag=document.createElement("SCRIPT"),scriptTag.type="text/javascript",scriptTag.defer=!0,scriptTag.src=a,scriptTag.referrerPolicy="no-referrer-when-downgrade",document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)},evalCall:function(a){return function(b){ready(function(){try{a(b),s=document.querySelector('[src*=BusuanziCallback]'),s.parentElement.removeChild(s)}catch(c){console.error(c),bszTag.hides()}})}}},bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",function(a){bszTag.texts(a),bszTag.shows()}),bszTag={bszs:["site_pv","page_pv","site_uv"],texts:function(a){this.bszs.map(function(b){var c=document.getElementById("busuanzi_value_"+b);c&amp;&amp;(c.innerHTML=a[b])})},hides:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="none")})},shows:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="inline")})}};<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后找到</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script async="async" src="&lt;%- theme.jsDelivr.url %&gt;&lt;%-url_for(theme.libs.js.busuanzi) %&gt;"&gt;&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果和我的一样就不需要修改，这也是主题默认的。成功解决</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292129016.png" alt="image-20220829212911099"></p>
+<p>网上搜到的很多解决办法是把 <code>id="busuanzi_container_*"</code> 删掉，这样当然就不会被隐藏了，只不过这个隐藏本意是在出错时不把错误或者无意义的内容显示给访客，保留这一行为还是挺好的。</p>
+<h4 id="3-6-2修改-live2d-的解决方法"><a href="#3-6-2修改-live2d-的解决方法" class="headerlink" title="3.6.2修改 live2d 的解决方法"></a>3.6.2修改 live2d 的解决方法</h4><p>总之，就是把 <code>innerHTML +=</code> 换成 <code>createElement</code> 和 <code>appendChild</code>，按 <a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget.js/pull/61/files#diff-61426849230d9976d234f7c4ca195c623d9bb05a91d76b7ae51501e394f81860L10-R43">xiazeyu/live2d-widget.js#61</a> 改就行。</p>
+<p>live2d 的代码还是挺长的，直接修改 minify 后的代码不太好。如果是 hexo 插件的话，要修改应该也蛮麻烦的。总之，如果你知道怎么改比较好的话可以改，不然的话还是推荐改 busuanzi。</p>
+<h1 id="4-问题启示"><a href="#4-问题启示" class="headerlink" title="4.问题启示"></a>4.问题启示</h1><h2 id="4-1不要修改原-DOM-中的-innerHTML"><a href="#4-1不要修改原-DOM-中的-innerHTML" class="headerlink" title="4.1不要修改原 DOM 中的 innerHTML"></a>4.1不要修改原 DOM 中的 innerHTML</h2><p>直接修改 DOM 元素的 innerHTML 会让其中的元素都重新渲染（加载？创建？），不仅指向其中元素的变量会失效，也可能导致画面闪烁等问题（例如导致 live2d-widget 修复这一问题的不是 busuanzi 失效而是 <a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d/issues/149">CSS 闪烁</a>）。</p>
+<p>所以，如果是添加 DOM 元素，应当避免修改 <code>innerHTML</code>，而应当使用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"><code>document.createElement</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"><code>Node.appendChild()</code></a> 以及 <code>removeChild</code>、<code>replaceChild</code>、<code>insertBefore</code> 等 API。</p>
+<h2 id="4-2不要依赖于指向-DOM-元素的变量长时间不改变"><a href="#4-2不要依赖于指向-DOM-元素的变量长时间不改变" class="headerlink" title="4.2不要依赖于指向 DOM 元素的变量长时间不改变"></a>4.2不要依赖于指向 DOM 元素的变量长时间不改变</h2><p>如果 DOM 因各种原因部分重建，指向 DOM 元素的变量很可能不再指向当前 DOM 中的元素。所以，最好不要在过了一段时间后（例如在 callback 中）再次使用指向 DOM 元素的变量，而应当再次获取这一元素。</p>
+<h2 id="4-3不要-silently-fail"><a href="#4-3不要-silently-fail" class="headerlink" title="4.3不要 silently fail"></a>4.3不要 silently fail</h2><p>在处理异常，尤其是未知的异常时，即使不 throw 出去，也最好用 <code>console.error</code> 等方法记录下来。记录在 console 中的错误信息并不会显示给普通用户，但可以给寻找问题所在的用户提供宝贵的提示信息。</p>
+<h2 id="4-4使用-Header-Editor-在对原环境最小修改的情况下进行调试"><a href="#4-4使用-Header-Editor-在对原环境最小修改的情况下进行调试" class="headerlink" title="4.4使用 Header Editor 在对原环境最小修改的情况下进行调试"></a>4.4使用 Header Editor 在对原环境最小修改的情况下进行调试</h2><p>这次使用 Header Editor 调试还是我临时想到的（知道有这么个插件还是以前用 <a target="_blank" rel="noopener" href="https://github.com/EndlessCheng/mahjong-helper">mahjong-helper</a>，当然现在已经没在用了）。一开始还用 pastebin 上传代码，效率极低，后来才想起来本地跑个 http server 就可以了..用这个插件来调试还是挺方便的。</p>
+<h2 id="4-5留心依赖版本"><a href="#4-5留心依赖版本" class="headerlink" title="4.5留心依赖版本"></a>4.5留心依赖版本</h2><p>一开始我还在 GitHub 上搜到一个 <a target="_blank" rel="noopener" href="https://github.com/JoeyBling/busuanzi.pure.js">busuanzi.pure.js</a>，调了一会儿才发现这个代码和 <a target="_blank" rel="noopener" href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js</a> 不一样..</p>
+<p>live2d 的版本也要注意开头包含时间的注释，因为最新版本已经把问题修复了。</p>
+<p>本文是参考大佬的博客</p>
+<p>原文连接:<a target="_blank" rel="noopener" href="https://ouuan.moe/post/2022/08/busuanzi-and-live2d">https://ouuan.moe/post/2022/08/busuanzi-and-live2d</a></p>
+
                 
             </div>
             <hr/>
@@ -600,7 +714,7 @@ charset="utf-8"></script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://beaumon.github.io/books/index.html">https://beaumon.github.io/books/index.html</a>
+                    <a href="https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/">https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,7 +751,15 @@ charset="utf-8"></script>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
+                                    <span class="chip bg-color">theme主题</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">
+                                    <span class="chip bg-color">不蒜子</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -713,7 +835,7 @@ charset="utf-8"></script>
         repo: 'beaumon.github.io',
         owner: 'Beaumon',
         admin: ["Beaumon"],
-        id: '2022-08-23T10-12-05',
+        id: '2022-08-29T21-24-44',
         distractionFreeMode: false  // Facebook-like distraction free mode,
     });
 
@@ -748,34 +870,49 @@ charset="utf-8"></script>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/books/index.html">
+                <a href="/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/">
                     <div class="card-image">
                         
+                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292129016.png" class="responsive-img" alt="不蒜子统计不显示问题">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
-                        
-                        <span class="card-title">books</span>
+                        <span class="card-title">不蒜子统计不显示问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            busuanzi统计不显示的根本原因及解决办法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-29
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Beaumon
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
+                        <span class="chip bg-color">theme主题</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">
+                        <span class="chip bg-color">不蒜子</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -783,37 +920,51 @@ charset="utf-8"></script>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/books/index.html">
+                <a href="/2022/08/25/hexo-tu-pian-pei-zhi/">
                     <div class="card-image">
                         
+                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250857879.png" class="responsive-img" alt="hexo图片配置">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
-                        
-                        <span class="card-title">books</span>
+                        <span class="card-title">hexo图片配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Introduction to several methods of hexo image setup.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Beaumon
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
+                        <span class="chip bg-color">theme主题</span>
+                    </a>
+                    
+                    <a href="/tags/PicGo/">
+                        <span class="chip bg-color">PicGo</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

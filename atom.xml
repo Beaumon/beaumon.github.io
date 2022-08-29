@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-08-26T00:24:32.718Z</updated>
+  <updated>2022-08-29T13:29:49.361Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不蒜子统计不显示问题</title>
+    <link href="https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/"/>
+    <id>https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/</id>
+    <published>2022-08-29T13:24:44.000Z</published>
+    <updated>2022-08-29T13:29:49.361Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;不蒜子-busuanzi统计不显示的根本原因及解决办法&quot;&gt;&lt;a href=&quot;#不蒜子-busuanzi统计不显示的根本原因及解决办法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://beaumon.github.io/categories/Markdown/"/>
+    
+    
+    <category term="theme主题" scheme="https://beaumon.github.io/tags/theme%E4%B8%BB%E9%A2%98/"/>
+    
+    <category term="不蒜子" scheme="https://beaumon.github.io/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo图片配置</title>
