@@ -13,4 +13,10 @@
     }
 }
 
+*{
+    cursor: url("/medias/rabbit1.ico"),auto!important;
+}
+:active{
+    cursor: url("/medias/rabbit2.ico"),auto!important;
+}
 
