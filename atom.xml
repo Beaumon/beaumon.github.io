@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-08-31T11:55:16.113Z</updated>
+  <updated>2022-09-01T03:16:29.715Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>debug调试</title>
+    <link href="https://beaumon.github.io/2022/09/01/debug-diao-shi/"/>
+    <id>https://beaumon.github.io/2022/09/01/debug-diao-shi/</id>
+    <published>2022-09-01T02:27:50.000Z</published>
+    <updated>2022-09-01T03:16:29.715Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IDEA断点调试技巧&quot;&gt;&lt;a href=&quot;#IDEA断点调试技巧&quot; class=&quot;headerlink&quot; title=&quot;IDEA断点调试技巧&quot;&gt;&lt;/a&gt;IDEA断点调试技巧&lt;/h1&gt;&lt;h2 id=&quot;1-问题总结&quot;&gt;&lt;a href=&quot;#1-问题总结&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/tags/java/"/>
+    
+    <category term="debug" scheme="https://beaumon.github.io/tags/debug/"/>
+    
+  </entry>
   
   <entry>
     <title>CloudFlare-githubpages配置</title>
