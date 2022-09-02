@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="不蒜子统计不显示问题, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="busuanzi统计不显示的根本原因及解决办法">
+    <meta name="keywords" content="MonogoDB入门基础教程, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="MongoDB入门基础教程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>不蒜子统计不显示问题 | 是Beaumon的小博客鸭</title>
+    <title>MonogoDB入门基础教程 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -489,12 +489,12 @@ charset="utf-8"></script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292129016.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">不蒜子统计不显示问题</h1>
+                    <h1 class="description center-align post-title">MonogoDB入门基础教程</h1>
                 </div>
             </div>
         </div>
@@ -518,12 +518,8 @@ charset="utf-8"></script>
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
-                                <span class="chip bg-color">theme主题</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">
-                                <span class="chip bg-color">不蒜子</span>
+                            <a href="/tags/MonogoDB/">
+                                <span class="chip bg-color">MonogoDB</span>
                             </a>
                         
                     </div>
@@ -534,8 +530,8 @@ charset="utf-8"></script>
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
+                            <a href="/categories/MonogoDB/" class="post-category">
+                                MonogoDB
                             </a>
                         
                     </div>
@@ -547,28 +543,28 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-29
+                    2022-09-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-29
+                    2022-09-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    4.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    17 分
                 </div>
                 
 
@@ -591,103 +587,456 @@ charset="utf-8"></script>
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="不蒜子-busuanzi统计不显示的根本原因及解决办法"><a href="#不蒜子-busuanzi统计不显示的根本原因及解决办法" class="headerlink" title="不蒜子(busuanzi统计不显示的根本原因及解决办法)"></a>不蒜子(busuanzi统计不显示的根本原因及解决办法)</h1><h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h1><p>我使用的 Hexo 博客遇到了的 busuanzi 访问量统计不显示问题，搜索了csdn，知乎，githubstackoverflow，等等也没找到解决办法，直到我发现了大佬的文章(链接见文章末尾)。</p>
-<p>经过一番研究发现是 busuanzi 代码的一处问题和 <a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d">live2d看板娘插件</a>的一处问题凑在一起导致的。</p>
-<p>今天在写博客之前先搜了一下“busuanzi live2d”，发现搜出来一堆结果，我还以为我白研究了..结果点进去一看，第一页结果里没有一个指出了问题的根本原因，而且修复方法基本上都是删 feature 或者换组件，但实际上只要知道问题的根本原因就可以在不妨碍正常功能运作的前提下进行修复。</p>
-<h1 id="2-问题描述"><a href="#2-问题描述" class="headerlink" title="2.问题描述"></a>2.问题描述</h1><p>在一个同时启用了 busuanzi 访问量统计和 live2d 插件的 Hexo 博客里，访问或刷新博客时有大概率 busuanzi 会被隐藏。</p>
-<p>被隐藏的具体表现为，刷新的瞬间 id 为 <code>busuanzi_container_*</code> 的容器是显示的，然后容器的样式很快被设为 <code>display: none</code>。</p>
-<p>查看 F12 的 Network，busuanzi 相关请求正常返回；console 中没有报错。</p>
-<h1 id="3-问题定位"><a href="#3-问题定位" class="headerlink" title="3.问题定位"></a>3.问题定位</h1><h3 id="3-1标签对比："><a href="#3-1标签对比：" class="headerlink" title="3.1标签对比："></a>3.1标签对比：</h3><p><strong>对比发现出现了多余的style=”display: none”;</strong></p>
-<blockquote>
-<p>正常时</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">&lt;span id="busuanzi_container_site_pv"&gt;
-    |&amp;nbsp;&lt;i class="far fa-eye"&gt;&lt;/i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id="busuanzi_value_site_pv"
-        class="white-color"&gt;&lt;/span&gt;&amp;nbsp;次
-    &lt;/span&gt;
-&lt;span id="busuanzi_container_site_uv"&gt;
-    |&amp;nbsp;&lt;i class="fas fa-users"&gt;&lt;/i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id="busuanzi_value_site_uv"
-        class="white-color"&gt;&lt;/span&gt;&amp;nbsp;人
-    &lt;/span&gt;
-&lt;/span&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="MongoDB入门基础教程"><a href="#MongoDB入门基础教程" class="headerlink" title="MongoDB入门基础教程"></a>MongoDB入门基础教程</h1><p>本文主要围绕 MongoDB 的使用，从环境配置、数据库使用，再到客户端工具选用，做了简单的介绍，可能有的地方总结的不到位，还望指正。</p>
+<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h2><p>在介绍 MongoDB 之前，我先介绍一下业务开发的时候遇到的痛点，以便大家对它有一个更加清晰的认识！</p>
+<p>最近在用数据库存储数据的时候发现这么一个坑，例如从消息队列中监听消息的时候，原来的做法是将监听的消息json数据存储在数据库，以便好对异常消息数据进行追溯，消息内容使用<code>text</code>类型存储，起初因为数据内容很短，没啥毛病，但是当随着业务的扩展，收到的消息内容越来越长，最后发现数据库中的<code>text</code>字段类型无法很好的支持查询，于是在这个时候，就开始考虑采用更加合适的数据库来存储这种消息数据！在经过一番讨论之后，对于这种 json 类型的消息数据的存储，大家一致认为采用 MongoDB 是最佳的选择！</p>
+<p>据官方介绍，MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的一款高性能的 NoSQL 数据库。</p>
+<p>MongoDB 将数据存储为一个文档，数据结构由键值(<code>key=&gt;value</code>)对组成。其中的文档类似于 JSON 对象。字段值可以包含其他文档、数组及文档数组，数据结构的支持非常灵活！的确，在使用的过程当中，正如所介绍的，数据的存储和查询，性能极快，而且很好的满足我们的需求！</p>
+<p>话不多说，下面我们就一起来了解一下，这款数据库应该如何使用！</p>
+<h2 id="2-环境配置"><a href="#2-环境配置" class="headerlink" title="2.环境配置"></a>2.环境配置</h2><p>在学习它之前，我们需要先搭建好环境，MongoDB 的安装也非常简单！</p>
+<h3 id="2-1、Windows-平台"><a href="#2-1、Windows-平台" class="headerlink" title="2.1、Windows 平台"></a>2.1、Windows 平台</h3><p>如果你是 Windows 平台，MongoDB 提供了可用于 32 位和 64 位系统的预编译二进制，安装基本是傻瓜式的操作，登录 MongoDB 官网并且下载安装包，然后一步一步的操作即可！</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209021039727.jpeg" alt="img"></p>
+<h3 id="2-2、Linux-平台"><a href="#2-2、Linux-平台" class="headerlink" title="2.2、Linux 平台"></a>2.2、Linux 平台</h3><p>生产环境基本都是 Linux 平台，为了和生产保持一致，小编采用的服务器是<code>CentOS7</code>，安装过程也比较简单！</p>
+<ul>
+<li>创建资源文件</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">sudo vim /etc/yum.repos.d/mongodb-org-4.0.repo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<blockquote>
-<p>异常时</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">&lt;span id="busuanzi_container_site_pv" style="display: none;"&gt;
-    |&amp;nbsp;&lt;i class="far fa-eye"&gt;&lt;/i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id="busuanzi_value_site_pv" 
-        class="white-color"&gt;2303950&lt;/span&gt;&amp;nbsp;次
-&lt;/span&gt;
-&lt;span id="busuanzi_container_site_uv" style="display: none;"&gt;
-    |&amp;nbsp;&lt;i class="fas fa-users"&gt;&lt;/i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id="busuanzi_value_site_uv" 
-        class="white-color"&gt;160644&lt;/span&gt;&amp;nbsp;人
-&lt;/span&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>编辑内容如下</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">[mongodb-org-4.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-2查看display-none的定位"><a href="#3-2查看display-none的定位" class="headerlink" title="3.2查看display: none的定位"></a><strong>3.2查看display: none的定位</strong></h3><p>查看 <a target="_blank" rel="noopener" href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">busuanzi.pure.mini.js</a>，发现 <code>display: none</code> 在 <code>hides</code> 函数中被设置：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function-variable function">hides</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> b <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span> <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    b <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>运行以下命令安装 mongodb</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">sudo yum install -y mongodb-org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>而 hides 函数仅在一处被调用：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">try</span> <span class="token punctuation">{</span>
-  <span class="token function">a</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span> scriptTag<span class="token punctuation">.</span>parentElement<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  bszTag<span class="token punctuation">.</span><span class="token function">hides</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>安装完成之后，配置<code>mongod.conf</code>允许远程连接</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">#编辑mongod.conf
+vim /etc/mongod.conf
+#将net:bindIp: 127.0.0.1 改为 0.0.0.0
+net:
+   bindIp:0.0.0.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>所以是在 <code>a(b), scriptTag.parentElement.removeChild(scriptTag)</code> 抛出异常时容器被隐藏。</p>
-<h3 id="3-3异常原因的定位"><a href="#3-3异常原因的定位" class="headerlink" title="3.3异常原因的定位"></a>3.3异常原因的定位</h3><p>由于在其它地方的 busuanzi 不会出现这一问题，而问题的原因还完全不清楚，为了尽可能还原原始环境以复现问题，我选择了使用 <a target="_blank" rel="noopener" href="https://addons.mozilla.org/zh-CN/firefox/addon/header-editor/">Firefox 的 Header Editor 插件</a> 直接在原博客进行测试。具体来说，就是在本地复制一份 busuanzi 的代码，然后跑一个 http server，在 Header Editor 里把 busuanzi 代码的请求重定向到本地的 http server。</p>
-<p>首先，在 <code>catch</code> 中添加 <code>console.error(c)</code>，得到错误内容 <code>TypeError: scriptTag.parentElement is null</code>。</p>
-<p>查看代码中 <code>scriptTag</code> 相关的部分：</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">scriptTag = document.createElement("SCRIPT"), scriptTag.type = "text/javascript", scriptTag.defer = !0, scriptTag.src = a, scriptTag.referrerPolicy = "no-referrer-when-downgrade", document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>最后启动服务</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">#开启服务
+systemctl start mongod
+#关闭服务
+systemctl stop mongod
+#重启服务
+systemctl restart mongod
+#开机自启
+systemctl enable mongod<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>所以，再在 <code>catch</code> 中添加 <code>s = document.querySelector("[src*=BusuanziCallback]"); console.log(s.parentElement);</code>，发现 <code>s.parentElement</code> 不是 <code>null</code>。</p>
-<p>再添加 <code>console.log(s === scriptTag)</code>，发现结果是 <code>s</code> 和 <code>scriptTag</code> 不同，所以原因在于此时的 <code>scriptTag</code> 变量已经不指向 DOM 中的这个元素了。</p>
-<h3 id="3-4定位到-live2d-插件"><a href="#3-4定位到-live2d-插件" class="headerlink" title="3.4定位到 live2d 插件"></a>3.4定位到 live2d 插件</h3><p>此时我原本是没有任何头绪的，但我发现，并不是每次刷新页面都会触发这一问题，所以没有触发问题时和触发问题时的差别就成了问题的突破口。</p>
-<p>经过多次刷新，我发现，有一串 console 输出，在出现问题时总位于我在 <code>catch</code> 中添加的调试信息之前，而在没出现问题时则位于调试信息之后：</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">Live2D 2.1.00_1 live2d.core.js:5925:16
-profile : Desktop live2d.core.js:5913:16
-  [PROFILE_NAME] = Desktop live2d.core.js:5918:20
-  [USE_ADJUST_TRANSLATION] = false live2d.core.js:5918:20
-  [USE_CACHED_POLYGON_IMAGE] = false live2d.core.js:5918:20
-  [EXPAND_W] = 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>至此，环境配置已经完成！</p>
+<h2 id="3-数据库操作"><a href="#3-数据库操作" class="headerlink" title="3.数据库操作"></a>3.数据库操作</h2><p>MongoDB 的数据操作，是开发人员接触最频繁的部分，第一次使用的时候，你会发现它和我们传统使用的 sql 脚本命令完全不同，但是又类似，下面我们就一起来深入的了解下！</p>
+<h3 id="3-1进入-MongoDB"><a href="#3-1进入-MongoDB" class="headerlink" title="3.1进入 MongoDB"></a>3.1进入 MongoDB</h3><p>进入 MongoDB 服务很简单，输入如下命令即可进入！</p>
+<pre class="line-numbers language-none"><code class="language-none">mongo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>多亏了 live2d 的这串输出，我得以将问题定位到 live2d 插件上。</p>
-<p>实际上，如果没有这些 console 输出，也可以通过 <code>&lt;head&gt;</code> 中 <code>L2Dwidget.0.min.js</code> 和 <code>busuanzi?jsonpCallback=BusuanziCallback</code> 两个 <code>&lt;script&gt;</code> 的相对位置发现问题，只不过这样的话就更隐蔽更难发现了。</p>
-<h3 id="3-5在-live2d-插件中定位问题"><a href="#3-5在-live2d-插件中定位问题" class="headerlink" title="3.5在 live2d 插件中定位问题"></a>3.5在 live2d 插件中定位问题</h3><p>在 <code>L2Dwidget.min.js</code> 的第一行有源码地址以及时间：<code>/*! https://github.com/xiazeyu/live2d-widget.js built@2019-4-6 09:38:17 */</code></p>
-<p>因为注释中给出的时间不是最新版本，先查看 git log 并 checkout 到相应时间的版本。</p>
-<p>既然问题在于 <code>&lt;script&gt;</code> 元素被重新创建而导致原变量不指向 DOM 中元素，就在代码中 grep <code>head</code>，然后发现 <a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget.js/blob/fa8f2d831a1a9e96cd85bd1ef593a3336aeac720/src/dialog/index.js#L4-L38">问题代码</a>：<code>document.head.innerHTML += ……</code></p>
-<p>至此，问题原因已发现，就是 live2d 插件通过修改 <code>document.head.innerHTML</code> 来添加样式，导致 busuanzi 的 <code>scriptTag</code> 变量指向的不再是 DOM 中的 <code>&lt;script&gt;</code> 元素。</p>
-<p>实际上，live2d 插件的这一问题 <a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget.js/pull/61">已经修复</a>，但需要使用新版才行。</p>
-<h3 id="3-6解决方法"><a href="#3-6解决方法" class="headerlink" title="3.6解决方法"></a>3.6解决方法</h3><h4 id="3-6-1修改-busuanzi-的解决方法"><a href="#3-6-1修改-busuanzi-的解决方法" class="headerlink" title="3.6.1修改 busuanzi 的解决方法"></a>3.6.1修改 busuanzi 的解决方法</h4><p>因为 busuanzi 的代码较短，而且本来就是用的外部的代码，改起来比较容易。</p>
-<p>把 <code>scriptTag.parentElement.removeChild(scriptTag)</code> 修改为 <code>s=document.querySelector('[src*=BusuanziCallback]'),s.parentElement.removeChild(s)</code> 即可。可以把修改后的静态文件放在博客里，然后修改 busuanzi <code>&lt;script&gt;</code> 的 <code>src</code>。</p>
-<blockquote>
-<p>相关代码</p>
-<p>busuanzi.js的位置为\themes\hexo-theme-matery\source\libs\others\busuanzi.pure.mini.js</p>
-<p>修改后的 busuanzi 代码（还在 catch 里加了个 console.error）：</p>
-<pre class="line-numbers language-none"><code class="language-none">var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a||"interactive"===document.readyState||"complete"===document.readyState?c.call(document):b.push(function(){return c.call(this)}),this},d=function(){for(var a=0,c=b.length;c&gt;a;a++)b[a].apply(document);b=[]},e=function(){a||(a=!0,d.call(window),document.removeEventListener?document.removeEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.detachEvent("onreadystatechange",e),window==window.top&amp;&amp;(clearInterval(c),c=null)))},document.addEventListener?document.addEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.attachEvent("onreadystatechange",function(){/loaded|complete/.test(document.readyState)&amp;&amp;e()}),window==window.top&amp;&amp;(c=setInterval(function(){try{a||document.documentElement.doScroll("left")}catch(b){return}e()},5)))}(),bszCaller={fetch:function(a,b){var c="BusuanziCallback_"+Math.floor(1099511627776*Math.random());window[c]=this.evalCall(b),a=a.replace("=BusuanziCallback","="+c),scriptTag=document.createElement("SCRIPT"),scriptTag.type="text/javascript",scriptTag.defer=!0,scriptTag.src=a,scriptTag.referrerPolicy="no-referrer-when-downgrade",document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)},evalCall:function(a){return function(b){ready(function(){try{a(b),s=document.querySelector('[src*=BusuanziCallback]'),s.parentElement.removeChild(s)}catch(c){console.error(c),bszTag.hides()}})}}},bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",function(a){bszTag.texts(a),bszTag.shows()}),bszTag={bszs:["site_pv","page_pv","site_uv"],texts:function(a){this.bszs.map(function(b){var c=document.getElementById("busuanzi_value_"+b);c&amp;&amp;(c.innerHTML=a[b])})},hides:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="none")})},shows:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="inline")})}};<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>例如，在<code>CentOS</code>里面输入命令之后，进入的服务界面如下：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209021039639.jpeg" alt="img"></p>
+<h3 id="3-2创建数据库"><a href="#3-2创建数据库" class="headerlink" title="3.2创建数据库"></a>3.2创建数据库</h3><p>MongoDB 创建数据库的语法格式如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">use DATABASE_NAME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>然后找到</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;script async="async" src="&lt;%- theme.jsDelivr.url %&gt;&lt;%-url_for(theme.libs.js.busuanzi) %&gt;"&gt;&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>如果数据库不存在，则创建数据库，否则切换到指定数据库</strong>。</p>
+<p>输入如下命令，可以查询数据库列表</p>
+<pre class="line-numbers language-none"><code class="language-none">#查询数据库列表
+show dbs
+#命令输出结果：
+admin
+config
+local<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>如果和我的一样就不需要修改，这也是主题默认的。成功解决</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292129016.png" alt="image-20220829212911099"></p>
-<p>网上搜到的很多解决办法是把 <code>id="busuanzi_container_*"</code> 删掉，这样当然就不会被隐藏了，只不过这个隐藏本意是在出错时不把错误或者无意义的内容显示给访客，保留这一行为还是挺好的。</p>
-<h4 id="3-6-2修改-live2d-的解决方法"><a href="#3-6-2修改-live2d-的解决方法" class="headerlink" title="3.6.2修改 live2d 的解决方法"></a>3.6.2修改 live2d 的解决方法</h4><p>总之，就是把 <code>innerHTML +=</code> 换成 <code>createElement</code> 和 <code>appendChild</code>，按 <a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget.js/pull/61/files#diff-61426849230d9976d234f7c4ca195c623d9bb05a91d76b7ae51501e394f81860L10-R43">xiazeyu/live2d-widget.js#61</a> 改就行。</p>
-<p>live2d 的代码还是挺长的，直接修改 minify 后的代码不太好。如果是 hexo 插件的话，要修改应该也蛮麻烦的。总之，如果你知道怎么改比较好的话可以改，不然的话还是推荐改 busuanzi。</p>
-<h1 id="4-问题启示"><a href="#4-问题启示" class="headerlink" title="4.问题启示"></a>4.问题启示</h1><h2 id="4-1不要修改原-DOM-中的-innerHTML"><a href="#4-1不要修改原-DOM-中的-innerHTML" class="headerlink" title="4.1不要修改原 DOM 中的 innerHTML"></a>4.1不要修改原 DOM 中的 innerHTML</h2><p>直接修改 DOM 元素的 innerHTML 会让其中的元素都重新渲染（加载？创建？），不仅指向其中元素的变量会失效，也可能导致画面闪烁等问题（例如导致 live2d-widget 修复这一问题的不是 busuanzi 失效而是 <a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d/issues/149">CSS 闪烁</a>）。</p>
-<p>所以，如果是添加 DOM 元素，应当避免修改 <code>innerHTML</code>，而应当使用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"><code>document.createElement</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"><code>Node.appendChild()</code></a> 以及 <code>removeChild</code>、<code>replaceChild</code>、<code>insertBefore</code> 等 API。</p>
-<h2 id="4-2不要依赖于指向-DOM-元素的变量长时间不改变"><a href="#4-2不要依赖于指向-DOM-元素的变量长时间不改变" class="headerlink" title="4.2不要依赖于指向 DOM 元素的变量长时间不改变"></a>4.2不要依赖于指向 DOM 元素的变量长时间不改变</h2><p>如果 DOM 因各种原因部分重建，指向 DOM 元素的变量很可能不再指向当前 DOM 中的元素。所以，最好不要在过了一段时间后（例如在 callback 中）再次使用指向 DOM 元素的变量，而应当再次获取这一元素。</p>
-<h2 id="4-3不要-silently-fail"><a href="#4-3不要-silently-fail" class="headerlink" title="4.3不要 silently fail"></a>4.3不要 silently fail</h2><p>在处理异常，尤其是未知的异常时，即使不 throw 出去，也最好用 <code>console.error</code> 等方法记录下来。记录在 console 中的错误信息并不会显示给普通用户，但可以给寻找问题所在的用户提供宝贵的提示信息。</p>
-<h2 id="4-4使用-Header-Editor-在对原环境最小修改的情况下进行调试"><a href="#4-4使用-Header-Editor-在对原环境最小修改的情况下进行调试" class="headerlink" title="4.4使用 Header Editor 在对原环境最小修改的情况下进行调试"></a>4.4使用 Header Editor 在对原环境最小修改的情况下进行调试</h2><p>这次使用 Header Editor 调试还是我临时想到的（知道有这么个插件还是以前用 <a target="_blank" rel="noopener" href="https://github.com/EndlessCheng/mahjong-helper">mahjong-helper</a>，当然现在已经没在用了）。一开始还用 pastebin 上传代码，效率极低，后来才想起来本地跑个 http server 就可以了..用这个插件来调试还是挺方便的。</p>
-<h2 id="4-5留心依赖版本"><a href="#4-5留心依赖版本" class="headerlink" title="4.5留心依赖版本"></a>4.5留心依赖版本</h2><p>一开始我还在 GitHub 上搜到一个 <a target="_blank" rel="noopener" href="https://github.com/JoeyBling/busuanzi.pure.js">busuanzi.pure.js</a>，调了一会儿才发现这个代码和 <a target="_blank" rel="noopener" href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js</a> 不一样..</p>
-<p>live2d 的版本也要注意开头包含时间的注释，因为最新版本已经把问题修复了。</p>
-<p>本文是参考大佬的博客</p>
-<p>原文连接:<a target="_blank" rel="noopener" href="https://ouuan.moe/post/2022/08/busuanzi-and-live2d">https://ouuan.moe/post/2022/08/busuanzi-and-live2d</a></p>
+<p>可以看到，当前 MongoDB 有三个数据库！</p>
+<p>输入如下命令，可以切换到<code>admin</code>数据库</p>
+<pre class="line-numbers language-none"><code class="language-none">use admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>输入<code>db</code>命令，还可以查询当前数据库</p>
+<pre class="line-numbers language-none"><code class="language-none">db<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="3-3创建用户"><a href="#3-3创建用户" class="headerlink" title="3.3创建用户"></a>3.3创建用户</h3><p>默认的情况下，是没有用户的，也无法操作数据库，因此我们需要创建一个用户，同时给他分配权限！</p>
+<h4 id="3-3-1、创建一个管理员用户"><a href="#3-3-1、创建一个管理员用户" class="headerlink" title="3.3.1、创建一个管理员用户"></a>3.3.1、创建一个管理员用户</h4><p>创建一个用户、密码都是<code>admin</code>的用户，同时给这个用户分配<code>userAdminAnyDatabase</code>角色，指定的数据库为<code>admin</code>！</p>
+<pre class="line-numbers language-none"><code class="language-none">#创建一个admin用户
+db.createUser(
+{
+  user: "admin",
+  pwd: "admin",
+  roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中字段含义如下：</p>
+<ul>
+<li>user：用户的名字；</li>
+<li>pwd：用户的密码；</li>
+<li>roles：指定用户的角色，可以用一个空数组给新用户设定空角色。</li>
+<li>roles 中的 role：指定角色。</li>
+<li>roles 中的 db：指定的数据库，例如上面中的角色<code>userAdminAnyDatabase</code>，只在 admin 数据库中可用。</li>
+</ul>
+<p>角色在 MongoDB 中，<strong>代表着某个用户是否有权限访问数据库或者操作数据库</strong>，理解这点非常重要！</p>
+<p>MongoDB 角色定义如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">角色类型</th>
+<th align="center">名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">admin数据库角色</td>
+<td align="center">readAnyDatabase</td>
+<td align="center">只在admin数据库中可用，赋予用户所有数据库的读权限</td>
+</tr>
+<tr>
+<td align="center">admin数据库角色</td>
+<td align="center">readWriteAnyDatabase</td>
+<td align="center">只在admin数据库中可用，赋予用户所有数据库的读写权限</td>
+</tr>
+<tr>
+<td align="center">admin数据库角色</td>
+<td align="center">userAdminAnyDatabase</td>
+<td align="center">只在admin数据库中可用，赋予用户所有数据库的userAdmin权限</td>
+</tr>
+<tr>
+<td align="center">admin数据库角色</td>
+<td align="center">dbAdminAnyDatabase</td>
+<td align="center">只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限</td>
+</tr>
+<tr>
+<td align="center">admin数据库角色</td>
+<td align="center">clusterAdmin</td>
+<td align="center">只在admin数据库中可用，赋予用户所有分片和复制集相关函数的管理权限</td>
+</tr>
+<tr>
+<td align="center">admin数据库角色</td>
+<td align="center">root</td>
+<td align="center">只在admin数据库中可用，超级账号，超级权限</td>
+</tr>
+<tr>
+<td align="center">数据库管理角色</td>
+<td align="center">dbAdmin</td>
+<td align="center">允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile</td>
+</tr>
+<tr>
+<td align="center">数据库管理角色</td>
+<td align="center">userAdmin</td>
+<td align="center">允许用户向system.users集合写入，可以在指定数据库里创建、删除和管理用户</td>
+</tr>
+<tr>
+<td align="center">数据库用户角色</td>
+<td align="center">read</td>
+<td align="center">允许用户读取指定数据库</td>
+</tr>
+<tr>
+<td align="center">数据库用户角色</td>
+<td align="center">readWrite</td>
+<td align="center">允许用户读写指定数据库</td>
+</tr>
+</tbody></table>
+<h4 id="3-3-2创建一个不受访问限制的超级用户"><a href="#3-3-2创建一个不受访问限制的超级用户" class="headerlink" title="3.3.2创建一个不受访问限制的超级用户"></a>3.3.2创建一个不受访问限制的超级用户</h4><p>如果你想创建一个不受访问限制的超级用户，赋予<code>root</code>角色即可！</p>
+<pre class="line-numbers language-none"><code class="language-none">#创建超级用户
+db.createUser(
+    {
+        user:"root",
+        pwd:"root",
+        roles:["root"]
+    }
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-3-3创建一个业务数据库普通用户"><a href="#3-3-3创建一个业务数据库普通用户" class="headerlink" title="3.3.3创建一个业务数据库普通用户"></a>3.3.3创建一个业务数据库普通用户</h4><p>如果你想创建一个业务数据库普通用户，例如只能访问<code>test_db</code>数据库，并且只负责数据的増查改删。</p>
+<pre class="line-numbers language-none"><code class="language-none"># 创建或者切换数据库到test_db
+use test_db
+
+# 创建一个test用户，并且只能访问test_db，对表只有读写权限
+db.createUser(
+{
+  user: "test",
+  pwd: "test",
+  roles: [ { role: "readWrite", db: "test_db" } ]
+})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-3-4验证用户是否可以正常登录"><a href="#3-3-4验证用户是否可以正常登录" class="headerlink" title="3.3.4验证用户是否可以正常登录"></a>3.3.4验证用户是否可以正常登录</h4><p>对于刚刚创建的用户，我们怎么验证它是否能正常登录呢？命令也很简单！</p>
+<pre class="line-numbers language-none"><code class="language-none">db.auth("test","test")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果返回是<code>1</code>表示鉴权正常！</p>
+<h4 id="3-3-5查询当前数据库用户信息"><a href="#3-3-5查询当前数据库用户信息" class="headerlink" title="3.3.5查询当前数据库用户信息"></a>3.3.5查询当前数据库用户信息</h4><p>查询创建的用户，命令也很简单！</p>
+<pre class="line-numbers language-none"><code class="language-none"># 查看创建的用户
+show users<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="3-3-6修改用户密码"><a href="#3-3-6修改用户密码" class="headerlink" title="3.3.6修改用户密码"></a>3.3.6修改用户密码</h4><p>有些时候，我们会忘记密码，可通过如下方式进行修改！</p>
+<pre class="line-numbers language-none"><code class="language-none">#修改用户密码
+db.changeUserPassword("username", "xxxxx")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="3-3-7删除用户"><a href="#3-3-7删除用户" class="headerlink" title="3.3.7删除用户"></a>3.3.7删除用户</h4><p>如果某个用户需要停用，可通过如下方式进行删除</p>
+<pre class="line-numbers language-none"><code class="language-none">#切换指定数据库
+use test_db
+#删除用户
+db.dropUser('test')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-3-8删除数据库"><a href="#3-3-8删除数据库" class="headerlink" title="3.3.8删除数据库"></a>3.3.8删除数据库</h4><p>如果某个数据库需要停用，可通过如下方式进行删除（只有超级管理员有权限删除）</p>
+<pre class="line-numbers language-none"><code class="language-none">#切换指定数据库
+use test_db
+#删除数据库
+db.dropDatabase()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-4创建集合"><a href="#3-4创建集合" class="headerlink" title="3.4创建集合"></a>3.4创建集合</h3><p>MongoDB 并无<strong>表</strong>这个概念，而对应的定义叫：<strong>集合</strong>，我们在关系型数据库中看到的<strong>表数据</strong>，在 MongoDB 中被定义为：<strong>文档</strong>，MongoDB 也被很多人成为<strong>文档数据库</strong>！</p>
+<p>在关系型数据库中，表数据是一行一行的存储，但是在 MongoDB 中，可能不是这样，如果你存储的 json 非常复杂，嵌套很深，那么在 MongoDB 中存储的行数，可能非常深，存储的时候类似我们在页面看到的父子表结构！</p>
+<h4 id="3-4-1创建一个集合"><a href="#3-4-1创建一个集合" class="headerlink" title="3.4.1创建一个集合"></a>3.4.1创建一个集合</h4><p>MongoDB 中使用 createCollection() 方法来创建集合。</p>
+<p>语法格式：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.createCollection(name, options)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>参数说明：</p>
+<ul>
+<li>name: 要创建的集合名称</li>
+<li>options: 可选参数, 指定有关内存大小及索引的选项</li>
+</ul>
+<p>例如，在 test_db 数据库中创建 tb_user 集合：</p>
+<pre class="line-numbers language-none"><code class="language-none"># 切换到test_db数据库
+use test_db
+# 创建 tb_user 集合
+db.createCollection("tb_user")
+#输出结果
+{ "ok" : 1 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果要查看已有的集合，可以使用<code>show collections</code>命令！</p>
+<pre class="line-numbers language-none"><code class="language-none">show collections<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>下面是带有几个关键参数的<code>createCollection()</code>的用法，下面命令表示：创建固定集合<code>tb_user</code>，整个集合空间大小<code>6142800</code>KB, 文档最大个数为<code>10000</code> 个</p>
+<pre class="line-numbers language-none"><code class="language-none">db.createCollection("tb_user", { capped : true, autoIndexId : true, size : 6142800, max : 10000 } )<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 MongoDB 中，很多时候不需要手动创建集合。当你插入一个文档时，MongoDB 会自动创建集合！</p>
+<pre class="line-numbers language-none"><code class="language-none"># 向集合tb_user 插入一条文档数据
+db.tb_user.insert({"name" : "张三"})
+#查询集合
+show collections
+# 输出结果
+tb_user<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-4-2删除一个集合"><a href="#3-4-2删除一个集合" class="headerlink" title="3.4.2删除一个集合"></a>3.4.2删除一个集合</h4><p>MongoDB 中使用 drop() 方法来删除集合。</p>
+<p>语法格式：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.collection.drop()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>例如，删除在 test_db 数据库中 tb_user 集合：</p>
+<pre class="line-numbers language-none"><code class="language-none"># 切换到test_db数据库
+use test_db
+# 创建 tb_user 集合
+db.tb_user.drop()
+#输出结果
+true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-5、创建文档"><a href="#3-5、创建文档" class="headerlink" title="3.5、创建文档"></a>3.5、创建文档</h3><p>创建文档，类似我们在关系型数据库中，将数据插入到数据库，操作也很简单！</p>
+<h4 id="3-5-1插入文档"><a href="#3-5-1插入文档" class="headerlink" title="3.5.1插入文档"></a>3.5.1插入文档</h4><p>MongoDB 使用 <code>insert()</code> 或 <code>save()</code> 方法向集合中插入文档。</p>
+<p>语法如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.COLLECTION_NAME.insert(document)
+或
+db.COLLECTION_NAME.save(document)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><code>save()</code>：如果<code>_id</code>主键存在则更新数据，如果不存在就插入数据。</li>
+<li><code>insert()</code>：若插入的数据主键已经存在，则会抛异常，提示主键重复，不保存当前数据。</li>
+</ul>
+<p>例如，在<code>test_db</code>数据库的<code>tb_user</code>集合中，插入一条数据</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.insert(
+{
+    name:"张三",
+    age:18,
+    gender:"男",
+    tags: ['宅男', '技术控', '脱发严重']
+})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果该集合不在该数据库中， MongoDB 会自动创建该集合并插入文档。</p>
+<p>查看已插入文档，命令如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">#查询tb_user集合中的数据
+db.tb_user.find()
+# 输出结果
+{ "_id" : ObjectId("6022310f6b5e964b0a5916e6"), "name" : "张三", "age" : 18, "gender" : "男", "tags" : [ "宅男", "技术控", "脱发严重" ] }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当然，你还可以通过<code>save()</code>命令进行插入，如果不指定<code>_id</code>字段 <code>save()</code> 方法类似于 <code>insert()</code> 方法。如果指定 <code>_id</code> 字段，则会更新该 <code>_id</code> 的数据。</p>
+<p>例如，将<code>张三</code>年龄更新到<code>30</code>岁！</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.save(
+{
+    _id: ObjectId("6022310f6b5e964b0a5916e6"),
+    name:"张三",
+    age:30,
+    gender:"男",
+    tags: ['宅男', '技术控', '脱发严重']
+})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>查看文档</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.find()
+# 输出结果
+{ "_id" : ObjectId("6022310f6b5e964b0a5916e6"), "name" : "张三", "age" : 30, "gender" : "男", "tags" : [ "宅男", "技术控", "脱发严重" ] }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-5-2更新文档"><a href="#3-5-2更新文档" class="headerlink" title="3.5.2更新文档"></a>3.5.2更新文档</h4><p>MongoDB 提供了 <code>update()</code> 和 <code>save()</code> 方法来更新集合中的文档。</p>
+<p>语法格式如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.collection.update(
+   &lt;query&gt;,
+   &lt;update&gt;,
+   {
+     upsert: &lt;boolean&gt;,
+     multi: &lt;boolean&gt;,
+     writeConcern: &lt;document&gt;
+   }
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>query : update的查询条件，类似sql update查询内where后面的。</li>
+<li>update : update的对象和一些更新的操作符（如inc…）等，也可以理解为sql update查询内set后面的</li>
+<li>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入</li>
+<li>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
+<li>writeConcern :可选，抛出异常的级别。</li>
+</ul>
+<p>例如，将<code>张三</code>年龄更新到<code>22</code>岁！</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.update({'name':'张三'},{$set:{'age':22}})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>查询已更新的数据</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.find()
+
+# 输出结果
+{ "_id" : ObjectId("602235216b5e964b0a5916e8"), "name" : "张三", "age" : 22, "gender" : "男", "tags" : [ "宅男", "技术控", "脱发严重" ] }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上语句只会修改第一条发现的文档，如果你要修改多条相同的文档，则需要设置<code>multi</code>参数为<code>true</code>。</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.update({'name':'张三'},{$set:{'age':22}},{multi:true})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="3-5-3删除文档"><a href="#3-5-3删除文档" class="headerlink" title="3.5.3删除文档"></a>3.5.3删除文档</h4><p>MongoDB 中的<code>remove()</code>函数是用来移除集合中的数据</p>
+<p>语法格式如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.collection.remove(
+   &lt;query&gt;,
+   {
+     justOne: &lt;boolean&gt;,
+     writeConcern: &lt;document&gt;
+   }
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>query :（可选）删除的文档的条件。</li>
+<li>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。</li>
+<li>writeConcern :（可选）抛出异常的级别。</li>
+</ul>
+<p>例如，删除姓名为<code>张三</code>的用户</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.remove({'name':'张三'})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>查询数据是否被删除</p>
+<pre class="line-numbers language-none"><code class="language-none">db.col.find()
+#结果为空<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="3-5-4查询文档"><a href="#3-5-4查询文档" class="headerlink" title="3.5.4查询文档"></a>3.5.4查询文档</h4><p>MongoDB 查询文档使用 find() 方法。</p>
+<p>语法格式如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.collection.find(query, projection)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>query ：可选，使用查询操作符指定查询条件</li>
+<li>projection ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li>
+</ul>
+<p>如果你需要以易读的方式来读取数据，可以使用 pretty() 方法，语法格式如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.col.find().pretty()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>首先我们插入几条数据，插入结果如下：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209021039417.jpeg" alt="img"></p>
+<p>例如，查询一个性别为<code>男</code>的用户信息</p>
+<pre class="line-numbers language-none"><code class="language-none">#单个条件查询，类似 sql语句中的 gender = '男'
+db.tb_user.find({"gender":"男"})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>查询一个性别为<code>男</code>，姓名为<code>张三</code>的用户</p>
+<pre class="line-numbers language-none"><code class="language-none">#多条件查询，类似 sql语句中的 gender = '男' and name = '李四'
+db.tb_user.find({"gender":"男","name":"李四"})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>查询一个性别为<code>男</code> 或者 姓名为<code>张三</code>的用户</p>
+<pre class="line-numbers language-none"><code class="language-none">#多条件查询，类似 sql语句中的 gender = '男' or name = '李四'
+db.tb_user.find({$or:[{"gender":"男"},{"name": "李四"}]})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>查询一个性别为<code>男</code> 或者 姓名为<code>张三</code>，同时年龄大于<code>30</code>的用户</p>
+<pre class="line-numbers language-none"><code class="language-none">#多条件查询，类似 sql语句中的 age &gt; 30 and ( gender = '男' or name = '李四')
+db.tb_user.find({"age": {$gt:30}, $or:[{"gender":"男"},{"name": "李四"}]})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="3-4-5分页查询文档"><a href="#3-4-5分页查询文档" class="headerlink" title="3.4.5分页查询文档"></a>3.4.5分页查询文档</h4><p>如果需要分页查询集合数据，可以使用<code>limit()</code>和<code>skip()</code>函数，其中<code>limit()</code>表示读几条数据，<code>skip()</code>表示从第几条数据开始。</p>
+<pre class="line-numbers language-none"><code class="language-none">#从集合中的第三行数据开始，读2条数据返回
+db.tb_user.find({}).limit(2).skip(3)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="3-5-6文档排序"><a href="#3-5-6文档排序" class="headerlink" title="3.5.6文档排序"></a>3.5.6文档排序</h4><p>和关系型数据库一样，MongoDB 可以使用<code>sort()</code>方法进行排序，通过参数指定排序的字段，并使用 <code>1</code> 和 <code>-1</code> 来指定排序的方式，其中 <code>1</code> 为升序排列，而 <code>-1</code> 是用于降序排列。</p>
+<p>例如，查询<code>tb_user</code>文档，按照<code>age</code>进行升序排序！</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.find({}).sort({"age":1})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="3-6创建索引"><a href="#3-6创建索引" class="headerlink" title="3.6创建索引"></a>3.6创建索引</h3><p>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB 在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。</p>
+<p>这种扫描全集合的查询效率是非常低的，特别在处理大量的数据时，查询可以要花费几十秒甚至几分钟，这对网站的性能是非常致命的。</p>
+<h4 id="3-6-1创建索引"><a href="#3-6-1创建索引" class="headerlink" title="3.6.1创建索引"></a>3.6.1创建索引</h4><p>MongoDB 使用 <code>createIndex()</code> 方法来创建索引，语法格式如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.collection.createIndex(keys, options)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>语法中 Key 值为你要创建的索引字段，<code>1</code> 为指定按升序创建索引，如果你想按降序来创建索引指定为 <code>-1</code> 即可！</p>
+<p>例如，给<code>tb_user</code>文档中的<code>age</code>创建一个索引！</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.createIndex({"age":1})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>创建索引是一个比较耗时的动作，我们还可以通过参数配置，在后台创建索引。</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.createIndex({"age":1}, {background: true})<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>通过在创建索引时加<code>background:true</code>的选项，让创建工作在后台执行！</p>
+<h4 id="3-6-2查看索引"><a href="#3-6-2查看索引" class="headerlink" title="3.6.2查看索引"></a>3.6.2查看索引</h4><p>MongoDB 提供了<code>getIndexes()</code>方法，可以进行查看索引。</p>
+<p>例如，查询<code>tb_user</code>集合中的索引</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.getIndexes()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="3-6-3删除索引"><a href="#3-6-3删除索引" class="headerlink" title="3.6.3删除索引"></a>3.6.3删除索引</h4><p>不在需要的索引，我们可以将其删除。删除索引时，可以删除集合中的某一索引，可以删除全部索引。</p>
+<p>语法格式：</p>
+<pre class="line-numbers language-none"><code class="language-none">db.COLLECTION_NAME.dropIndex("INDEX-NAME")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>例如，删除集合<code>tb_user</code>集合中的<code>age</code>索引：</p>
+<pre class="line-numbers language-none"><code class="language-none">#查询索引
+db.tb_user.getIndexes()
+#输出结果
+[
+    {
+        "v" : 2,
+        "key" : {
+            "_id" : 1
+        },
+        "name" : "_id_",
+        "ns" : "test_db.tb_user"
+    },
+    {
+        "v" : 2,
+        "key" : {
+            "age" : 1
+        },
+        "name" : "age_1",
+        "ns" : "test_db.tb_user"
+    }
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>删除对应的<code>age_1</code>索引！</p>
+<pre class="line-numbers language-none"><code class="language-none">db.tb_user.dropIndex("age_1")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="4-客户端"><a href="#4-客户端" class="headerlink" title="4.客户端"></a>4.客户端</h2><p>对于任何一款数据库，如果没有可视化界面操作，在开发的时候，可以说极其不方便，下面推荐一款小编经常使用的一款客户端。</p>
+<ul>
+<li>Robo 3T(免费、轻量级) ，可以访问官网获取</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209021040062.jpeg" alt="img"></p>
+<ul>
+<li>Studio 3T(全面，收费)，访问官网地址获取</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209021040560.jpeg" alt="img"></p>
+<p>其中小编采用的是第二款，整体的体验比<code>Robo 3T</code>要一点，两者功能都比较齐全！</p>
+<p>在使用的时候，可以根据个人喜爱进行选择！</p>
+<h2 id="5-权限控制"><a href="#5-权限控制" class="headerlink" title="5.权限控制"></a>5.权限控制</h2><p>网上发现很多 mongodb 被黑，使大家将目光投向了mongodb 的权限控制。</p>
+<p>其实 mongodb 本身有一套完备的 RBAC 权限控制体系，这次被黑基本都是没有遵照 mongodb 的生产环境部署手册部署的结果。</p>
+<p>我们平时玩一玩 mongodb 习惯了不设置用户名密码，当我们的数据库放到公网时，由于我们也没有设置用户名密码，任何人都可以随便访问，而且由于我们没有开启授权访问，使得任何登录到 mongodb 服务器的用户都拥有最高权限！</p>
+<p>一些居心不良的人发现，就可以把我们的数据拷走，删除我们的数据库，从而勒索赎金！</p>
+<p>再次提醒各位同学，别学会所有的技能，大门还一直开着，还抱怨我方防御塔怎么一直被摧毁！</p>
+<p>以上文<code>CentOS7</code>安装为例，修改<code>/etc/mongod.conf</code>，在<code>security</code>部分添加如下配置，开启授权访问！</p>
+<pre class="line-numbers language-none"><code class="language-none">security:
+    authorization: enabled<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>修改完成之后，重启 mongodb 服务</p>
+<pre class="line-numbers language-none"><code class="language-none">#重启服务
+systemctl restart mongod<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -714,7 +1063,7 @@ profile : Desktop live2d.core.js:5913:16
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/">https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/</a>
+                    <a href="https://beaumon.github.io/2022/09/02/monogodb-ru-men/">https://beaumon.github.io/2022/09/02/monogodb-ru-men/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -752,12 +1101,8 @@ profile : Desktop live2d.core.js:5913:16
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
-                                    <span class="chip bg-color">theme主题</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">
-                                    <span class="chip bg-color">不蒜子</span>
+                                <a href="/tags/MonogoDB/">
+                                    <span class="chip bg-color">MonogoDB</span>
                                 </a>
                             
                         </div>
@@ -835,7 +1180,7 @@ profile : Desktop live2d.core.js:5913:16
         repo: 'beaumon.github.io',
         owner: 'Beaumon',
         admin: ["Beaumon"],
-        id: '2022-08-29T21-24-44',
+        id: '2022-09-02T10-25-13',
         distractionFreeMode: false  // Facebook-like distraction free mode,
     });
 
@@ -865,29 +1210,80 @@ profile : Desktop live2d.core.js:5913:16
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/">
+                <a href="/2022/09/02/monogodb-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="聊聊数据库建表的15个小技巧">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="MonogoDB入门基础教程">
                         
-                        <span class="card-title">聊聊数据库建表的15个小技巧</span>
+                        <span class="card-title">MonogoDB入门基础教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            分享数据库建表的15个小技巧
+                            MongoDB入门基础教程
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-29
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MonogoDB/" class="post-category">
+                                    MonogoDB
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MonogoDB/">
+                        <span class="chip bg-color">MonogoDB</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/01/debug-diao-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="debug调试">
+                        
+                        <span class="card-title">debug调试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            IDEA断点调试技巧
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -907,60 +1303,8 @@ profile : Desktop live2d.core.js:5913:16
                         <span class="chip bg-color">java</span>
                     </a>
                     
-                    <a href="/tags/mysql/">
-                        <span class="chip bg-color">mysql</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/08/25/hexo-tu-pian-pei-zhi/">
-                    <div class="card-image">
-                        
-                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208250857879.png" class="responsive-img" alt="hexo图片配置">
-                        
-                        <span class="card-title">hexo图片配置</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Introduction to several methods of hexo image setup.
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
-                        <span class="chip bg-color">theme主题</span>
-                    </a>
-                    
-                    <a href="/tags/PicGo/">
-                        <span class="chip bg-color">PicGo</span>
+                    <a href="/tags/debug/">
+                        <span class="chip bg-color">debug</span>
                     </a>
                     
                 </div>

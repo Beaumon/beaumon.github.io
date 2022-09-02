@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-01T03:16:29.715Z</updated>
+  <updated>2022-09-02T02:41:14.945Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MonogoDB入门基础教程</title>
+    <link href="https://beaumon.github.io/2022/09/02/monogodb-ru-men/"/>
+    <id>https://beaumon.github.io/2022/09/02/monogodb-ru-men/</id>
+    <published>2022-09-02T02:25:13.000Z</published>
+    <updated>2022-09-02T02:41:14.945Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MongoDB入门基础教程&quot;&gt;&lt;a href=&quot;#MongoDB入门基础教程&quot; class=&quot;headerlink&quot; title=&quot;MongoDB入门基础教程&quot;&gt;&lt;/a&gt;MongoDB入门基础教程&lt;/h1&gt;&lt;p&gt;本文主要围绕 MongoDB</summary>
+        
+      
+    
+    
+    
+    <category term="MonogoDB" scheme="https://beaumon.github.io/categories/MonogoDB/"/>
+    
+    
+    <category term="MonogoDB" scheme="https://beaumon.github.io/tags/MonogoDB/"/>
+    
+  </entry>
   
   <entry>
     <title>debug调试</title>
