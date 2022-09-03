@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-02T02:41:14.945Z</updated>
+  <updated>2022-09-03T01:02:37.464Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Typora使用教程</title>
+    <link href="https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/"/>
+    <id>https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/</id>
+    <published>2022-09-03T00:20:16.000Z</published>
+    <updated>2022-09-03T01:02:37.464Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Typora使用教程&quot;&gt;&lt;a href=&quot;#Typora使用教程&quot; class=&quot;headerlink&quot; title=&quot;Typora使用教程&quot;&gt;&lt;/a&gt;Typora使用教程&lt;/h1&gt;&lt;h2 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://beaumon.github.io/categories/Markdown/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>MonogoDB入门基础教程</title>
@@ -73,7 +96,7 @@
     <link href="https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/"/>
     <id>https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/</id>
     <published>2022-08-31T11:51:08.000Z</published>
-    <updated>2022-09-02T15:17:22.773Z</updated>
+    <updated>2022-09-03T00:59:54.885Z</updated>
     
     
       

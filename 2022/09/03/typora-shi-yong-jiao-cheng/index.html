@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="debug调试, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="IDEA断点调试技巧">
+    <meta name="keywords" content="Typora">
+    <meta name="description" content="Typora使用教程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>debug调试 | 是Beaumon的小博客鸭</title>
+    <title>Typora使用教程 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -489,12 +489,12 @@ charset="utf-8"></script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">debug调试</h1>
+                    <h1 class="description center-align post-title">Typora使用教程</h1>
                 </div>
             </div>
         </div>
@@ -516,17 +516,9 @@ charset="utf-8"></script>
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
-                            </a>
-                        
-                            <a href="/tags/debug/">
-                                <span class="chip bg-color">debug</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -534,8 +526,8 @@ charset="utf-8"></script>
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java/" class="post-category">
-                                java
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
                             </a>
                         
                     </div>
@@ -547,14 +539,14 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-09-01
+                    2022-09-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-01
+                    2022-09-03
                 </div>
                 
 
@@ -568,7 +560,7 @@ charset="utf-8"></script>
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -591,143 +583,385 @@ charset="utf-8"></script>
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="IDEA断点调试技巧"><a href="#IDEA断点调试技巧" class="headerlink" title="IDEA断点调试技巧"></a>IDEA断点调试技巧</h1><h2 id="1-问题总结"><a href="#1-问题总结" class="headerlink" title="1. 问题总结"></a>1. 问题总结</h2><blockquote>
-<p>1.怎么开启断点调试?</p>
-</blockquote>
+                <h1 id="Typora使用教程"><a href="#Typora使用教程" class="headerlink" title="Typora使用教程"></a>Typora使用教程</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>一次偶然的机会，让我接触到了 .md 文档，进而开始摸索，并意外结识了 Typora 这个编辑器。</p>
 <blockquote>
-<p>2.调试界面咋那么多按钮？</p>
-<ul>
+<p>百度解释：Typora 是一款由 Abner Lee 开发的轻量级 Markdown 编辑器，与其他 Markdown 编辑器不同的是，Typora 没有采用源代码和预览双栏显示的方式，而是采用所见即所得的编辑方式，实现了即时预览的功能，但也可切换至源代码编辑模式.</p>
+</blockquote>
+<p>也确实如此。Typora 是一款轻便简洁的 Markdown 编辑器，支持即时渲染技术，这也是与其他Markdown编辑器最显著的区别。即时渲染使得你写 Markdown 就像是写Word文档一样流畅自如。个人认为是一款很好用的 MarkDown 编辑器，特来分享给大家❤️</p>
+<h3 id="1-1MarkDown"><a href="#1-1MarkDown" class="headerlink" title="1.1MarkDown"></a>1.1MarkDown</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><blockquote>
+<p>Markdown 是一种轻量级标记语言，创始人为 John Gruber。它允许人们「使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档」。</p>
+</blockquote>
+<h3 id="1-2为什么要用MarkDown"><a href="#1-2为什么要用MarkDown" class="headerlink" title="1.2为什么要用MarkDown"></a>1.2为什么要用MarkDown</h3><p>对于我而言，我选择MarkDown的原因如下：</p>
+<ol>
+<li><p>回归到内容本身，注重文章本身的结构，而不是样式</p>
+</li>
 <li><ul>
-<li>1.返回断点位置</li>
-<li>2.步过</li>
-<li>3.步入</li>
-<li>4,5.强制步入，步出</li>
-<li>6.回退断点</li>
-<li>7.断点跳到光标处</li>
-<li>8.表达式计算</li>
-<li>9.恢复程序</li>
-<li>10.停止程序</li>
-<li>11.查看所有断点</li>
-<li>12.禁用断点</li>
-<li>13.其他</li>
+<li>不需要考虑字体大小、颜色等，因为 Markdown 中字体样式都与结构有关，无法手动设置</li>
 </ul>
 </li>
-</ul>
-</blockquote>
-<blockquote>
-<p>竟然有那么多调试断点？</p>
-<ul>
+<li><p>MarkDown的语法简单，记住几个常用的就可以释放鼠标了</p>
+</li>
 <li><ul>
-<li>1.方法断点</li>
-<li>2.属性断点</li>
-<li>3.异常断点</li>
-<li>4.终止断点</li>
-<li>5.条件断点</li>
-<li>6.流断点</li>
-<li>7.多线程断点</li>
-<li>8.远程断点</li>
+<li>比如，我想要将 “这是个标题” 设置成二级标题，只需要在标题前添加<code>##</code>+空格即可实现，而不需要用鼠标先选中 “这是个标题”，然后在设置成二级标题</li>
 </ul>
 </li>
+<li><p>当前许多网站都支持用 Markdown 来撰写文档</p>
+</li>
+<li><ul>
+<li>如 博客园、CSDN、简书、语雀 等，有了这么多网站的支持，你可以随时随地上传本地 MarkDown 文件到博客中</li>
 </ul>
+</li>
+</ol>
+<h2 id="2-MarkDown-基本语法"><a href="#2-MarkDown-基本语法" class="headerlink" title="2.MarkDown 基本语法"></a>2.MarkDown 基本语法</h2><h3 id="2-1标题"><a href="#2-1标题" class="headerlink" title="2.1标题"></a>2.1标题</h3><p>语法格式：<code>#+空格+标题</code>，一个<code>#</code>是一级标题，两个<code>##</code>是两级标题，以此类推，支持六级标题</p>
+<h3 id="2-2字体"><a href="#2-2字体" class="headerlink" title="2.2字体"></a>2.2字体</h3><ul>
+<li><p><strong>加粗</strong>语法格式：<code>**加粗**</code></p>
+</li>
+<li><p><em>斜体</em>语法格式：<code>*斜体*</code></p>
+</li>
+<li><p><em><strong>斜体加粗</strong></em>语法格式：``<em><strong>斜体加粗</strong></em>`</p>
+</li>
+<li><p>删除线 语法格式：<code>~~删除线~~</code></p>
+</li>
+<li><p>高亮</p>
+<p>语法格式：<code>==高亮==</code></p>
+</li>
+</ul>
+<h3 id="2-3引用"><a href="#2-3引用" class="headerlink" title="2.3引用"></a>2.3引用</h3><p>语法格式：<code>&gt;+引用文字</code></p>
+<blockquote>
+<p>我是引用文字</p>
 </blockquote>
-<h2 id="2-怎么开启断点调试？"><a href="#2-怎么开启断点调试？" class="headerlink" title="2.怎么开启断点调试？"></a>2.怎么开启断点调试？</h2><p>随着开发的深入，越来越觉得高效的调试方法是多么的重要了，但我们一般上来就是敲一些代码，谁会去静下心来学一些看似没什么用的调试技巧呢？但这恰恰就是新手和老手之间的区别。</p>
-<p>断点调试是很简单的，只需要点击idea上方的小虫子，启动调试即可，如下所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011101731.png" alt="img">这当然不是本文的重点，只是开个头。</p>
-<h2 id="3-调试界面咋那么多按钮？"><a href="#3-调试界面咋那么多按钮？" class="headerlink" title="3.调试界面咋那么多按钮？"></a>3.调试界面咋那么多按钮？</h2><p>先来介绍一下界面。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011101686.png" alt="img">我给这些区域都标了号，下面来重点介绍。</p>
-<h3 id="3-1返回断点位置"><a href="#3-1返回断点位置" class="headerlink" title="3.1返回断点位置"></a>3.1返回断点位置</h3><p>1号按钮，这个用的不多，如果你从其他地方想要回到断点位置，就按一下即可，如下图所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011101716.gif" alt="img"></p>
-<h3 id="3-2步过"><a href="#3-2步过" class="headerlink" title="3.2步过"></a>3.2步过</h3><p>2号按钮，说人话就是一行行的往下执行，不会进入方法里面，如下所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011101915.gif" alt="img"></p>
-<h3 id="3-3步入"><a href="#3-3步入" class="headerlink" title="3.3步入"></a>3.3步入</h3><p>3号按钮，可以进入我们自定义的方法，如果是其他类库的方法不会进入，如下所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011101559.gif" alt="img"></p>
-<h3 id="3-4强制步入-步出"><a href="#3-4强制步入-步出" class="headerlink" title="3.4强制步入|步出"></a>3.4强制步入|步出</h3><p>4号5号按钮，前者可以进入深层的方法，包括官方的源码，后者就是从对应的方法中出来，演示如下。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011101003.gif" alt="img"></p>
-<h3 id="3-5回退断点"><a href="#3-5回退断点" class="headerlink" title="3.5回退断点"></a>3.5回退断点</h3><p>6号按钮是很特殊的，如果你的代码中没有调用其他地方的方法，那么是呈灰色的，无法使用，只有进入更深层的方法，才能够使用，其实就是后悔药，我们很多时候调试时不小心按的快了点，很容易错过想看的位置，只能再次重启吗？不，使用这个drop frame 就可以了，演示如下。</p>
-<p>可以看到，这里往下执行了add，但是还没有执行完，按这个按钮，再次回到了调用方法之前，但对于数据库插入等操作，其实是无法回退的，这里的回退只是因为记录了栈信息才能够做到的。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011101780.gif" alt="img">但是要注意，如果你某个方法调用完毕了，你想再回去那就没有办法了。</p>
-<h3 id="3-6断点跳到光标处"><a href="#3-6断点跳到光标处" class="headerlink" title="3.6断点跳到光标处"></a>3.6断点跳到光标处</h3><p>7号按钮也用的不多，主要是为了快速跳转到光标指向的那一行，如下所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011102813.gif" alt="img"></p>
-<h3 id="3-7表达式计算"><a href="#3-7表达式计算" class="headerlink" title="3.7表达式计算"></a>3.7表达式计算</h3><p>8号按钮是计算表达式的，我们模拟从数据库获取集合，用表达式查询对应的元素，如下所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011116506.gif" alt="img"></p>
-<h3 id="3-8恢复程序"><a href="#3-8恢复程序" class="headerlink" title="3.8恢复程序"></a>3.8恢复程序</h3><p>9号按钮称为 <code>Resume Program</code>，能够跳转到指定的断点处，我们在10行和第100行各加一个断点，需要点几下该按钮跳转到100行呢？答案是一次即可，第一次断点会在第10行停下，点击改按钮直接飞越90行到第100行，如下所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011102946.gif" alt="img"></p>
-<h3 id="3-9停止程序"><a href="#3-9停止程序" class="headerlink" title="3.9停止程序"></a>3.9停止程序</h3><p>10号按钮就是停止调试，但是注意，即便停止了调试，程序也会继续运行下去，如何想让他就在断点处停止呢？后面我会说到。</p>
-<h3 id="3-10查看所有断点"><a href="#3-10查看所有断点" class="headerlink" title="3.10查看所有断点"></a>3.10查看所有断点</h3><p>11号按钮打开又别有乾坤，基本功能如下图所示，主要是设置，查看断点信息，大家看着应吧，实用的方法我会在下面讲的。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011102417.png" alt="img"></p>
-<h3 id="3-11禁用断点"><a href="#3-11禁用断点" class="headerlink" title="3.11禁用断点"></a>3.11禁用断点</h3><p>12号按钮就简单了，暂时禁用掉断点，方便程序继续执行，一般配合 <code>Resume Program</code>。</p>
-<h3 id="3-12其他"><a href="#3-12其他" class="headerlink" title="3.12其他"></a>3.12其他</h3><p>13号其实不是按钮，而是一块区域，这里面存放了很多变量的信息，方便我们查看。</p>
-<p>14号按钮其实之前被我忽略掉了，这次拿出来讲一下，在watch可以监控变量的变化，有同学说，中间的变量栏也可以看啊，但是单独拉出来，看起来更加的方便，演示如下。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011102929.gif" alt="img"></p>
-<h2 id="4-竟然有那么多调试断点？"><a href="#4-竟然有那么多调试断点？" class="headerlink" title="4. 竟然有那么多调试断点？"></a>4. 竟然有那么多调试断点？</h2><p>这里省略了普通的行断点调试，毕竟是最简单的，大家都会。</p>
-<h3 id="4-1方法断点"><a href="#4-1方法断点" class="headerlink" title="4.1方法断点"></a>4.1方法断点</h3><p>方法断点是不是用在普通方法上的，最好的用法是在接口上使用，当我们在调试源码的时候，如果在接口上打了断点，再往下走，可以直接跳转到实现类的实现方法上，而不需要我们一个个的去找。</p>
-<p>案例中，有一个接口<code>DemoInterface</code>，它有两个实现类，让我们看下效果吧，演示如下。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011111531.png" alt="img">注意：方法断点是一个菱形标志。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011111977.gif" alt="img"></p>
-<p>其实可以直接在接口方法上打断点，直接跳转到对应的实现方法的，这里是为了放慢演示速度。</p>
-<h3 id="4-2属性断点"><a href="#4-2属性断点" class="headerlink" title="4.2属性断点"></a>4.2属性断点</h3><p>属性断点是打在属性上的，我们无需再<code>getter setter</code>方法上打断点，在属性上打上断点，就会出现一个小眼睛的标志，如下所示。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011112502.png" alt="img"></p>
-<p>在眼睛上点击右键可以设置。</p>
-<p>我们一般是通过getter，setter方法设值的，所以就会在这两个方法上停留。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011112914.png" alt="img"></p>
-<p>看一下GIF演示吧。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011113662.gif" alt="img"></p>
-<h3 id="4-3异常断点"><a href="#4-3异常断点" class="headerlink" title="4.3异常断点"></a>4.3异常断点</h3><p>在线上由于空指针出现了BUG，我们想快速定位到哪里出现了空指针，应该怎么做呢，答案就是，异常断点！演示如下。</p>
-<p>注意，异常断点是一个闪电的标志。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011113574.gif" alt="img"></p>
-<p>可以看到，我们在全局打了个空指针断点，只要哪里出现了空指针，就会在那里停止，太方便了！</p>
-<h3 id="4-4终止断点"><a href="#4-4终止断点" class="headerlink" title="4.4终止断点"></a>4.4终止断点</h3><p>前面我们说过，即便停止程序，也不会让我们后面运行的代码取消执行，那么我一定要取消执行可以吗？当然是可以的，演示如，在方法栈上点击右键，有一个<code>Force Return</code>，然后再点击<code>Resumer Program</code>，就可以直接终止返回了。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011113627.gif" alt="img"></p>
-<h3 id="4-5条件断点"><a href="#4-5条件断点" class="headerlink" title="4.5条件断点"></a>4.5条件断点</h3><p>我想要在某个条件满足的时候打上断点，而不想一步步的走下去，有什么办法吗？当然有，在断点处右击，在<code>condition</code>里填入相应的条件即可，演示如下。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011115237.gif" alt="img"></p>
-<h3 id="4-6流断点"><a href="#4-6流断点" class="headerlink" title="4.6流断点"></a>4.6流断点</h3><p>我们使用流的时候，很难看到中间做了什么，但其实idea就帮我们解决了，我用断点调试下面代码，给大家演示下。</p>
-<p>其实只需要找到这个按钮就行了</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011113955.png" alt="img"></p>
-<pre class="line-numbers language-none"><code class="language-none">List&lt;Integer&gt; list = new ArrayList&lt;&gt;(Arrays.asList(1, 3, 3, 4, 4, 4, 5, 6, 78));
-       List&lt;Integer&gt; collect = list.stream()
-         //先将偶数筛选，再去重，返回集合
-               .filter(s -&gt; s % 2 == 0)
-               .distinct()
-               .collect(Collectors.toList());<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011113718.gif" alt="img"></p>
-<h3 id="4-7多线程断点"><a href="#4-7多线程断点" class="headerlink" title="4.7多线程断点"></a>4.7多线程断点</h3><p>给大家演示两种情况，多线程下调试，定时任务下调试。</p>
-<p>这个演示比较简单，可能有同学不以为意，你可以去尝试下，如果使用默认All来调试多线程程序会发生什么，可能某条线程就跑掉了，没有停留，而这种方式可以捕获到运行的所有线程。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011113144.gif" alt="img">定时任务这样调试有个好处，即便我们在调试的过程中下一个任务也到时间了，也不会执行，防止多次定时任务执行带来的干扰，我在演示前已经提前一分钟启动了程序，每隔10秒钟打印一次，但是由于暂停了线程的执行，多次点击<code>Resumer Program</code>，发现并没有往下执行哦，而是再等了10秒钟之后执行。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011113981.gif" alt="img"></p>
-<h3 id="4-8远程断点"><a href="#4-8远程断点" class="headerlink" title="4.8远程断点"></a>4.8远程断点</h3><p>顾名思义，远程debug就是断点打在你的本地环境, 但是代码是跑在远端的(可以理解为是服务端)。</p>
-<h4 id="4-8-1为什么需要远程debug"><a href="#4-8-1为什么需要远程debug" class="headerlink" title="4.8.1为什么需要远程debug"></a>4.8.1为什么需要远程debug</h4><p>相信很多人在开发中遇到过这样的问题, 就是明明代码在自己的环境上是好的, 为什么去了测试环境就有问题, 这个时候你可能会质疑测试, 是不是准备的数据有问题?还是不会使用, 导致用错了场景? 还是部署有问题?</p>
-<p>在做数据项目的时候, 遇到bug可能会把相应的数据下载到本地开发环境, 然后进行debug, 但如果遇到了如下的问题, 该怎么办呢</p>
-<ul>
-<li>数据量特别大, 本地无法下载</li>
-<li>数据比较敏感, 安全原因不让下载</li>
-<li>本地无法搭建环境, 比如, 需要启动cluster, 需要至少三台物理节点</li>
-</ul>
-<p>这个时候远程debug就要上场了, 这样你就能在本地看到远端运行的样子了, 而不用只看输出日志去推断可能哪里出了错误。</p>
-<h4 id="4-8-2如何远程debug"><a href="#4-8-2如何远程debug" class="headerlink" title="4.8.2如何远程debug"></a>4.8.2如何远程debug</h4><h5 id="4-8-2-1首先看服务器是不是在Debug模式下工作"><a href="#4-8-2-1首先看服务器是不是在Debug模式下工作" class="headerlink" title="4.8.2.1首先看服务器是不是在Debug模式下工作"></a>4.8.2.1首先看服务器是不是在Debug模式下工作</h5><p>不是则进行（tomcat/bin/catalina.sh）配置。</p>
-<pre class="line-numbers language-none"><code class="language-none">-Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>引用也可以嵌套：</p>
+<blockquote>
+<blockquote>
+<p>如加两个<code>&gt;&gt;</code></p>
+<blockquote>
+<p>三个<code>&gt;&gt;&gt;</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>支持无线套娃~~</p>
+<h3 id="2-4分割线"><a href="#2-4分割线" class="headerlink" title="2.4分割线"></a>2.4分割线</h3><p>语法格式：三个或者三个以上的 - 或者 * 都可以，如<code>***</code></p>
+<h3 id="2-5图片"><a href="#2-5图片" class="headerlink" title="2.5图片"></a>2.5图片</h3><p>详细的图片引用以及图床配置请参考<a target="_blank" rel="noopener" href="https://beaumon.tk/2022/08/25/hexo-tu-pian-pei-zhi/">hexo图片配置</a> </p>
+<p>这里只介绍一下Typora默认的引入方式。</p>
+<p>语法格式：</p>
+<pre class="line-numbers language-none"><code class="language-none">![alt](图片地址 ''title'')<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
-<p>具体解释：</p>
-<ul>
-<li><strong>-Xdebug ：</strong> 启用调试特性。</li>
-<li>-<strong>Xrunjdwp</strong>:在目标 VM 中加载 JDWP 实现。它通过传输和 JDWP 协议与独立的调试器应用程序通信。下面介绍一些特定的子选项。</li>
-<li><strong>transport</strong>: 这里通常使用套接字传输。但是在 Windows 平台上也可以使用共享内存传输。</li>
-<li><strong>address</strong> 这是连接的传输地址。如果服务器为 <em>n</em> ，将尝试连接到该地址上的调试器应用程序。否则，将在这个端口监听连接。</li>
-<li><strong>server</strong> 如果值为 <em>y</em> ，目标应用程序监听将要连接的调试器应用程序。否则，它将连接到特定地址上的调试器应用程序。</li>
-<li><strong>suspend</strong> 如果值为 <em>y</em> ，目标 VM 将暂停，直到调试器应用程序进行连接。</li>
-</ul>
+<p>alt 指的是当图片链接失效时显示的提示文字，可加可不加 title是图片的标题，当鼠标移到图片上时显示的内容，可加可不加</p>
 </blockquote>
-<h5 id="4-8-2-2本地IDEA进行远程Debug"><a href="#4-8-2-2本地IDEA进行远程Debug" class="headerlink" title="4.8.2.2本地IDEA进行远程Debug"></a>4.8.2.2本地IDEA进行远程Debug</h5><p>其实非常简单, 用Intellij IDEA打开你的代码, 点击右上角的“Edit Configurations”</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011114216.png" alt="image-20220901104745631"></p>
-<p>然后点击左上角的”+“, 添加一个“Remote”, 这个选项就是用来做远程Debug用的, 并且添加远程DEBUG配置项，Host和Port，端口默认给的是5005。配置后，点击<code>Apply</code>和<code>OK</code>按钮（然后只要把IP和刚才配置的端口号加上就行。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011114467.png" alt="image-20220901104935150"></p>
-<h4 id="4-8-3远程debug测试"><a href="#4-8-3远程debug测试" class="headerlink" title="4.8.3远程debug测试"></a>4.8.3远程debug测试</h4><p>我们直接在TestController类里的test方法上打断点：</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011114854.png" alt="image-20220901105824672"></p>
-<p>然后选择远程debug启动项，点击调试按钮启动。</p>
-<p>打开postman测试：</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011115937.png" alt="image-20220901105616699"><br>发现成功进入断点</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209011115278.png" alt="image-20220901105729273"></p>
+<h3 id="2-6超链接"><a href="#2-6超链接" class="headerlink" title="2.6超链接"></a>2.6超链接</h3><p>语法格式：<code>[超链接名](超链接地址)</code></p>
+<h3 id="2-7列表"><a href="#2-7列表" class="headerlink" title="2.7列表"></a>2.7列表</h3><ul>
+<li>无序列表</li>
+</ul>
+<p>语法格式：无序列表用 - + * 任何一种都可以，如<code>+ 我是无序列表</code></p>
+<blockquote>
+<p>加号和内容之间需要放置一个空格</p>
+</blockquote>
+<ul>
+<li>有序列表</li>
+</ul>
+<p>语法格式：<code>数字+点+空格+内容</code>，如<code>1. 我是有序列表</code></p>
+<ul>
+<li>子列表</li>
+</ul>
+<p>在子列表前按下tab键即可构成子列表。</p>
+<h3 id="2-8表格"><a href="#2-8表格" class="headerlink" title="2.8表格"></a>2.8表格</h3><p>语法格式：</p>
+<pre class="line-numbers language-none"><code class="language-none">|左对齐|居中对齐|右对齐|
+|:----|:----:|---:|
+|左|中|右|<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="center">居中对齐</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">左</td>
+<td align="center">中</td>
+<td align="right">右</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>第二行分割表头和内容，并声明内容的对齐格式。一般而言，不这么用，感觉太费劲了，下面再介绍快捷键。</p>
+</blockquote>
+<h3 id="2-9代码"><a href="#2-9代码" class="headerlink" title="2.9代码"></a>2.9代码</h3><ul>
+<li>行内代码</li>
+</ul>
+<p>语法格式：用一个反引号包起来 <code>代码内容</code>，代码会以主题中设置的样式出现在行内，但不会实现代码高亮。</p>
+<ul>
+<li>多行代码</li>
+</ul>
+<p>语法格式：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
+<blockquote>
+<p>``` 语言 代码内容 ```</p>
+<p>语言：C、C++、JAVA 等</p>
+</blockquote>
+<ul>
+<li>流程图</li>
+</ul>
+<p>正因为Typora支持mermaid语言,所以使用只需要插入代码块，把语言调成mermaid即可流程图。</p>
+<p>官方介绍地址：<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/flowchart?id=a-hexagon-node">https://mermaid-js.github.io/mermaid/#/flowchart?id=a-hexagon-node</a></p>
+<blockquote>
+<p>Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901755.png" alt="image-20220903085104557"></p>
+<ul>
+<li>视频</li>
+</ul>
+<p>同理，点击嵌入代码，可以通过video|iframe标签引入视频。</p>
+<pre class="line-numbers language-none"><code class="language-none">栗子：
+&lt;iframe src="//player.bilibili.com/player.html?aid=762955321&amp;bvid=BV1z64y1h74z&amp;cid=406257730&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>网页片段</li>
+</ul>
+<p>通过嵌入codepen，你甚至可以在typora里玩贪吃蛇！！！</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="moPsych" data-slug-hash="KKgQxWb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Snake Game"&gt;
+  &lt;span&gt;See the Pen &lt;a href="https://codepen.io/moPsych/pen/KKgQxWb"&gt;
+  Snake Game&lt;/a&gt; by moPsych (&lt;a href="https://codepen.io/moPsych"&gt;@moPsych&lt;/a&gt;)
+  on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async src="https://static.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>PDF</li>
+</ul>
+<p>当然，区区PDF也不在话下，如果是本地文件，直接拖入即可。</p>
+<p>如果想导入云端PDF，需要通过 <code>Google Drive Viewer</code> 来显示：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;iframe src="https://docs.google.com/gview?embedded=true&amp;url=http://infolab.stanford.edu/pub/papers/google.pdf" style="width:800px; height:500px;" frameborder="0"&gt;&lt;/iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>只需把 <code>url=http://infolab.stanford.edu/pub/papers/google.pdf</code> 替换成自己的PDF链接即可，例如 GitHub 上的PDF也可以：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/Theigrams/Mathematical-optimization/d304e27f613352b5d8240010cc58ddb4360ac48d/%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E6%9C%80%E4%BC%98%E5%8C%96%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A.pdf" style="width:800px; height:500px;" frameborder="0"&gt;&lt;/iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>发现了一个新的本地嵌入 PDF 的方法，把下面 <code>src</code> 中的 PDF 路径换成自己的即可。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;embed id="pdfPlayer" src="C:\Users\question.pdf" type="application/pdf" width="100%" height="600" &gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="3-高级技巧"><a href="#3-高级技巧" class="headerlink" title="3.高级技巧"></a>3.高级技巧</h2><h3 id="3-1转义字符"><a href="#3-1转义字符" class="headerlink" title="3.1转义字符"></a>3.1转义字符</h3><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<pre class="line-numbers language-none"><code class="language-none">\   反斜线
+`   反引号
+*   星号
+_   下划线
+{}  花括号
+[]  方括号
+()  小括号
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   感叹号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>行内公式（inline）用 <code>$...$</code> 括起公式，公式会出现在行内。</li>
+<li>块间公式（display）用 <code>$$...$$</code> 括起公式（注意 <code>$$</code> 后需要换行），公式会默认显示在行中间。</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">$$
+块间公式
+$$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>支持HTML</li>
+</ul>
+<h3 id="3-2在Typora中书写MarkDown"><a href="#3-2在Typora中书写MarkDown" class="headerlink" title="3.2在Typora中书写MarkDown"></a>3.2在Typora中书写MarkDown</h3><table>
+<thead>
+<tr>
+<th align="left">Markdown语法</th>
+<th align="center">Typora快捷键</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">一级标题</td>
+<td align="center"><code>#</code></td>
+<td>ctrl+1</td>
+</tr>
+<tr>
+<td align="left">二级标题</td>
+<td align="center"><code>##</code></td>
+<td>ctrl+2</td>
+</tr>
+<tr>
+<td align="left">三级标题</td>
+<td align="center"><code>###</code></td>
+<td>ctrl+3</td>
+</tr>
+<tr>
+<td align="left">四级标题</td>
+<td align="center"><code>####</code></td>
+<td>ctrl+4</td>
+</tr>
+<tr>
+<td align="left">五级标题</td>
+<td align="center"><code>#####</code></td>
+<td>ctrl+5</td>
+</tr>
+<tr>
+<td align="left">六级标题</td>
+<td align="center"><code>######</code></td>
+<td>ctrl+6</td>
+</tr>
+<tr>
+<td align="left">加粗</td>
+<td align="center"><code>**粗体**</code></td>
+<td>ctrl+B</td>
+</tr>
+<tr>
+<td align="left">斜体</td>
+<td align="center"><code>*斜体*</code></td>
+<td>ctrl+I</td>
+</tr>
+<tr>
+<td align="left">下划线</td>
+<td align="center"><code>&lt;u&gt;下划线&lt;/u&gt;</code></td>
+<td>ctrl+U</td>
+</tr>
+<tr>
+<td align="left">删除线</td>
+<td align="center"><code>~~删除线~~</code></td>
+<td>alt+shift+5</td>
+</tr>
+<tr>
+<td align="left">创建表格</td>
+<td align="center"></td>
+<td>ctrl+T</td>
+</tr>
+<tr>
+<td align="left">创建超链接</td>
+<td align="center"><code>[超链接名](超链接地址)</code></td>
+<td>ctrl+K</td>
+</tr>
+<tr>
+<td align="left">插入图片</td>
+<td align="center"><code>![alt](图片地址)</code></td>
+<td>ctrl+shift+I</td>
+</tr>
+<tr>
+<td align="left">插入公式块</td>
+<td align="center"><code>$$公式$$</code></td>
+<td>ctrl+shift+M</td>
+</tr>
+<tr>
+<td align="left">添加引用</td>
+<td align="center"><code>&gt;内容</code></td>
+<td>ctrl+shift+Q</td>
+</tr>
+<tr>
+<td align="left">无序列表</td>
+<td align="center"><code>+ 内容</code></td>
+<td>ctrl+shift+]</td>
+</tr>
+<tr>
+<td align="left">有序列表</td>
+<td align="center"><code>1. 内容</code></td>
+<td>ctrl+shift+[</td>
+</tr>
+<tr>
+<td align="left">粘贴为纯文本</td>
+<td align="center"></td>
+<td>ctrl+shift+V</td>
+</tr>
+<tr>
+<td align="left">返回Typora顶部</td>
+<td align="center"></td>
+<td>ctrl+Home</td>
+</tr>
+<tr>
+<td align="left">返回Typora底部</td>
+<td align="center"></td>
+<td>ctrl+End</td>
+</tr>
+<tr>
+<td align="left">启用/退出 源代码模式</td>
+<td align="center"></td>
+<td>ctrl+/</td>
+</tr>
+<tr>
+<td align="left">搜索</td>
+<td align="center"></td>
+<td>ctrl+F</td>
+</tr>
+<tr>
+<td align="left">搜索并替换</td>
+<td align="center"></td>
+<td>ctrl+H</td>
+</tr>
+<tr>
+<td align="left">选中光标所在行</td>
+<td align="center"></td>
+<td>ctrl+L</td>
+</tr>
+<tr>
+<td align="left">生成文档目录</td>
+<td align="center"></td>
+<td><code>[toc]</code>+Enter</td>
+</tr>
+<tr>
+<td align="left">快速打开最新文档</td>
+<td align="center"></td>
+<td>ctrl+P</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>TOC从文档中提取所有标题，其内容将自动更新。</p>
+</blockquote>
+<h4 id="3-2-1图片插入"><a href="#3-2-1图片插入" class="headerlink" title="3.2.1图片插入"></a>3.2.1图片插入</h4><p>插入图片除了使用插入语句外，还可以：</p>
+<ul>
+<li>ctrl+C/V 将网络图片、剪贴板图片复制到文档中</li>
+<li>拖动本地图片到文档中</li>
+</ul>
+<p>Typora 会自动帮你插入符合 Markdown 语法的图片语句，并给它添加<code>alt</code>。</p>
+<h4 id="3-2-2打字机模式和专注模式"><a href="#3-2-2打字机模式和专注模式" class="headerlink" title="3.2.2打字机模式和专注模式"></a>3.2.2打字机模式和专注模式</h4><p>通过 视图→→打字机模式/专注模式 开启或关闭：</p>
+<ul>
+<li>「打字机模式」使得你所编辑的那一行永远处于屏幕正中央。</li>
+<li>「专注模式」使你正在编辑的那一行保留颜色，而其他行的字体呈灰色。</li>
+</ul>
+<h4 id="3-2-3空格与换行"><a href="#3-2-3空格与换行" class="headerlink" title="3.2.3空格与换行"></a>3.2.3空格与换行</h4><ul>
+<li><strong>空格：</strong>在输入连续的空格后，Typora 会在编辑器视图里为你保留这些空格，但当你打印或导出时，这些空格会被省略成一个。你可以在源代码模式下，为每个空格前加一个 <code>\</code> 转义符，或者直接使用 HTML 风格的 <code>&amp;nbps;</code> 来保持连续的空格。</li>
+</ul>
+<blockquote>
+<p>需要说明的是，在 Markdown 语法中，换行（line break）与换段是不同的，且换行分为软换行和硬换行。</p>
+</blockquote>
+<ul>
+<li><strong>软换行</strong>：在 Typora 中，你可以通过shift+enter完成一次软换行。软换行只在编辑界面可见，当文档被导出时换行会被省略。</li>
+<li><strong>硬换行：</strong>你可以通过 空格+ 空格+ shift+enter完成一次硬换行，而这也是许多 Markdown 编辑器所原生支持的。硬换行在文档被导出时将被保留，且没有换段的段后距。</li>
+<li><strong>换段：</strong>你可以通过enter完成一次换段。Typora 会自动帮你完成两次shift+enter的软换行，从而完成一次换段。这也意味着在 Markdown 语法下，换段是通过在段与段之间加入空行来实现的。</li>
+<li><strong>Windows 风格（CR+LF）与 Unix 风格（LF）的换行符：</strong>CR表示回车<code>\r</code>，即回到一行的开头，而LF表示换行<code>\n</code>，即另起一行。所以 Windows 风格的换行符本质是「回车+换行」，而 Unix 风格的换行符是「换行」。这也是为什么 Unix/Mac 系统下的文件，如果在 Windows 系统直接打开会全部在同一行内。你可以在「文件 - 偏好设置 - 编辑器 - 默认换行符」中对此进行切换。</li>
+</ul>
+<h4 id="3-2-4支持emoji-表情"><a href="#3-2-4支持emoji-表情" class="headerlink" title="3.2.4支持emoji 表情"></a>3.2.4支持emoji 表情</h4><p>在 Typora 中，你可以用 <code>:emoji:</code> 的形式来打出 emoji，软件会自动给出图形的提示。</p>
+<h2 id="4-Typora主题"><a href="#4-Typora主题" class="headerlink" title="4.Typora主题"></a>4.Typora主题</h2><ol>
+<li><p>使用 Typora 内置主题：点击状态栏「主题」，选择喜欢的主题样式</p>
+</li>
+<li><p>自定义主题：通过「文件-偏好设置-外观-打开主题文件夹」打开Typora的主题文件夹<code>Typora\themes</code>，将自定义的 CSS 文件导入到 <code>themes</code>文件夹中并重启Typora，在「主题」中选择你导入的主题样式即可</p>
+<p>自定义的主题样式：</p>
+</li>
+</ol>
+<ul>
+<li>mo主题</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901591.png" alt="img"></p>
+<ul>
+<li>mo-dark主题</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901404.png" alt="img"></p>
+<ul>
+<li>pie主题</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901056.png" alt="img"></p>
+<ul>
+<li>pie-dark主题</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901228.png" alt="img"></p>
+<ul>
+<li>melephant主题</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901976.png" alt="img"></p>
+<ul>
+<li>melephant-2主题</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901682.png" alt="img"></p>
+<p>​     大家可以根据自己的喜好找寻更多好看的主题。</p>
 
                 
             </div>
@@ -754,7 +988,7 @@ charset="utf-8"></script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://beaumon.github.io/2022/09/01/debug-diao-shi/">https://beaumon.github.io/2022/09/01/debug-diao-shi/</a>
+                    <a href="https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/">https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -791,15 +1025,7 @@ charset="utf-8"></script>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
-                                </a>
-                            
-                                <a href="/tags/debug/">
-                                    <span class="chip bg-color">debug</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -875,7 +1101,7 @@ charset="utf-8"></script>
         repo: 'beaumon.github.io',
         owner: 'Beaumon',
         admin: ["Beaumon"],
-        id: '2022-09-01T10-27-50',
+        id: '2022-09-03T08-20-16',
 		distractionFreeMode: 'true',
 		proxy: 'https://gitalkreslove.introduce.workers.dev/?https://github.com/login/oauth/access_token'
     });
@@ -906,9 +1132,52 @@ charset="utf-8"></script>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/09/03/typora-shi-yong-jiao-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Typora使用教程">
+                        
+                        <span class="card-title">Typora使用教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Typora使用教程
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2022/09/02/monogodb-ru-men/">
                     <div class="card-image">
@@ -926,9 +1195,9 @@ charset="utf-8"></script>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -946,54 +1215,6 @@ charset="utf-8"></script>
                     
                     <a href="/tags/MonogoDB/">
                         <span class="chip bg-color">MonogoDB</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/08/31/cloudflare-githubpages-pei-zhi/">
-                    <div class="card-image">
-                        
-                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208311930055.png" class="responsive-img" alt="CloudFlare-githubpages配置">
-                        
-                        <span class="card-title">CloudFlare-githubpages配置</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            CloudFlare+githubpages配置
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-31
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/cloudflare/">
-                        <span class="chip bg-color">cloudflare</span>
                     </a>
                     
                 </div>
