@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-03T01:02:37.464Z</updated>
+  <updated>2022-09-06T03:08:00.320Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Spring Boot 自定义starter</title>
+    <link href="https://beaumon.github.io/2022/09/06/spring-boot-zi-ding-yi-starter/"/>
+    <id>https://beaumon.github.io/2022/09/06/spring-boot-zi-ding-yi-starter/</id>
+    <published>2022-09-06T02:59:38.000Z</published>
+    <updated>2022-09-06T03:08:00.320Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在编写 &lt;code&gt;starter&lt;/code&gt; 之前我们先了解一下什么是 &lt;code&gt;starter&lt;/code&gt;，一个 &lt;code&gt;starter&lt;/code&gt; 其实就是对一个功能的集成封装，然后对外提供一个依赖，让业务去使用，像我们熟悉的</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/tags/java/"/>
+    
+    <category term="Spring Boot" scheme="https://beaumon.github.io/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot 自动装配原理</title>
+    <link href="https://beaumon.github.io/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/"/>
+    <id>https://beaumon.github.io/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/</id>
+    <published>2022-09-06T02:50:38.000Z</published>
+    <updated>2022-09-06T03:11:51.865Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先，先看SpringBoot的主配置类：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;@SpringBootApplication
+public class</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/tags/java/"/>
+    
+    <category term="Spring Boot" scheme="https://beaumon.github.io/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Typora使用教程</title>
     <link href="https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/"/>
     <id>https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/</id>
     <published>2022-09-03T00:20:16.000Z</published>
-    <updated>2022-09-03T01:02:37.464Z</updated>
+    <updated>2022-09-06T03:13:13.453Z</updated>
     
     
       
@@ -36,6 +92,8 @@
     
     <category term="Markdown" scheme="https://beaumon.github.io/categories/Markdown/"/>
     
+    
+    <category term="Typora" scheme="https://beaumon.github.io/tags/Typora/"/>
     
   </entry>
   

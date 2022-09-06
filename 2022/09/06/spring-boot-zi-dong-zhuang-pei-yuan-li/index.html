@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Typora使用教程, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="Typora使用教程">
+    <meta name="keywords" content="Spring Boot 自动装配原理, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="Spring Boot 自动装配原理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Typora使用教程 | 是Beaumon的小博客鸭</title>
+    <title>Spring Boot 自动装配原理 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -38,9 +38,7 @@
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
-
 
 
 
@@ -489,12 +487,12 @@ charset="utf-8"></script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Typora使用教程</h1>
+                    <h1 class="description center-align post-title">Spring Boot 自动装配原理</h1>
                 </div>
             </div>
         </div>
@@ -504,12 +502,10 @@ charset="utf-8"></script>
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -518,8 +514,12 @@ charset="utf-8"></script>
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/Spring-Boot/">
+                                <span class="chip bg-color">Spring Boot</span>
                             </a>
                         
                     </div>
@@ -530,8 +530,8 @@ charset="utf-8"></script>
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
+                            <a href="/categories/java/" class="post-category">
+                                java
                             </a>
                         
                     </div>
@@ -543,7 +543,7 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-09-03
+                    2022-09-06
                 </div>
                 
 
@@ -557,14 +557,14 @@ charset="utf-8"></script>
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    12 分
                 </div>
                 
 
@@ -587,385 +587,449 @@ charset="utf-8"></script>
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Typora使用教程"><a href="#Typora使用教程" class="headerlink" title="Typora使用教程"></a>Typora使用教程</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>一次偶然的机会，让我接触到了 .md 文档，进而开始摸索，并意外结识了 Typora 这个编辑器。</p>
-<blockquote>
-<p>百度解释：Typora 是一款由 Abner Lee 开发的轻量级 Markdown 编辑器，与其他 Markdown 编辑器不同的是，Typora 没有采用源代码和预览双栏显示的方式，而是采用所见即所得的编辑方式，实现了即时预览的功能，但也可切换至源代码编辑模式.</p>
-</blockquote>
-<p>也确实如此。Typora 是一款轻便简洁的 Markdown 编辑器，支持即时渲染技术，这也是与其他Markdown编辑器最显著的区别。即时渲染使得你写 Markdown 就像是写Word文档一样流畅自如。个人认为是一款很好用的 MarkDown 编辑器，特来分享给大家❤️</p>
-<h3 id="1-1MarkDown"><a href="#1-1MarkDown" class="headerlink" title="1.1MarkDown"></a>1.1MarkDown</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><blockquote>
-<p>Markdown 是一种轻量级标记语言，创始人为 John Gruber。它允许人们「使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档」。</p>
-</blockquote>
-<h3 id="1-2为什么要用MarkDown"><a href="#1-2为什么要用MarkDown" class="headerlink" title="1.2为什么要用MarkDown"></a>1.2为什么要用MarkDown</h3><p>对于我而言，我选择MarkDown的原因如下：</p>
-<ol>
-<li><p>回归到内容本身，注重文章本身的结构，而不是样式</p>
-</li>
-<li><ul>
-<li>不需要考虑字体大小、颜色等，因为 Markdown 中字体样式都与结构有关，无法手动设置</li>
-</ul>
-</li>
-<li><p>MarkDown的语法简单，记住几个常用的就可以释放鼠标了</p>
-</li>
-<li><ul>
-<li>比如，我想要将 “这是个标题” 设置成二级标题，只需要在标题前添加<code>##</code>+空格即可实现，而不需要用鼠标先选中 “这是个标题”，然后在设置成二级标题</li>
-</ul>
-</li>
-<li><p>当前许多网站都支持用 Markdown 来撰写文档</p>
-</li>
-<li><ul>
-<li>如 博客园、CSDN、简书、语雀 等，有了这么多网站的支持，你可以随时随地上传本地 MarkDown 文件到博客中</li>
-</ul>
-</li>
-</ol>
-<h2 id="2-MarkDown-基本语法"><a href="#2-MarkDown-基本语法" class="headerlink" title="2.MarkDown 基本语法"></a>2.MarkDown 基本语法</h2><h3 id="2-1标题"><a href="#2-1标题" class="headerlink" title="2.1标题"></a>2.1标题</h3><p>语法格式：<code>#+空格+标题</code>，一个<code>#</code>是一级标题，两个<code>##</code>是两级标题，以此类推，支持六级标题</p>
-<h3 id="2-2字体"><a href="#2-2字体" class="headerlink" title="2.2字体"></a>2.2字体</h3><ul>
-<li><p><strong>加粗</strong>语法格式：<code>**加粗**</code></p>
-</li>
-<li><p><em>斜体</em>语法格式：<code>*斜体*</code></p>
-</li>
-<li><p><em><strong>斜体加粗</strong></em>语法格式：``<em><strong>斜体加粗</strong></em>`</p>
-</li>
-<li><p>删除线 语法格式：<code>~~删除线~~</code></p>
-</li>
-<li><p>高亮</p>
-<p>语法格式：<code>==高亮==</code></p>
-</li>
-</ul>
-<h3 id="2-3引用"><a href="#2-3引用" class="headerlink" title="2.3引用"></a>2.3引用</h3><p>语法格式：<code>&gt;+引用文字</code></p>
-<blockquote>
-<p>我是引用文字</p>
-</blockquote>
-<p>引用也可以嵌套：</p>
-<blockquote>
-<blockquote>
-<p>如加两个<code>&gt;&gt;</code></p>
-<blockquote>
-<p>三个<code>&gt;&gt;&gt;</code></p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>支持无线套娃~~</p>
-<h3 id="2-4分割线"><a href="#2-4分割线" class="headerlink" title="2.4分割线"></a>2.4分割线</h3><p>语法格式：三个或者三个以上的 - 或者 * 都可以，如<code>***</code></p>
-<h3 id="2-5图片"><a href="#2-5图片" class="headerlink" title="2.5图片"></a>2.5图片</h3><p>详细的图片引用以及图床配置请参考<a target="_blank" rel="noopener" href="https://beaumon.tk/2022/08/25/hexo-tu-pian-pei-zhi/">hexo图片配置</a> </p>
-<p>这里只介绍一下Typora默认的引入方式。</p>
-<p>语法格式：</p>
-<pre class="line-numbers language-none"><code class="language-none">![alt](图片地址 ''title'')<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <p>首先，先看SpringBoot的主配置类：</p>
+<pre class="line-numbers language-none"><code class="language-none">@SpringBootApplication
+public class StartEurekaApplication
+{
+    public static void main(String[] args)
+    {
+        SpringApplication.run(StartEurekaApplication.class, args);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<blockquote>
-<p>alt 指的是当图片链接失效时显示的提示文字，可加可不加 title是图片的标题，当鼠标移到图片上时显示的内容，可加可不加</p>
-</blockquote>
-<h3 id="2-6超链接"><a href="#2-6超链接" class="headerlink" title="2.6超链接"></a>2.6超链接</h3><p>语法格式：<code>[超链接名](超链接地址)</code></p>
-<h3 id="2-7列表"><a href="#2-7列表" class="headerlink" title="2.7列表"></a>2.7列表</h3><ul>
-<li>无序列表</li>
-</ul>
-<p>语法格式：无序列表用 - + * 任何一种都可以，如<code>+ 我是无序列表</code></p>
-<blockquote>
-<p>加号和内容之间需要放置一个空格</p>
-</blockquote>
-<ul>
-<li>有序列表</li>
-</ul>
-<p>语法格式：<code>数字+点+空格+内容</code>，如<code>1. 我是有序列表</code></p>
-<ul>
-<li>子列表</li>
-</ul>
-<p>在子列表前按下tab键即可构成子列表。</p>
-<h3 id="2-8表格"><a href="#2-8表格" class="headerlink" title="2.8表格"></a>2.8表格</h3><p>语法格式：</p>
-<pre class="line-numbers language-none"><code class="language-none">|左对齐|居中对齐|右对齐|
-|:----|:----:|---:|
-|左|中|右|<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>点进@SpringBootApplication来看，发现@SpringBootApplication是一个组合注解。</p>
+<pre class="line-numbers language-none"><code class="language-none">@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@SpringBootConfiguration
+@EnableAutoConfiguration
+@ComponentScan(excludeFilters = {
+      @Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),
+      @Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })
+public @interface SpringBootApplication {
 
-<table>
-<thead>
-<tr>
-<th align="left">左对齐</th>
-<th align="center">居中对齐</th>
-<th align="right">右对齐</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">左</td>
-<td align="center">中</td>
-<td align="right">右</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>第二行分割表头和内容，并声明内容的对齐格式。一般而言，不这么用，感觉太费劲了，下面再介绍快捷键。</p>
-</blockquote>
-<h3 id="2-9代码"><a href="#2-9代码" class="headerlink" title="2.9代码"></a>2.9代码</h3><ul>
-<li>行内代码</li>
-</ul>
-<p>语法格式：用一个反引号包起来 <code>代码内容</code>，代码会以主题中设置的样式出现在行内，但不会实现代码高亮。</p>
-<ul>
-<li>多行代码</li>
-</ul>
-<p>语法格式：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
-<blockquote>
-<p>``` 语言 代码内容 ```</p>
-<p>语言：C、C++、JAVA 等</p>
-</blockquote>
-<ul>
-<li>流程图</li>
-</ul>
-<p>正因为Typora支持mermaid语言,所以使用只需要插入代码块，把语言调成mermaid即可流程图。</p>
-<p>官方介绍地址：<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/flowchart?id=a-hexagon-node">https://mermaid-js.github.io/mermaid/#/flowchart?id=a-hexagon-node</a></p>
-<blockquote>
-<p>Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901755.png" alt="image-20220903085104557"></p>
-<ul>
-<li>视频</li>
-</ul>
-<p>同理，点击嵌入代码，可以通过video|iframe标签引入视频。</p>
-<pre class="line-numbers language-none"><code class="language-none">栗子：
-&lt;iframe src="//player.bilibili.com/player.html?aid=762955321&amp;bvid=BV1z64y1h74z&amp;cid=406257730&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li>网页片段</li>
-</ul>
-<p>通过嵌入codepen，你甚至可以在typora里玩贪吃蛇！！！</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="moPsych" data-slug-hash="KKgQxWb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Snake Game"&gt;
-  &lt;span&gt;See the Pen &lt;a href="https://codepen.io/moPsych/pen/KKgQxWb"&gt;
-  Snake Game&lt;/a&gt; by moPsych (&lt;a href="https://codepen.io/moPsych"&gt;@moPsych&lt;/a&gt;)
-  on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
-&lt;/p&gt;
-&lt;script async src="https://static.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>首先我们先来看 @SpringBootConfiguration：</p>
+<pre class="line-numbers language-none"><code class="language-none">@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Configuration
+public @interface SpringBootConfiguration {
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li>PDF</li>
-</ul>
-<p>当然，区区PDF也不在话下，如果是本地文件，直接拖入即可。</p>
-<p>如果想导入云端PDF，需要通过 <code>Google Drive Viewer</code> 来显示：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;iframe src="https://docs.google.com/gview?embedded=true&amp;url=http://infolab.stanford.edu/pub/papers/google.pdf" style="width:800px; height:500px;" frameborder="0"&gt;&lt;/iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>可以看到这个注解除了元注解以外，就只有一个@Configuration，那也就是说这个注解相当于@Configuration，所以这两个注解作用是一样的，它让我们能够去注册一些额外的Bean，并且导入一些额外的配置。</p>
+<p>那@Configuration还有一个作用就是把该类变成一个配置类，不需要额外的XML进行配置。所以@SpringBootConfiguration就相当于@Configuration。进入@Configuration，发现@Configuration核心是@Component，说明Spring的配置类也是Spring的一个组件。</p>
+<pre class="line-numbers language-none"><code class="language-none">@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Component
+public @interface Configuration {
+    @AliasFor(
+        annotation = Component.class
+    )
+    String value() default "";
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>只需把 <code>url=http://infolab.stanford.edu/pub/papers/google.pdf</code> 替换成自己的PDF链接即可，例如 GitHub 上的PDF也可以：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/Theigrams/Mathematical-optimization/d304e27f613352b5d8240010cc58ddb4360ac48d/%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E6%9C%80%E4%BC%98%E5%8C%96%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A.pdf" style="width:800px; height:500px;" frameborder="0"&gt;&lt;/iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>继续来看下一个@EnableAutoConfiguration,这个注解是开启自动配置的功能。</p>
+<pre class="line-numbers language-none"><code class="language-none">@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@AutoConfigurationPackage
+@Import({AutoConfigurationImportSelector.class})
+public @interface EnableAutoConfiguration {
+    String ENABLED_OVERRIDE_PROPERTY = "spring.boot.enableautoconfiguration";
 
-<p>发现了一个新的本地嵌入 PDF 的方法，把下面 <code>src</code> 中的 PDF 路径换成自己的即可。</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;embed id="pdfPlayer" src="C:\Users\question.pdf" type="application/pdf" width="100%" height="600" &gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    Class&lt;?&gt;[] exclude() default {};
 
-<h2 id="3-高级技巧"><a href="#3-高级技巧" class="headerlink" title="3.高级技巧"></a>3.高级技巧</h2><h3 id="3-1转义字符"><a href="#3-1转义字符" class="headerlink" title="3.1转义字符"></a>3.1转义字符</h3><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<pre class="line-numbers language-none"><code class="language-none">\   反斜线
-`   反引号
-*   星号
-_   下划线
-{}  花括号
-[]  方括号
-()  小括号
-#   井字号
-+   加号
--   减号
-.   英文句点
-!   感叹号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    String[] excludeName() default {};
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li>行内公式（inline）用 <code>$...$</code> 括起公式，公式会出现在行内。</li>
-<li>块间公式（display）用 <code>$$...$$</code> 括起公式（注意 <code>$$</code> 后需要换行），公式会默认显示在行中间。</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">$$
-块间公式
-$$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>可以看到它是由 @AutoConfigurationPackage，@Import(EnableAutoConfigurationImportSelector.class)这两个而组成的，我们先说@AutoConfigurationPackage，他是说：让包中的类以及子包中的类能够被自动扫描到spring容器中。</p>
+<pre class="line-numbers language-none"><code class="language-none">@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@Import({Registrar.class})
+public @interface AutoConfigurationPackage {
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li>支持HTML</li>
-</ul>
-<h3 id="3-2在Typora中书写MarkDown"><a href="#3-2在Typora中书写MarkDown" class="headerlink" title="3.2在Typora中书写MarkDown"></a>3.2在Typora中书写MarkDown</h3><table>
-<thead>
-<tr>
-<th align="left">Markdown语法</th>
-<th align="center">Typora快捷键</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">一级标题</td>
-<td align="center"><code>#</code></td>
-<td>ctrl+1</td>
-</tr>
-<tr>
-<td align="left">二级标题</td>
-<td align="center"><code>##</code></td>
-<td>ctrl+2</td>
-</tr>
-<tr>
-<td align="left">三级标题</td>
-<td align="center"><code>###</code></td>
-<td>ctrl+3</td>
-</tr>
-<tr>
-<td align="left">四级标题</td>
-<td align="center"><code>####</code></td>
-<td>ctrl+4</td>
-</tr>
-<tr>
-<td align="left">五级标题</td>
-<td align="center"><code>#####</code></td>
-<td>ctrl+5</td>
-</tr>
-<tr>
-<td align="left">六级标题</td>
-<td align="center"><code>######</code></td>
-<td>ctrl+6</td>
-</tr>
-<tr>
-<td align="left">加粗</td>
-<td align="center"><code>**粗体**</code></td>
-<td>ctrl+B</td>
-</tr>
-<tr>
-<td align="left">斜体</td>
-<td align="center"><code>*斜体*</code></td>
-<td>ctrl+I</td>
-</tr>
-<tr>
-<td align="left">下划线</td>
-<td align="center"><code>&lt;u&gt;下划线&lt;/u&gt;</code></td>
-<td>ctrl+U</td>
-</tr>
-<tr>
-<td align="left">删除线</td>
-<td align="center"><code>~~删除线~~</code></td>
-<td>alt+shift+5</td>
-</tr>
-<tr>
-<td align="left">创建表格</td>
-<td align="center"></td>
-<td>ctrl+T</td>
-</tr>
-<tr>
-<td align="left">创建超链接</td>
-<td align="center"><code>[超链接名](超链接地址)</code></td>
-<td>ctrl+K</td>
-</tr>
-<tr>
-<td align="left">插入图片</td>
-<td align="center"><code>![alt](图片地址)</code></td>
-<td>ctrl+shift+I</td>
-</tr>
-<tr>
-<td align="left">插入公式块</td>
-<td align="center"><code>$$公式$$</code></td>
-<td>ctrl+shift+M</td>
-</tr>
-<tr>
-<td align="left">添加引用</td>
-<td align="center"><code>&gt;内容</code></td>
-<td>ctrl+shift+Q</td>
-</tr>
-<tr>
-<td align="left">无序列表</td>
-<td align="center"><code>+ 内容</code></td>
-<td>ctrl+shift+]</td>
-</tr>
-<tr>
-<td align="left">有序列表</td>
-<td align="center"><code>1. 内容</code></td>
-<td>ctrl+shift+[</td>
-</tr>
-<tr>
-<td align="left">粘贴为纯文本</td>
-<td align="center"></td>
-<td>ctrl+shift+V</td>
-</tr>
-<tr>
-<td align="left">返回Typora顶部</td>
-<td align="center"></td>
-<td>ctrl+Home</td>
-</tr>
-<tr>
-<td align="left">返回Typora底部</td>
-<td align="center"></td>
-<td>ctrl+End</td>
-</tr>
-<tr>
-<td align="left">启用/退出 源代码模式</td>
-<td align="center"></td>
-<td>ctrl+/</td>
-</tr>
-<tr>
-<td align="left">搜索</td>
-<td align="center"></td>
-<td>ctrl+F</td>
-</tr>
-<tr>
-<td align="left">搜索并替换</td>
-<td align="center"></td>
-<td>ctrl+H</td>
-</tr>
-<tr>
-<td align="left">选中光标所在行</td>
-<td align="center"></td>
-<td>ctrl+L</td>
-</tr>
-<tr>
-<td align="left">生成文档目录</td>
-<td align="center"></td>
-<td><code>[toc]</code>+Enter</td>
-</tr>
-<tr>
-<td align="left">快速打开最新文档</td>
-<td align="center"></td>
-<td>ctrl+P</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>TOC从文档中提取所有标题，其内容将自动更新。</p>
-</blockquote>
-<h4 id="3-2-1图片插入"><a href="#3-2-1图片插入" class="headerlink" title="3.2.1图片插入"></a>3.2.1图片插入</h4><p>插入图片除了使用插入语句外，还可以：</p>
-<ul>
-<li>ctrl+C/V 将网络图片、剪贴板图片复制到文档中</li>
-<li>拖动本地图片到文档中</li>
-</ul>
-<p>Typora 会自动帮你插入符合 Markdown 语法的图片语句，并给它添加<code>alt</code>。</p>
-<h4 id="3-2-2打字机模式和专注模式"><a href="#3-2-2打字机模式和专注模式" class="headerlink" title="3.2.2打字机模式和专注模式"></a>3.2.2打字机模式和专注模式</h4><p>通过 视图→→打字机模式/专注模式 开启或关闭：</p>
-<ul>
-<li>「打字机模式」使得你所编辑的那一行永远处于屏幕正中央。</li>
-<li>「专注模式」使你正在编辑的那一行保留颜色，而其他行的字体呈灰色。</li>
-</ul>
-<h4 id="3-2-3空格与换行"><a href="#3-2-3空格与换行" class="headerlink" title="3.2.3空格与换行"></a>3.2.3空格与换行</h4><ul>
-<li><strong>空格：</strong>在输入连续的空格后，Typora 会在编辑器视图里为你保留这些空格，但当你打印或导出时，这些空格会被省略成一个。你可以在源代码模式下，为每个空格前加一个 <code>\</code> 转义符，或者直接使用 HTML 风格的 <code>&amp;nbps;</code> 来保持连续的空格。</li>
-</ul>
-<blockquote>
-<p>需要说明的是，在 Markdown 语法中，换行（line break）与换段是不同的，且换行分为软换行和硬换行。</p>
-</blockquote>
-<ul>
-<li><strong>软换行</strong>：在 Typora 中，你可以通过shift+enter完成一次软换行。软换行只在编辑界面可见，当文档被导出时换行会被省略。</li>
-<li><strong>硬换行：</strong>你可以通过 空格+ 空格+ shift+enter完成一次硬换行，而这也是许多 Markdown 编辑器所原生支持的。硬换行在文档被导出时将被保留，且没有换段的段后距。</li>
-<li><strong>换段：</strong>你可以通过enter完成一次换段。Typora 会自动帮你完成两次shift+enter的软换行，从而完成一次换段。这也意味着在 Markdown 语法下，换段是通过在段与段之间加入空行来实现的。</li>
-<li><strong>Windows 风格（CR+LF）与 Unix 风格（LF）的换行符：</strong>CR表示回车<code>\r</code>，即回到一行的开头，而LF表示换行<code>\n</code>，即另起一行。所以 Windows 风格的换行符本质是「回车+换行」，而 Unix 风格的换行符是「换行」。这也是为什么 Unix/Mac 系统下的文件，如果在 Windows 系统直接打开会全部在同一行内。你可以在「文件 - 偏好设置 - 编辑器 - 默认换行符」中对此进行切换。</li>
-</ul>
-<h4 id="3-2-4支持emoji-表情"><a href="#3-2-4支持emoji-表情" class="headerlink" title="3.2.4支持emoji 表情"></a>3.2.4支持emoji 表情</h4><p>在 Typora 中，你可以用 <code>:emoji:</code> 的形式来打出 emoji，软件会自动给出图形的提示。</p>
-<h2 id="4-Typora主题"><a href="#4-Typora主题" class="headerlink" title="4.Typora主题"></a>4.Typora主题</h2><ol>
-<li><p>使用 Typora 内置主题：点击状态栏「主题」，选择喜欢的主题样式</p>
-</li>
-<li><p>自定义主题：通过「文件-偏好设置-外观-打开主题文件夹」打开Typora的主题文件夹<code>Typora\themes</code>，将自定义的 CSS 文件导入到 <code>themes</code>文件夹中并重启Typora，在「主题」中选择你导入的主题样式即可</p>
-<p>自定义的主题样式：</p>
-</li>
-</ol>
-<ul>
-<li>mo主题</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901591.png" alt="img"></p>
-<ul>
-<li>mo-dark主题</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901404.png" alt="img"></p>
-<ul>
-<li>pie主题</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901056.png" alt="img"></p>
-<ul>
-<li>pie-dark主题</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901228.png" alt="img"></p>
-<ul>
-<li>melephant主题</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901976.png" alt="img"></p>
-<ul>
-<li>melephant-2主题</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209030901682.png" alt="img"></p>
-<p>​     大家可以根据自己的喜好找寻更多好看的主题。</p>
+<p>使用@Import来给Spring容器中导入一个组件 ，这里导入的是Registrar.class。来看下这个Registrar：</p>
+<pre class="line-numbers language-none"><code class="language-none">static class Registrar implements ImportBeanDefinitionRegistrar, DeterminableImports {
+        Registrar() {
+        }
+
+        public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
+            AutoConfigurationPackages.register(registry, (new AutoConfigurationPackages.PackageImport(metadata)).getPackageName());
+        }
+
+        public Set&lt;Object&gt; determineImports(AnnotationMetadata metadata) {
+            return Collections.singleton(new AutoConfigurationPackages.PackageImport(metadata));
+        }
+    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>就是通过以上这个方法获取扫描的包路径，可以debug查看具体的值：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061055223.png" alt="img">那metadata是什么呢，可以看到是标注在@SpringBootApplication注解上的DemosbApplication，也就是我们的主配置类Application：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061055458.png" alt="img">其实就是将主配置类（即@SpringBootApplication标注的类）的所在包及子包里面所有组件扫描加载到Spring容器。因此我们要把DemoApplication放在项目的最高级中（最外层目录)。</p>
+<p>看看注解@Import(AutoConfigurationImportSelector.class)，@Import注解就是给Spring容器中导入一些组件，这里传入了一个组件的选择器:AutoConfigurationImportSelector。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061055688.png" alt="img">可以从图中看出AutoConfigurationImportSelector 继承了 DeferredImportSelector 继承了 ImportSelector，ImportSelector有一个方法为：selectImports。将所有需要导入的组件以全类名的方式返回，这些组件就会被添加到容器中。</p>
+<pre class="line-numbers language-none"><code class="language-none">public String[] selectImports(AnnotationMetadata annotationMetadata) {
+    if (!this.isEnabled(annotationMetadata)) {
+        return NO_IMPORTS;
+    } else {
+        AutoConfigurationMetadata autoConfigurationMetadata = AutoConfigurationMetadataLoader.loadMetadata(this.beanClassLoader);
+        AutoConfigurationImportSelector.AutoConfigurationEntry autoConfigurationEntry = 
+        this.getAutoConfigurationEntry(autoConfigurationMetadata, annotationMetadata);
+        return StringUtils.toStringArray(autoConfigurationEntry.getConfigurations());
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>会给容器中导入非常多的自动配置类（xxxAutoConfiguration）；就是给容器中导入这个场景需要的所有组件，并配置好这些组件。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061055858.png" alt="img">有了自动配置类，免去了我们手动编写配置注入功能组件等的工作。那是如何获取到这些配置类的呢，看看下面这个方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">protected AutoConfigurationImportSelector.AutoConfigurationEntry 
+  getAutoConfigurationEntry(AutoConfigurationMetadata autoConfigurationMetadata, AnnotationMetadata annotationMetadata) {
+    if (!this.isEnabled(annotationMetadata)) {
+        return EMPTY_ENTRY;
+    } else {
+        AnnotationAttributes attributes = this.getAttributes(annotationMetadata);
+        List&lt;String&gt; configurations = this.getCandidateConfigurations(annotationMetadata, attributes);
+        configurations = this.removeDuplicates(configurations);
+        Set&lt;String&gt; exclusions = this.getExclusions(annotationMetadata, attributes);
+        this.checkExcludedClasses(configurations, exclusions);
+        configurations.removeAll(exclusions);
+        configurations = this.filter(configurations, autoConfigurationMetadata);
+        this.fireAutoConfigurationImportEvents(configurations, exclusions);
+        return new AutoConfigurationImportSelector.AutoConfigurationEntry(configurations, exclusions);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们可以看到getCandidateConfigurations()这个方法，他的作用就是引入系统已经加载好的一些类，到底是那些类呢：</p>
+<pre class="line-numbers language-none"><code class="language-none">protected List&lt;String&gt; getCandidateConfigurations(AnnotationMetadata metadata, AnnotationAttributes attributes) {
+    List&lt;String&gt; configurations = SpringFactoriesLoader.loadFactoryNames(this.getSpringFactoriesLoaderFactoryClass(), this.getBeanClassLoader());
+    Assert.notEmpty(configurations, 
+    "No auto configuration classes found in META-INF/spring.factories. If you are using a custom packaging, make sure that file is correct.");
+    return configurations;
+}
+public static List&lt;String&gt; loadFactoryNames(Class&lt;?&gt; factoryClass, @Nullable ClassLoader classLoader) {
+    String factoryClassName = factoryClass.getName();
+    return (List)loadSpringFactories(classLoader).getOrDefault(factoryClassName, Collections.emptyList());
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>会从META-INF/spring.factories中获取资源，然后通过Properties加载资源：</p>
+<pre class="line-numbers language-none"><code class="language-none">private static Map&lt;String, List&lt;String&gt;&gt; loadSpringFactories(@Nullable ClassLoader classLoader) {
+    MultiValueMap&lt;String, String&gt; result = (MultiValueMap)cache.get(classLoader);
+    if (result != null) {
+        return result;
+    } else {
+        try {
+            Enumeration&lt;URL&gt; urls = classLoader != 
+          null ? classLoader.getResources("META-INF/spring.factories") : ClassLoader.getSystemResources("META-INF/spring.factories");
+            LinkedMultiValueMap result = new LinkedMultiValueMap();
+
+            while(urls.hasMoreElements()) {
+                URL url = (URL)urls.nextElement();
+                UrlResource resource = new UrlResource(url);
+                Properties properties = PropertiesLoaderUtils.loadProperties(resource);
+                Iterator var6 = properties.entrySet().iterator();
+
+                while(var6.hasNext()) {
+                    Map.Entry&lt;?, ?&gt; entry = (Map.Entry)var6.next();
+                    String factoryClassName = ((String)entry.getKey()).trim();
+                    String[] var9 = StringUtils.commaDelimitedListToStringArray((String)entry.getValue());
+                    int var10 = var9.length;
+
+                    for(int var11 = 0; var11 &lt; var10; ++var11) {
+                        String factoryName = var9[var11];
+                        result.add(factoryClassName, factoryName.trim());
+                    }
+                }
+            }
+
+            cache.put(classLoader, result);
+            return result;
+        } catch (IOException var13) {
+            throw new IllegalArgumentException("Unable to load factories from location [META-INF/spring.factories]", var13);
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以知道SpringBoot在启动的时候从类路径下的META-INF/spring.factories中获取EnableAutoConfiguration指定的值，将这些值作为自动配置类导入到容器中，自动配置类就生效，帮我们进行自动配置工作。以前我们需要自己配置的东西，自动配置类都帮我们完成了。如下图可以发现Spring常见的一些类已经自动导入。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061055446.png" alt="img">接下来看@ComponentScan注解，@ComponentScan(excludeFilters = { @Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class), @Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })，这个注解就是扫描包，然后放入spring容器。</p>
+<pre class="line-numbers language-none"><code class="language-none">@ComponentScan(excludeFilters = {
+  @Filter(type = FilterType.CUSTOM,classes = {TypeExcludeFilter.class}), 
+  @Filter(type = FilterType.CUSTOM,classes = {AutoConfigurationExcludeFilter.class})})
+public @interface SpringBootApplication {}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>总结下@SpringbootApplication：就是说，他已经把很多东西准备好，具体是否使用取决于我们的程序或者说配置。</p>
+<p>接下来继续看run方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>来看下在执行run方法到底有没有用到哪些自动配置的东西，我们点进run：</p>
+<pre class="line-numbers language-none"><code class="language-none">public ConfigurableApplicationContext run(String... args) {
+    //计时器
+    StopWatch stopWatch = new StopWatch();
+    stopWatch.start();
+    ConfigurableApplicationContext context = null;
+    Collection&lt;SpringBootExceptionReporter&gt; exceptionReporters = new ArrayList();
+    this.configureHeadlessProperty();
+    //监听器
+    SpringApplicationRunListeners listeners = this.getRunListeners(args);
+    listeners.starting();
+
+    Collection exceptionReporters;
+    try {
+        ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);
+        ConfigurableEnvironment environment = this.prepareEnvironment(listeners, applicationArguments);
+        this.configureIgnoreBeanInfo(environment);
+        Banner printedBanner = this.printBanner(environment);
+        //准备上下文
+        context = this.createApplicationContext();
+        exceptionReporters = this.getSpringFactoriesInstances(SpringBootExceptionReporter.class,                       new Class[]{ConfigurableApplicationContext.class}, context);
+        //预刷新context
+        this.prepareContext(context, environment, listeners, applicationArguments, printedBanner);
+        //刷新context
+        this.refreshContext(context);
+        //刷新之后的context
+        this.afterRefresh(context, applicationArguments);
+        stopWatch.stop();
+        if (this.logStartupInfo) {
+            (new StartupInfoLogger(this.mainApplicationClass)).logStarted(this.getApplicationLog(), stopWatch);
+        }
+
+        listeners.started(context);
+        this.callRunners(context, applicationArguments);
+    } catch (Throwable var10) {
+        this.handleRunFailure(context, var10, exceptionReporters, listeners);
+        throw new IllegalStateException(var10);
+    }
+
+    try {
+        listeners.running(context);
+        return context;
+    } catch (Throwable var9) {
+        this.handleRunFailure(context, var9, exceptionReporters, (SpringApplicationRunListeners)null);
+        throw new IllegalStateException(var9);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>那我们关注的就是 refreshContext(context); 刷新context，我们点进来看。</p>
+<pre class="line-numbers language-none"><code class="language-none">private void refreshContext(ConfigurableApplicationContext context) {
+   refresh(context);
+   if (this.registerShutdownHook) {
+      try {
+         context.registerShutdownHook();
+      }
+      catch (AccessControlException ex) {
+         // Not allowed in some environments.
+      }
+   }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们继续点进refresh(context);</p>
+<pre class="line-numbers language-none"><code class="language-none">protected void refresh(ApplicationContext applicationContext) {
+   Assert.isInstanceOf(AbstractApplicationContext.class, applicationContext);
+   ((AbstractApplicationContext) applicationContext).refresh();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>他会调用 ((AbstractApplicationContext) applicationContext).refresh();方法，我们点进来看：</p>
+<pre class="line-numbers language-none"><code class="language-none">public void refresh() throws BeansException, IllegalStateException {
+   synchronized (this.startupShutdownMonitor) {
+      // Prepare this context for refreshing.
+      prepareRefresh();
+      // Tell the subclass to refresh the internal bean factory.
+      ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
+      // Prepare the bean factory for use in this context.
+      prepareBeanFactory(beanFactory);
+
+      try {
+         // Allows post-processing of the bean factory in context subclasses.
+         postProcessBeanFactory(beanFactory);
+         // Invoke factory processors registered as beans in the context.
+         invokeBeanFactoryPostProcessors(beanFactory);
+         // Register bean processors that intercept bean creation.
+         registerBeanPostProcessors(beanFactory);
+         // Initialize message source for this context.
+         initMessageSource();
+         // Initialize event multicaster for this context.
+         initApplicationEventMulticaster();
+         // Initialize other special beans in specific context subclasses.
+         onRefresh();
+         // Check for listener beans and register them.
+         registerListeners();
+         // Instantiate all remaining (non-lazy-init) singletons.
+         finishBeanFactoryInitialization(beanFactory);
+         // Last step: publish corresponding event.
+         finishRefresh();
+      }catch (BeansException ex) {
+         if (logger.isWarnEnabled()) {
+            logger.warn("Exception encountered during context initialization - " +
+                  "cancelling refresh attempt: " + ex);
+         }
+         // Destroy already created singletons to avoid dangling resources.
+         destroyBeans();
+         // Reset 'active' flag.
+         cancelRefresh(ex);
+         // Propagate exception to caller.
+         throw ex;
+      }finally {
+         // Reset common introspection caches in Spring's core, since we
+         // might not ever need metadata for singleton beans anymore...
+         resetCommonCaches();
+      }
+   }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由此可知，就是一个spring的bean的加载过程。继续来看一个方法叫做 onRefresh()：</p>
+<pre class="line-numbers language-none"><code class="language-none">protected void onRefresh() throws BeansException {
+   // For subclasses: do nothing by default.
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>他在这里并没有直接实现，但是我们找他的具体实现：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061055771.png" alt="img">比如Tomcat跟web有关，我们可以看到有个ServletWebServerApplicationContext：</p>
+<pre class="line-numbers language-none"><code class="language-none">@Override
+protected void onRefresh() {
+   super.onRefresh();
+   try {
+      createWebServer();
+   }
+   catch (Throwable ex) {
+      throw new ApplicationContextException("Unable to start web server", ex);
+   }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到有一个createWebServer();方法他是创建web容器的，而Tomcat不就是web容器，那是如何创建的呢，我们继续看：</p>
+<pre class="line-numbers language-none"><code class="language-none">private void createWebServer() {
+   WebServer webServer = this.webServer;
+   ServletContext servletContext = getServletContext();
+   if (webServer == null &amp;&amp; servletContext == null) {
+      ServletWebServerFactory factory = getWebServerFactory();
+      this.webServer = factory.getWebServer(getSelfInitializer());
+   }
+   else if (servletContext != null) {
+      try {
+         getSelfInitializer().onStartup(servletContext);
+      }
+      catch (ServletException ex) {
+         throw new ApplicationContextException("Cannot initialize servlet context",
+               ex);
+      }
+   }
+   initPropertySources();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>factory.getWebServer(getSelfInitializer());他是通过工厂的方式创建的。</p>
+<pre class="line-numbers language-none"><code class="language-none">public interface ServletWebServerFactory {
+   WebServer getWebServer(ServletContextInitializer... initializers);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到 它是一个接口，为什么会是接口。因为我们不止是Tomcat一种web容器。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061056038.png" alt="img"></p>
+<p>我们看到还有Jetty，那我们来看TomcatServletWebServerFactory：</p>
+<pre class="line-numbers language-none"><code class="language-none">@Override
+public WebServer getWebServer(ServletContextInitializer... initializers) {
+   Tomcat tomcat = new Tomcat();
+   File baseDir = (this.baseDirectory != null) ? this.baseDirectory
+         : createTempDir("tomcat");
+   tomcat.setBaseDir(baseDir.getAbsolutePath());
+   Connector connector = new Connector(this.protocol);
+   tomcat.getService().addConnector(connector);
+   customizeConnector(connector);
+   tomcat.setConnector(connector);
+   tomcat.getHost().setAutoDeploy(false);
+   configureEngine(tomcat.getEngine());
+   for (Connector additionalConnector : this.additionalTomcatConnectors) {
+      tomcat.getService().addConnector(additionalConnector);
+   }
+   prepareContext(tomcat.getHost(), initializers);
+   return getTomcatWebServer(tomcat);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>那这块代码，就是我们要寻找的内置Tomcat，在这个过程当中，我们可以看到创建Tomcat的一个流程。</p>
+<p>如果不明白的话， 我们在用另一种方式来理解下，大家要应该都知道starter举点例子。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-freemarker&lt;/artifactId&gt;
+&lt;/dependency&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>首先自定义一个starter。详细定义starter的步骤参考</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;parent&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;2.1.4.RELEASE&lt;/version&gt;
+    &lt;relativePath/&gt;
+&lt;/parent&gt;
+&lt;groupId&gt;com.demo&lt;/groupId&gt;
+&lt;artifactId&gt;gw-spring-boot-starter&lt;/artifactId&gt;
+&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-autoconfigure&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们先来看maven配置写入版本号，如果自定义一个starter的话必须依赖spring-boot-autoconfigure这个包,我们先看下项目目录。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209061056702.png" alt="img">img</p>
+<pre class="line-numbers language-none"><code class="language-none">public class GwServiceImpl  implements GwService{
+    @Autowired
+    GwProperties properties;
+
+    @Override
+    public void Hello()
+    {
+        String name=properties.getName();
+        System.out.println(name+"说:你们好啊");
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们做的就是通过配置文件来定制name这个是具体实现。</p>
+<pre class="line-numbers language-none"><code class="language-none">@Component
+@ConfigurationProperties(prefix = "spring.gwname")
+public class GwProperties {
+
+    String name="Beaumon";
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这个类可以通过@ConfigurationProperties读取配置文件。</p>
+<pre class="line-numbers language-none"><code class="language-none">@Configuration
+@ConditionalOnClass(GwService.class)  //扫描类
+@EnableConfigurationProperties(GwProperties.class) //让配置类生效
+public class GwAutoConfiguration {
+
+    /**
+    * 功能描述 托管给spring
+    * @author Beaumon
+    * @return
+    */
+    @Bean
+    @ConditionalOnMissingBean
+    public GwService gwService()
+    {
+        return new GwServiceImpl();
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这个为配置类，为什么这么写因为，spring-boot的starter都是这么写的，我们可以参照他仿写starter，以达到自动配置的目的，然后我们在通过spring.factories也来进行配置。</p>
+<pre class="line-numbers language-none"><code class="language-none">org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.gw.GwAutoConfiguration<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后这样一个简单的starter就完成了，然后可以进行maven的打包，在其他项目引入就可以使用。</p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
             </div>
@@ -992,7 +1056,7 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/">https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/</a>
+                    <a href="https://beaumon.github.io/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/">https://beaumon.github.io/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1030,8 +1094,12 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/Spring-Boot/">
+                                    <span class="chip bg-color">Spring Boot</span>
                                 </a>
                             
                         </div>
@@ -1109,7 +1177,7 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
         repo: 'beaumon.github.io',
         owner: 'Beaumon',
         admin: ["Beaumon"],
-        id: '2022-09-03T08-20-16',
+        id: '2022-09-06T10-50-38',
 		distractionFreeMode: 'true',
 		proxy: 'https://gitalkreslove.introduce.workers.dev/?https://github.com/login/oauth/access_token'
     });
@@ -1144,19 +1212,19 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/">
+                <a href="/2022/09/06/spring-boot-zi-ding-yi-starter/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Spring Boot 自动装配原理">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Spring Boot 自定义starter">
                         
-                        <span class="card-title">Spring Boot 自动装配原理</span>
+                        <span class="card-title">Spring Boot 自定义starter</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Spring Boot 自动装配原理
+                            Spring Boot 自定义starter
                         
                     </div>
                     <div class="publish-info">
@@ -1197,31 +1265,31 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/02/monogodb-ru-men/">
+                <a href="/2022/09/03/typora-shi-yong-jiao-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="MonogoDB入门基础教程">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Typora使用教程">
                         
-                        <span class="card-title">MonogoDB入门基础教程</span>
+                        <span class="card-title">Typora使用教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MongoDB入门基础教程
+                            Typora使用教程
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MonogoDB/" class="post-category">
-                                    MonogoDB
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
                                 </a>
                             
                             
@@ -1231,8 +1299,8 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MonogoDB/">
-                        <span class="chip bg-color">MonogoDB</span>
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
                     </a>
                     
                 </div>
@@ -1270,87 +1338,6 @@ $$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 
