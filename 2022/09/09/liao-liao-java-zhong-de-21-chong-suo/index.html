@@ -630,15 +630,15 @@ charset="utf-8"></script>
 <p>再次获取锁：识别获取锁的线程是否为当前占据锁的线程，如果是，则再次成功获取。获取锁后，进行计数自增，</p>
 <p>释放锁：释放锁时，进行计数自减。</p>
 </blockquote>
-<pre><code>synchronized void setA() throws InterruptedException {
-    TimeUnit.SECONDS.sleep(1);
-    setB();
+<pre class="line-numbers language-none"><code class="language-none">synchronized void setA() throws InterruptedException {
+	TimeUnit.SECONDS.sleep(1);
+	setB();
 }
 
 synchronized void setB() throws InterruptedException {
-    TimeUnit.SECONDS.sleep(1);
-}
-</code></pre>
+	TimeUnit.SECONDS.sleep(1);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>上面的代码就是可重入锁的一个特点，如果不是可重入锁的话，setB()可能不会被当前线程执行，可能造成死锁。</p>
 <pre class="line-numbers language-none"><code class="language-none">面试题1： 可重入锁如果加了两把，但是只释放了一把会出现什么问题？
 答：程序卡死，线程不能出来，也就是说我们申请了几把锁，就需要释放几把锁。
@@ -652,7 +652,7 @@ synchronized void setB() throws InterruptedException {
 </ul>
 <p>ReentrantLock中可重入锁实现：</p>
 <p>非公平锁的锁获取方法：</p>
-<pre><code>    final boolean nonfairTryAcquire(int acquires) {
+<pre class="line-numbers language-none"><code class="language-none">final boolean nonfairTryAcquire(int acquires) {
         final Thread current = Thread.currentThread();
         int c = getState();
         if (c == 0) {
@@ -669,8 +669,9 @@ synchronized void setB() throws InterruptedException {
             return true;
         }
         return false;
-    }
-</code></pre>
+    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <p>在AQS中维护了一个volatile修饰的state成员变量来计数重入次数，避免了频繁的持有释放操作，这样提升了效率，又避免了死锁</p>
 <p><strong>补充: 什么是AQS?</strong></p>
 <p>AQS（AbstractQueuedSynchronizer）使用一个int成员变量来表示 同步状态，通过内置的FIFO队列来完成获取资源线程的排队工作，状态信息通过protected类型的getState,setState,compareAndSetState来进行操作</p>
@@ -790,22 +791,22 @@ public interface ReadWriteLock {
 <p>自旋锁的缺点： 占用处理器的时间，如果占用的时间很长，会白白消耗处理器资源，而不会做任何有价值的工作，带来性能的浪费。因此自旋等待的时间必须有一定的限度，如果自旋超过了限定的次数仍然没有成功获得锁，就应当使用传统的方式去挂起线程。</p>
 <p>自旋锁次数默认值：10次，可以使用参数-XX:PreBlockSpin来自行更改。</p>
 <p>自适应自旋： 自适应意味着自旋的时间不再是固定的，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。有了自适应自旋，随着程序运行时间的增长及性能监控信息的不断完善，虚拟机对程序锁的状态预测就会越来越精准。</p>
-<h4 id="2-8-3Java实现自旋锁"><a href="#2-8-3Java实现自旋锁" class="headerlink" title="2.8.3Java实现自旋锁"></a>2.8.3Java实现自旋锁</h4><pre><code>public class SpinLock {
-    private AtomicReference&lt;Thread&gt; cas = new AtomicReference&lt;&gt;();
+<h4 id="2-8-3Java实现自旋锁"><a href="#2-8-3Java实现自旋锁" class="headerlink" title="2.8.3Java实现自旋锁"></a>2.8.3Java实现自旋锁</h4><pre class="line-numbers language-none"><code class="language-none">public class SpinLock {
+	private AtomicReference&lt;Thread&gt; cas = new AtomicReference&lt;&gt;();
     public void lock() {
         Thread current = Thread.currentThread();
         // 利用CAS
         while (!cas.compareAndSet(null, current)) {
             // do nothing
         }
-    }
+	}
 
     public void unlock() {
         Thread current = Thread.currentThread();
         cas.compareAndSet(current, null);
     }
-}
-</code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>lock()方法利用的CAS，当第一个线程A获取锁的时候，能够成功获取到，不会进入while循环，如果此时线程A没有释放锁，另一个线程B又来获取锁，此时由于不满足CAS，所以就会进入while循环，不会判断是否满足CAS，直到A线程调用unlock()方法释放了该锁</p>
 <h4 id="2-8-4自旋锁存在的问题"><a href="#2-8-4自旋锁存在的问题" class="headerlink" title="2.8.4自旋锁存在的问题"></a>2.8.4自旋锁存在的问题</h4><ul>
 <li><p>如果某个线程持有锁的时间过长，就会导致其他等待获取锁的线程进入循环等待，消耗CPU。使用不当会造成CPU使用率极高</p>
