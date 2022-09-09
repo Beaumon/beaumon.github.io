@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-06T03:08:00.320Z</updated>
+  <updated>2022-09-09T00:54:13.327Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>白嫖 IBM LinuxOne 服务器</title>
+    <link href="https://beaumon.github.io/2022/09/08/bai-piao-ibm-linuxone-fu-wu-qi/"/>
+    <id>https://beaumon.github.io/2022/09/08/bai-piao-ibm-linuxone-fu-wu-qi/</id>
+    <published>2022-09-08T13:34:35.000Z</published>
+    <updated>2022-09-09T00:54:13.327Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;白嫖-IBM-LinuxOne-教程&quot;&gt;&lt;a href=&quot;#白嫖-IBM-LinuxOne-教程&quot; class=&quot;headerlink&quot; title=&quot;白嫖 IBM LinuxOne 教程&quot;&gt;&lt;/a&gt;白嫖 IBM LinuxOne 教程&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://beaumon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="云服务器" scheme="https://beaumon.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring Boot 自定义starter</title>
