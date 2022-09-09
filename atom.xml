@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-09T00:54:13.327Z</updated>
+  <updated>2022-09-09T01:47:31.291Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>聊聊8种架构模式</title>
+    <link href="https://beaumon.github.io/2022/09/09/liao-liao-8-chong-jia-gou-mo-shi/"/>
+    <id>https://beaumon.github.io/2022/09/09/liao-liao-8-chong-jia-gou-mo-shi/</id>
+    <published>2022-09-09T01:36:07.000Z</published>
+    <updated>2022-09-09T01:47:31.291Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;8种架构模式&quot;&gt;&lt;a href=&quot;#8种架构模式&quot; class=&quot;headerlink&quot; title=&quot;8种架构模式&quot;&gt;&lt;/a&gt;8种架构模式&lt;/h1&gt;&lt;h2 id=&quot;1-什么是架构&quot;&gt;&lt;a href=&quot;#1-什么是架构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="聊聊" scheme="https://beaumon.github.io/categories/%E8%81%8A%E8%81%8A/"/>
+    
+    
+    <category term="架构" scheme="https://beaumon.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>权限系统设计方案（图解）</title>
+    <link href="https://beaumon.github.io/2022/09/09/quan-xian-xi-tong-she-ji-fang-an-tu-jie/"/>
+    <id>https://beaumon.github.io/2022/09/09/quan-xian-xi-tong-she-ji-fang-an-tu-jie/</id>
+    <published>2022-09-09T01:24:18.000Z</published>
+    <updated>2022-09-09T01:30:47.771Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-为什么需要权限管理&quot;&gt;&lt;a href=&quot;#1-为什么需要权限管理&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="mysql" scheme="https://beaumon.github.io/categories/mysql/"/>
+    
+    
+    <category term="权限" scheme="https://beaumon.github.io/tags/%E6%9D%83%E9%99%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>白嫖 IBM LinuxOne 服务器</title>
     <link href="https://beaumon.github.io/2022/09/08/bai-piao-ibm-linuxone-fu-wu-qi/"/>
     <id>https://beaumon.github.io/2022/09/08/bai-piao-ibm-linuxone-fu-wu-qi/</id>
     <published>2022-09-08T13:34:35.000Z</published>
-    <updated>2022-09-09T00:54:13.327Z</updated>
+    <updated>2022-09-09T01:14:00.738Z</updated>
     
     
       
@@ -204,7 +254,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/"/>
     <id>https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/</id>
     <published>2022-08-29T13:51:17.000Z</published>
-    <updated>2022-08-29T13:58:52.362Z</updated>
+    <updated>2022-09-09T01:48:08.308Z</updated>
     
     
       
@@ -217,10 +267,8 @@ public class</summary>
     
     
     
-    <category term="java" scheme="https://beaumon.github.io/categories/java/"/>
+    <category term="聊聊" scheme="https://beaumon.github.io/categories/%E8%81%8A%E8%81%8A/"/>
     
-    
-    <category term="java" scheme="https://beaumon.github.io/tags/java/"/>
     
     <category term="mysql" scheme="https://beaumon.github.io/tags/mysql/"/>
     
