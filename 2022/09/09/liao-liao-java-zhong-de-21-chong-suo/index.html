@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="聊聊数据库建表的15个小技巧, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="分享数据库建表的15个小技巧">
+    <meta name="keywords" content="聊聊java中的21种锁, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="聊聊java中的21种锁">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>聊聊数据库建表的15个小技巧 | 是Beaumon的小博客鸭</title>
+    <title>聊聊java中的21种锁 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -489,12 +489,12 @@ charset="utf-8"></script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">聊聊数据库建表的15个小技巧</h1>
+                    <h1 class="description center-align post-title">聊聊java中的21种锁</h1>
                 </div>
             </div>
         </div>
@@ -518,8 +518,12 @@ charset="utf-8"></script>
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/mysql/">
-                                <span class="chip bg-color">mysql</span>
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%94%81/">
+                                <span class="chip bg-color">锁</span>
                             </a>
                         
                     </div>
@@ -530,8 +534,8 @@ charset="utf-8"></script>
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%81%8A%E8%81%8A/" class="post-category">
-                                聊聊
+                            <a href="/categories/java/" class="post-category">
+                                java
                             </a>
                         
                     </div>
@@ -543,7 +547,7 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-29
+                    2022-09-09
                 </div>
                 
 
@@ -557,14 +561,14 @@ charset="utf-8"></script>
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.6k
+                    7.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    16 分
+                    26 分
                 </div>
                 
 
@@ -587,257 +591,331 @@ charset="utf-8"></script>
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数据库建表的15个小技巧"><a href="#数据库建表的15个小技巧" class="headerlink" title="数据库建表的15个小技巧"></a>数据库建表的15个小技巧</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于后端开发同学来说，访问数据库，是代码中必不可少的一个环节。</p>
-<p>系统中收集到用户的核心数据，为了安全性，我们一般会存储到数据库，比如：mysql，oracle等。</p>
-<p>后端开发的日常工作，需要不断的建库和建表，来满足业务需求。</p>
-<p>通常情况下，建库的频率比建表要低很多，所以，我们这篇文章主要讨论建表相关的内容。</p>
-<p>如果我们在建表的时候不注意细节，等后面系统上线之后，表的维护成本变得非常高，而且很容易踩坑。</p>
-<p>今天就跟大家一起聊聊，数据库建表的15个小技巧，希望对你会有所帮助。</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292154327.png" alt="img"></p>
-<h2 id="1-名字"><a href="#1-名字" class="headerlink" title="1.名字"></a>1.名字</h2><p>建表的时候，给<code>表</code>、<code>字段</code>和<code>索引</code>起个好名字，真的太重要了。</p>
-<h3 id="1-1-见名知意"><a href="#1-1-见名知意" class="headerlink" title="1.1 见名知意"></a><strong>1.1 见名知意</strong></h3><p>名字就像<code>表</code>、<code>字段</code>和<code>索引</code>的一张脸，可以给人留下第一印象。</p>
-<p>好的名字，言简意赅，见名知意，让人心情愉悦，能够提高沟通和维护成本。</p>
-<p>坏的名字，模拟两可，不知所云。而且显得杂乱无章，看得让人抓狂。</p>
-<p><strong>反例：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">用户名称字段定义成：yong_hu_ming、用户_name、name、user_name_123456789<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>你看了可能会一脸懵逼，这是什么骚操作？</p>
-<p><strong>正例：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">用户名称字段定义成：user_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>温馨提醒一下，名字也不宜过长，尽量控制在<code>30</code>个字符以内。</p>
-</blockquote>
-<h3 id="1-2-大小写"><a href="#1-2-大小写" class="headerlink" title="1.2 大小写"></a><strong>1.2 大小写</strong></h3><p>名字尽量都用<code>小写字母</code>，因为从视觉上，小写字母更容易让人读懂。</p>
-<p><strong>反例：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">字段名：PRODUCT_NAME、PRODUCT_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>全部大写，看起来有点不太直观。而一部分大写，一部分小写，让人看着更不爽。</p>
-<p><strong>正例：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">字段名：product_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>名字还是使用全小写字母，看着更舒服。</p>
-<h3 id="1-3-分隔符"><a href="#1-3-分隔符" class="headerlink" title="1.3 分隔符"></a><strong>1.3 分隔符</strong></h3><p>很多时候，名字为了让人好理解，有可能会包含多个单词。</p>
-<p>那么，多个单词间的<code>分隔符</code>该用什么呢？</p>
-<p><strong>反例：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">字段名：productname、productName、product name、product@name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>单词间没有分隔，或者单词间用驼峰标识，或者单词间用空格分隔，或者单词间用@分隔，这几种方式都不太建议。</p>
-<p><strong>正例：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">字段名：product_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>强烈建议大家在单词间用<code>_</code>分隔。</p>
-<h3 id="1-4-表名"><a href="#1-4-表名" class="headerlink" title="1.4 表名"></a><strong>1.4 表名</strong></h3><p>对于表名，在言简意赅，见名知意的基础之上，建议带上<code>业务前缀</code>。</p>
-<p>如果是订单相关的业务表，可以在表名前面加个前缀：<code>order_</code>。</p>
-<p>例如：order_pay、order_pay_detail等。</p>
-<p>如果是商品相关的业务表，可以在表名前面加个前缀：<code>product_</code>。</p>
-<p>例如：product_spu，product_sku等。</p>
-<p>这样做的好处是为了方便归类，把相同业务的表，可以非常快速的聚集到一起。</p>
-<p>另外，还有有个好处是，如果哪天有非订单的业务，比如：金融业务，也需要建一个名字叫做pay的表，可以取名：finance_pay，就能非常轻松的区分。</p>
-<p>这样就不会出现<code>同名表</code>的情况。</p>
-<h3 id="1-5-字段名称"><a href="#1-5-字段名称" class="headerlink" title="1.5 字段名称"></a><strong>1.5 字段名称</strong></h3><p><code>字段名称</code>是开发人员发挥空间最大，但也最容易发生混乱的地方。</p>
-<p>比如有些表，使用flag表示状态，另外的表用status表示状态。</p>
-<p>可以统一一下，使用status表示状态。</p>
-<p>如果一个表使用了另一个表的主键，可以在另一张表的名后面，加<code>_id</code>或<code>_sys_no</code>，例如：</p>
-<p>在product_sku表中有个字段，是product_spu表的主键，这时候可以取名：product_spu_id或product_spu_sys_no。</p>
-<p>还有创建时间，可以统一成：create_time，修改时间统一成：update_time。</p>
-<p>删除状态固定为：delete_status。</p>
-<p>其实还有很多公共字段，在不同的表之间，可以使用全局统一的命名规则，定义成相同的名称，以便于大家好理解。</p>
-<h3 id="1-6-索引名"><a href="#1-6-索引名" class="headerlink" title="1.6 索引名"></a><strong>1.6 索引名</strong></h3><p>在数据库中，索引有很多种，包括：主键、普通索引、唯一索引、联合索引等。</p>
-<p>每张表的主键只有一个，一般使用：<code>id</code>或者<code>sys_no</code>命名。</p>
-<p>普通索引和联合索引，其实是一类。在建立该类索引时，可以加<code>ix_</code>前缀，比如：ix_product_status。</p>
-<p>唯一索引，可以加<code>ux_</code>前缀，比如：ux_product_code。</p>
-<h2 id="2-字段类型"><a href="#2-字段类型" class="headerlink" title="2.字段类型"></a>2.字段类型</h2><p>在设计表时，我们在选择<code>字段类型</code>时，可发挥空间很大。</p>
-<p>时间格式的数据有：date、datetime和timestamp等等可以选择。</p>
-<p>字符类型的数据有：varchar、char、text等可以选择。</p>
-<p>数字类型的数据有：int、bigint、smallint、tinyint等可以选择。</p>
-<p>说实话，选择很多，有时候是一件好事，也可能是一件坏事。</p>
-<p>如何选择一个<code>合适</code>的字段类型，变成了我们不得不面对的问题。</p>
-<p>如果字段类型选大了，比如：原本只有1-10之间的10个数字，结果选了<code>bigint</code>，它占<code>8</code>个字节。</p>
-<p>其实，1-10之间的10个数字，每个数字<code>1</code>个字节就能保存，选择<code>tinyint</code>更为合适。</p>
-<p>这样会白白浪费7个字节的空间。</p>
-<p>如果字段类型择小了，比如：一个18位的id字段，选择了<code>int</code>类型，最终数据会保存失败。</p>
-<p>所以选择一个合适的字段类型，还是非常重要的一件事情。</p>
-<p>以下原则可以参考一下：</p>
-<ol>
-<li>尽可能选择占用存储空间小的字段类型，在满足正常业务需求的情况下，从小到大，往上选。</li>
-<li>如果字符串长度固定，或者差别不大，可以选择char类型。如果字符串长度差别较大，可以选择varchar类型。</li>
-<li>是否字段，可以选择bit类型。</li>
-<li>枚举字段，可以选择tinyint类型。</li>
-<li>主键字段，可以选择bigint类型。</li>
-<li>金额字段，可以选择decimal类型。</li>
-<li>时间字段，可以选择timestamp或datetime类型。</li>
+                <h1 id="聊聊java中的21种锁"><a href="#聊聊java中的21种锁" class="headerlink" title="聊聊java中的21种锁"></a>聊聊java中的21种锁</h1><h2 id="1-概括"><a href="#1-概括" class="headerlink" title="1.概括"></a>1.概括</h2><ol>
+<li>公平锁/非公平锁</li>
+<li>可重入锁/不可重入锁</li>
+<li>悲观锁/乐观锁</li>
+<li>自旋锁</li>
+<li>分段锁</li>
+<li>互斥锁/读写锁</li>
+<li>独享锁/共享锁</li>
+<li>偏向锁/轻量级锁/重量级锁</li>
 </ol>
-<h2 id="3-字段长度"><a href="#3-字段长度" class="headerlink" title="3.字段长度"></a>3.字段长度</h2><p>前面我们已经定义好了<code>字段名称</code>，选择了合适的<code>字段类型</code>，接下来，需要重点关注的是<code>字段长度</code>了。</p>
-<p>比如：varchar(20)，biginit(20)等。</p>
-<p>那么问题来了，<code>varchar</code>代表的是<code>字节</code>长度，还是<code>字符</code>长度呢？</p>
-<p>答：在mysql中除了<code>varchar</code>和<code>char</code>是代表<code>字符</code>长度之外，其余的类型都是代表<code>字节</code>长度。</p>
-<p>biginit(n) 这个<code>n</code>表示什么意思呢？</p>
-<p>假如我们定义的字段类型和长度是：bigint(4)，bigint实际长度是<code>8</code>个字节。</p>
-<p>现在有个数据a=1，a显示4个字节，所以在不满4个字节时前面填充0（前提是该字段设置了zerofill属性），比如：0001。</p>
-<p>当满了4个字节时，比如现在数据是a=123456，它会按照实际的长度显示，比如：123456。</p>
-<p>但需要注意的是，有些mysql客户端即使满了4个字节，也可能只显示4个字节的内容，比如会显示成：1234。</p>
-<p>所以bigint(4)，这里的4表示显示的长度为4个字节，实际长度还是占8个字节。</p>
-<h2 id="4-字段个数"><a href="#4-字段个数" class="headerlink" title="4.字段个数"></a>4.字段个数</h2><p>我们在建表的时候，一定要对<code>字段个数</code>做一些限制。</p>
-<p>我之前见过有人创建的表，有几十个，甚至上百个字段，表中保存的数据非常大，查询效率很低。</p>
-<p>如果真有这种情况，可以将一张<code>大表</code>拆成多张<code>小表</code>，这几张表的主键相同。</p>
-<p>建议每表的字段个数，不要超过<code>20</code>个。</p>
-<h2 id="5-主键"><a href="#5-主键" class="headerlink" title="5. 主键"></a>5. 主键</h2><p>在创建表时，一定要创建<code>主键</code>。</p>
-<p>因为主键自带了主键索引，相比于其他索引，主键索引的查询效率最高，因为它不需要回表。</p>
-<p>此外，主键还是天然的<code>唯一索引</code>，可以根据它来判重。</p>
-<p>在<code>单个</code>数据库中，主键可以通过<code>AUTO_INCREMENT</code>，设置成<code>自动增长</code>的。</p>
-<p>但在<code>分布式</code>数据库中，特别是做了分库分表的业务库中，主键最好由外部算法(比如：雪花算法）生成，它能够保证生成的id是全局唯一的。</p>
-<p>除此之外，主键建议保存跟业务无关的值，减少业务耦合性，方便今后的扩展。</p>
-<p>不过我也见过，有些一对一的表关系，比如：用户表和用户扩展表，在保存数据时是一对一的关系。</p>
-<p>这样，用户扩展表的主键，可以直接保存用户表的主键。</p>
-<h2 id="6-存储引擎"><a href="#6-存储引擎" class="headerlink" title="6.存储引擎"></a>6.存储引擎</h2><p>在<code>mysql5.1</code>以前的版本，默认的存储引擎是<code>myslam</code>，而<code>mysql5.1</code>以后的版本，默认的存储引擎变成了<code>innodb</code>。</p>
-<p>之前我们还在创建表时，还一直纠结要选哪种存储引擎？</p>
-<p><code>myslam</code>的索引和数据分开存储，而有利于查询，但它不支持事务和外键等功能。</p>
-<p>而<code>innodb</code>虽说查询性能，稍微弱一点，但它支持事务和外键等，功能更强大一些。</p>
-<p>以前的建议是：读多写少的表，用myslam存储引擎。而写多读多的表，用innodb。</p>
-<p>但虽说mysql对innodb存储引擎性能的不断优化，现在myslam和innodb查询性能相差已经越来越小。</p>
-<p>所以，建议我们在使用<code>mysql8</code>以后的版本时，直接使用默认的<code>innodb</code>存储引擎即可，无需额外修改存储引擎。</p>
-<h2 id="7-NOT-NULL"><a href="#7-NOT-NULL" class="headerlink" title="7. NOT NULL"></a>7. NOT NULL</h2><p>在创建字段时，需要选择该字段是否允许为<code>NULL</code>。</p>
-<p>我们在定义字段时，应该尽可能明确该字段<code>NOT NULL</code>。</p>
-<p>为什么呢？</p>
-<p>我们主要以innodb存储引擎为例，myslam存储引擎没啥好说的。</p>
-<p>主要有以下原因：</p>
-<ol>
-<li>在innodb中，需要额外的空间存储null值，需要占用更多的空间。</li>
-<li>null值可能会导致索引失效。</li>
-<li>null值只能用<code>is null</code>或者<code>is not null</code>判断，用<code>=号</code>判断永远返回false。</li>
-</ol>
-<p>因此，建议我们在定义字段时，能定义成NOT NULL，就定义成NOT NULL。</p>
-<p>但如果某个字段直接定义成NOT NULL，万一有些地方忘了给该字段写值，就会<code>insert</code>不了数据。</p>
-<p>这也算合理的情况。</p>
-<p>但有一种情况是，系统有新功能上线，新增了字段。上线时一般会先执行sql脚本，再部署代码。</p>
-<p>由于老代码中，不会给新字段赋值，则insert数据时，也会报错。</p>
-<p>由此，非常有必要给NOT NULL的字段设置默认值，特别是后面新增的字段。</p>
-<p>例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">alter table product_sku add column  brand_id int(10) not null default 0;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="8-外键"><a href="#8-外键" class="headerlink" title="8.外键"></a>8.外键</h2><p>在mysql中，是存在<code>外键</code>的。</p>
-<p>外键存在的主要作用是：保证数据的<code>一致性</code>和<code>完整性</code>。</p>
-<p>例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">create table class (
-  id int(10) primary key auto_increment,
-  cname varchar(15)
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>有个班级表class。</p>
-<p>然后有个student表：</p>
-<pre class="line-numbers language-none"><code class="language-none">create table student(
-  id int(10) primary key auto_increment,
-  name varchar(15) not null,
-  gender varchar(10) not null,
-  cid int,
-  foreign key(cid) references class(id)
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>其中student表中的cid字段，保存的class表的id，这时通过<code>foreign key</code>增加了一个外键。</p>
-<p>这时，如果你直接通过student表的id删除数据，会报异常：</p>
-<pre class="line-numbers language-none"><code class="language-none">a foreign key constraint fails<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>必须要先删除class表对于的cid那条数据，再删除student表的数据才行，这样能够保证数据的一致性和完整性。</p>
-<blockquote>
-<p>顺便说一句：只有存储引擎是innodb时，才能使用外键。</p>
-</blockquote>
-<p>如果只有两张表的关联还好，但如果有十几张表都建了外键关联，每删除一次主表，都需要同步删除十几张子表，很显然性能会非常差。</p>
-<p>因此，互联网系统中，一般建议不使用外键。因为这类系统更多的是为了性能考虑，宁可牺牲一点数据一致性和完整性。</p>
-<p>除了<code>外键</code>之外，<code>存储过程</code>和<code>触发器</code>也不太建议使用，他们都会影响性能。</p>
-<h2 id="9-索引"><a href="#9-索引" class="headerlink" title="9. 索引"></a>9. 索引</h2><p>在建表时，除了指定<code>主键索引</code>之外，还需要创建一些<code>普通索引</code>。</p>
-<p>例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">create table product_sku(
-  id int(10) primary key auto_increment,
-  spu_id int(10) not null,
-  brand_id int(10) not null,
-  name varchar(15) not null
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>在创建商品表时，使用spu_id（商品组表）和brand_id（品牌表）的id。</p>
-<p>像这类保存其他表id的情况，可以增加普通索引：</p>
-<pre class="line-numbers language-none"><code class="language-none">create table product_sku (
-  id int(10) primary key auto_increment,
-  spu_id int(10) not null,
-  brand_id int(10) not null,
-  name varchar(15) not null,
-  KEY `ix_spu_id` (`spu_id`) USING BTREE,
-  KEY `ix_brand_id` (`brand_id`) USING BTREE
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>后面查表的时候，效率更高。</p>
-<p>但索引字段也不能建的太多，可能会影响保存数据的效率，因为索引需要额外的存储空间。</p>
-<p>建议单表的索引个数不要超过：<code>5</code>个。</p>
-<p>如果在建表时，发现索引个数超过5个了，可以删除部分<code>普通索引</code>，改成<code>联合索引</code>。</p>
-<p>顺便说一句：在创建联合索引的时候，需要使用注意<code>最左匹配原则</code>，不然，建的联合索引效率可能不高。</p>
-<p>对于数据重复率非常高的字段，比如：状态，不建议单独创建普通索引。因为即使加了索引，如果mysql发现<code>全表扫描</code>效率更高，可能会导致索引失效。</p>
-<h2 id="10-时间字段"><a href="#10-时间字段" class="headerlink" title="10.时间字段"></a>10.时间字段</h2><p><code>时间字段</code>的类型，我们可以选择的范围还是比较多的，目前mysql支持：date、datetime、timestamp、varchar等。</p>
-<p><code>varchar</code>类型可能是为了跟接口保持一致，接口中的时间类型是String。</p>
-<p>但如果哪天我们要通过时间范围查询数据，效率会非常低，因为这种情况没法走索引。</p>
-<p><code>date</code>类型主要是为了保存<code>日期</code>，比如：2022-08-29，不适合保存<code>日期和时间</code>，比如：2022-08-29 21:55:20。</p>
-<p>而<code>datetime</code>和<code>timestamp</code>类型更适合我们保存<code>日期和时间</code>。</p>
-<p>但它们有略微区别。</p>
-<ul>
-<li><code>timestamp</code>：用4个字节来保存数据，它的取值范围为<code>1970-01-01 00:00:01</code> UTC ~ <code>2038-01-19 03:14:07</code>。此外，它还跟时区有关。</li>
-<li><code>datetime</code>：用8个字节来保存数据，它的取值范围为<code>1000-01-01 00:00:00</code> ~ <code>9999-12-31 23:59:59</code>。它跟时区无关。</li>
+<p>以上锁分类并不全指锁的状态，有些是锁的特性、设计。</p>
+<p>公平锁：按线程申请锁的先后顺序获得锁<br>非公平锁：线程不是按先后顺序获得锁，效率比公平锁效率高</p>
+<p>可重入锁：已获得的锁在内层可重复使用<br>不可重入锁：已获得的锁在内层不可重复使用</p>
+<p>悲观锁：每次都假定访问时会有多个线程，执行代码前都要加锁，加锁成功后，其它线程处于阻塞状态<br>乐观锁：其实就是无锁，CAS就是无锁，每次都假定访问时只有自己一个线程</p>
+<p>自旋锁：当一个线程在获得锁的时候，有其它线程获得锁，那么该线程就循环判断是否能获得锁，直至其它线程释放锁，然后获得锁。</p>
+<p>分段锁：它是一种锁的设计，ConcurrentHashMap就是将hash数据分成多段，持有多把锁，其实就是分成多个hashmap，只有当线程访问同一把锁时才会阻塞，提高了效率。</p>
+<p>互斥锁：加锁的代码块只能允许一个线程访问，其它线程则会阻塞<br>读写锁：它的read模式是共享锁、write模式是互斥锁。读锁和读锁能共存，读锁和写锁、写锁和写锁均不能共存</p>
+<p>独享锁：就是互斥锁，该锁每次只能有一个线程访问<br>共享锁：该锁可以有多个线程访问</p>
+<p>偏向锁：同一代码块一直被同一线程获得锁，那么下次将自动获得锁，降低获得锁的代价</p>
+<p>轻量级锁：当锁是偏向锁时，被其它线程访问，偏向锁就会升级为轻量级锁，通过自旋转来获取锁，不会阻塞，提高性能</p>
+<p>重量级锁：当轻量级锁时，线程一直自旋，当自旋次数达到一定次数时，将提升为重量级锁，让其它申请锁的线程进入阻塞状态，降低cpu的负载。synchronized是重量级锁。</p>
+<h2 id="2-详解"><a href="#2-详解" class="headerlink" title="2.详解"></a>2.详解</h2><h3 id="2-1公平锁-x2F-非公平锁"><a href="#2-1公平锁-x2F-非公平锁" class="headerlink" title="2.1公平锁/非公平锁"></a>2.1公平锁/非公平锁</h3><ul>
+<li><p>公平锁：公平锁是指多个线程申请锁的顺序来获取锁，类似排队买票，先来的人先买，后来的人在队尾排着，这是公平的。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091602502.png" alt="image-20220909143227215"></p>
+</li>
+<li><p>非公平锁：非公平锁是指多个线程获取锁的顺序并不是按照申请锁的顺序，有可能申请的线程比先申请的线程优先获取锁。在高并发环境下，有可能造成优先级翻转，或者饥饿的状态（某个线程一直得不到锁）。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091602788.png" alt="image-20220909143503292"></p>
+</li>
 </ul>
-<p>优先推荐使用<code>datetime</code>类型保存日期和时间，可以保存的时间范围更大一些。</p>
+<p>对于ReentrantLock而言，通过构造函数指定该锁是否是公平锁，默认是非公平锁。非公平锁的优点在于吞吐量比公平锁大</p>
+<p>对于Synchronized而言，是一种非公平锁。由于其不像ReentrantLock是通过AQS的来实现线程调度，所以并没有任何办法使其变成公平锁</p>
+<h3 id="2-2可重入锁-x2F-不可重入锁"><a href="#2-2可重入锁-x2F-不可重入锁" class="headerlink" title="2.2可重入锁/不可重入锁"></a>2.2可重入锁/不可重入锁</h3><ul>
+<li>重入锁：也称递归锁。重入锁指的是可重复可递归调用的锁，在外层使用锁之后，在内层仍然可以使用，并且不发生死锁（前提是同一对象或class），简单来说，就是任意线程在获取到锁之后能够再次获取该锁而不会被锁所阻塞，这样的锁就叫做可重入锁。ReentrantLock和Synchronized都是可重入锁。</li>
+</ul>
 <blockquote>
-<p>温馨提醒一下，在给时间字段设置默认值是，建议不要设置成：<code>0000-00-00 00:00:00</code>，不然查询表时可能会因为转换不了，而直接报错。</p>
+<p>可重入锁的原理： 通过组合自定义同步器来实现锁的获取与释放。</p>
+<p>再次获取锁：识别获取锁的线程是否为当前占据锁的线程，如果是，则再次成功获取。获取锁后，进行计数自增，</p>
+<p>释放锁：释放锁时，进行计数自减。</p>
 </blockquote>
-<h2 id="11-金额字段"><a href="#11-金额字段" class="headerlink" title="11.金额字段"></a>11.金额字段</h2><p>mysql中有多个字段可以表示浮点数：float、double、decimal等。</p>
-<p>而<code>float</code>和<code>double</code>可能会丢失精度，因此推荐大家使用<code>decimal</code>类型保存金额。</p>
-<p>一般我们是这样定义浮点数的：decimal(m,n)。</p>
-<p>其中<code>n</code>是指<code>小数</code>的长度，而<code>m</code>是指<code>整数加小数</code>的总长度。</p>
-<p>假如我们定义的金额类型是这样的：decimal(10,2)，则表示整数长度是8位，并且保留2位小数。</p>
-<h2 id="12-唯一索引"><a href="#12-唯一索引" class="headerlink" title="12.唯一索引"></a>12.唯一索引</h2><p><code>唯一索引</code>在我们实际工作中，使用频率相当高。</p>
-<p>你可以给单个字段，加唯一索引，比如：组织机构code。</p>
-<p>也可以给多个字段，加一个联合的唯一索引，比如：分类编号、单位、规格等。</p>
-<p>单个的唯一索引还好，但如果是联合的唯一索引，字段值出现null时，则唯一性约束可能会失效。</p>
+<pre><code>synchronized void setA() throws InterruptedException {
+    TimeUnit.SECONDS.sleep(1);
+    setB();
+}
+
+synchronized void setB() throws InterruptedException {
+    TimeUnit.SECONDS.sleep(1);
+}
+</code></pre>
+<p>上面的代码就是可重入锁的一个特点，如果不是可重入锁的话，setB()可能不会被当前线程执行，可能造成死锁。</p>
+<pre class="line-numbers language-none"><code class="language-none">面试题1： 可重入锁如果加了两把，但是只释放了一把会出现什么问题？
+答：程序卡死，线程不能出来，也就是说我们申请了几把锁，就需要释放几把锁。
+面试题2： 如果只加了一把锁，释放两次会出现什么问题？
+答：会报错，java.lang.IllegalMonitorStateException。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><p>不可重入锁：不可重入锁不可递归调用，递归调用就发生死锁</p>
+<p>  // 使用自旋锁来模拟一个不可重入锁<br>  public class UnreentrantLock {<br>  private AtomicReference<thread> owner = new AtomicReference&lt;&gt;();<br>  public void lock() {<br>      Thread current = Thread.currentThread();<br>      for (;;) {<br>          if (owner.compareAndSet(null, current)) {<br>              return;<br>          }<br>      }<br>  }<br><br>  public void unlock() {<br>      Thread current = Thread.currentThread();<br>      owner.compareAndSet(current, null);<br>  }<br>  }</thread></p>
+</li>
+</ul>
+<p>ReentrantLock中可重入锁实现：</p>
+<p>非公平锁的锁获取方法：</p>
+<pre><code>    final boolean nonfairTryAcquire(int acquires) {
+        final Thread current = Thread.currentThread();
+        int c = getState();
+        if (c == 0) {
+            if (compareAndSetState(0, acquires)) {
+                setExclusiveOwnerThread(current);
+                return true;
+            }
+        }
+        else if (current == getExclusiveOwnerThread()) {
+            int nextc = c + acquires;
+            if (nextc &lt; 0) 
+                throw new Error("Maximum lock count exceeded");
+            setState(nextc);
+            return true;
+        }
+        return false;
+    }
+</code></pre>
+<p>在AQS中维护了一个volatile修饰的state成员变量来计数重入次数，避免了频繁的持有释放操作，这样提升了效率，又避免了死锁</p>
+<p><strong>补充: 什么是AQS?</strong></p>
+<p>AQS（AbstractQueuedSynchronizer）使用一个int成员变量来表示 同步状态，通过内置的FIFO队列来完成获取资源线程的排队工作，状态信息通过protected类型的getState,setState,compareAndSetState来进行操作</p>
+<p>AQS支持独占式和共享式这两种同步方法，独占式如ReentrantLock，共享式如Semaphore,CountDownLatch,组合式如ReentrantReadWriteLock。</p>
+<p>同步器的设计基于模板方法模式，使用方法如下：</p>
+<ul>
+<li><p>继承AbstractQueuedSynchronizer并重写指定方法（重写方法simple，就是对共享资源state的获取和释放）</p>
+</li>
+<li><p>将AQS组合在自定义同步组件的实现中，并调用模板方法，这些模板方法会调用使用者重写的方法。</p>
+</li>
+</ul>
+<h3 id="2-3排它锁-x2F-共享锁"><a href="#2-3排它锁-x2F-共享锁" class="headerlink" title="2.3排它锁/共享锁"></a>2.3排它锁/共享锁</h3><ul>
+<li><p>排它锁：排它锁在同一时刻只允许一个线程进行访问</p>
+</li>
+<li><p>共享锁：共享锁在同一时刻可以允许多个线程访问，典型的就是ReentrantReadWriteLock里的读锁，它的读锁是可以被共享的，但是它的写锁确实每次只能被独占。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091602984.png" alt="image-20220909143806779"></p>
+</li>
+</ul>
+<p>排它锁和共享锁也是通过AQS来实现的</p>
+<h3 id="2-4互斥锁-x2F-读写锁"><a href="#2-4互斥锁-x2F-读写锁" class="headerlink" title="2.4互斥锁/读写锁"></a>2.4互斥锁/读写锁</h3><ul>
+<li><p>独占锁：是指锁一次只能被一个线程所持有。如果一个线程对数据加上排他锁后，那么其他线程不能再对该数据加任何类型的锁。获得独占锁的线程即能读数据又能修改数据。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091602366.png" alt="image-20220909144257494"></p>
+</li>
+<li><p>互斥锁（排它锁）：互斥锁是独占锁的一种常规实现，是指某一资源同时只允许一个访问者对其进行访问，具有唯一性和排它性，互斥锁一次只能一个线程拥有互斥锁，其他线程只有等待。</p>
 <blockquote>
-<p>创建唯一索引时，相关字段一定不能包含null值，否则唯一性会失效。</p>
+<ul>
+<li>读-读互斥</li>
+<li>读-写互斥</li>
+<li>写-读互斥</li>
+<li>写-写互斥</li>
+</ul>
 </blockquote>
-<h2 id="13-字符集"><a href="#13-字符集" class="headerlink" title="13.字符集"></a>13.字符集</h2><p>mysql中支持的<code>字符集</code>有很多，常用的有：latin1、utf-8、utf8mb4、GBK等。</p>
-<p>这4种字符集情况如下：</p>
-<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292155161.png" alt="img"></p>
-<p><code>latin1</code>容易出现乱码问题，在实际项目中使用比较少。</p>
-<p>而<code>GBK</code>支持中文，但不支持国际通用字符，在实际项目中使用也不多。</p>
-<p>从目前来看，mysql的字符集使用最多的还是：<code>utf-8</code>和<code>utf8mb4</code>。</p>
-<p>其中<code>utf-8</code>占用3个字节，比<code>utf8mb4</code>的4个字节，占用更小的存储空间。</p>
-<p>但utf-8有个问题：即无法存储emoji表情，因为emoji表情一般需要4个字节。</p>
-<p>由此，使用utf-8字符集，保存emoji表情时，数据库会直接报错。</p>
-<p>所以，建议在建表时字符集设置成：<code>utf8mb4</code>，会省去很多不必要的麻烦。</p>
-<h2 id="14-排序规则"><a href="#14-排序规则" class="headerlink" title="14. 排序规则"></a>14. 排序规则</h2><p>不知道，你关注过没，在mysql中创建表时，有个<code>COLLATE</code>参数可以设置。</p>
-<p>例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">CREATE TABLE `order` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `code` varchar(20) COLLATE utf8mb4_bin NOT NULL,
-  `name` varchar(30) COLLATE utf8mb4_bin NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `un_code` (`code`),
-  KEY `un_code_name` (`code`,`name`) USING BTREE,
-  KEY `idx_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091604629.png" alt="互斥锁"></p>
+</li>
+<li><p>读写锁：既是互斥锁，又是共享锁，read模式是共享，write模式是互斥的</p>
+</li>
+</ul>
+<p>读写锁是共享锁的一种具体实现。读写锁管理一组锁，一个是只读的锁，一个是写锁。</p>
+<p>读锁可以在没有写锁的时候被多个线程同时持有，而写锁是独占的。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091604402.png" alt="image-20220909142753739"></p>
+<p>写锁的优先级要高于读锁，一个获得了读锁的线程必须能看到前一个释放的写锁所更新的内容。读写锁相比于互斥锁并发程度更高，每次只有一个写线程，但是同时可以有多个线程并发读。在Java中的具体实现就是ReadWriteLock。</p>
+<pre class="line-numbers language-none"><code class="language-none">
+public interface ReadWriteLock {
+    /**
+     * 获取读锁
+     */
+    Lock readLock();
+ 
+    /**
+     * 获取写锁
+     */
+    Lock writeLock();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>它是用来设置<code>排序规则</code>的。</p>
-<p>字符排序规则跟字符集有关，比如：字符集如果是<code>utf8mb4</code>，则字符排序规则也是以：<code>utf8mb4_</code>开头的，常用的有：<code>utf8mb4_general_ci</code>、<code>utf8mb4_bin</code>等。</p>
-<p>其中utf8mb4_general_ci排序规则，对字母的大小写不敏感。说得更直白一点，就是不区分大小写。</p>
-<p>而utf8mb4_bin排序规则，对字符大小写敏感，也就是区分大小写。</p>
-<p>说实话，这一点还是非常重要的。</p>
-<p>假如order表中现在有一条记录，name的值是大写的YOYO，但我们用小写的yoyo去查，例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">select * from order where name='yoyo';<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-5乐观锁-x2F-悲观锁"><a href="#2-5乐观锁-x2F-悲观锁" class="headerlink" title="2.5乐观锁/悲观锁"></a>2.5乐观锁/悲观锁</h3><p>乐观锁：总是假设最好的情况，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号机制和CAS算法实现。乐观锁适用于多读的应用类型，这样可以提高吞吐量，像数据库提供的类似于write_condition机制，其实都是提供的乐观锁。在Java中java.util.concurrent.atomic包下面的原子变量类就是使用了乐观锁的一种实现方式CAS实现的。</p>
+<blockquote>
+<p>举个生活中的例子，假设厕所只有一个坑位了，乐观锁认为：这荒郊野外的，又没有什么人，不会有人抢我坑位的，每次关门上锁多浪费时间，还是不加锁好了。</p>
+<p>回到代码世界中，乐观锁操作数据时不会上锁，在更新的时候会判断一下在此期间是否有其他线程去更新这个数据。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091604210.png" alt="image-20220909135353539"></p>
+<p>悲观锁：总是假设最坏的情况，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会阻塞直到它拿到锁（共享资源每次只给一个线程使用，其他线程阻塞，用完后再把资源转让给其他线程）。传统的关系型数据库里面就用到了很多这种锁机制，比如行锁、表锁、读锁、写锁等，都是在做操作之前先上锁。Java中的synchronized和ReentrantLock等独占锁就是悲观锁思想的实现</p>
+<blockquote>
+<p>举个生活中的例子，假设厕所只有一个坑位了，悲观锁上厕所会第一时间把门反锁上，这样其他人上厕所只能在门外等候，这种状态就是「阻塞」了。</p>
+<p>回到代码世界中，一个共享数据加了悲观锁，那线程每次想操作这个数据前都会假设其他线程也可能会操作这个数据，所以每次操作前都会上锁，这样其他线程想操作这个数据拿不到锁只能阻塞了。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091604248.png" alt="image-20220909135702121"></p>
+<h3 id="2-6分段锁"><a href="#2-6分段锁" class="headerlink" title="2.6分段锁"></a>2.6分段锁</h3><p>分段锁是一种锁的设计，并不是具体的一种锁。在某些情况下我们将锁分解技术进一步扩展为一组独立对象上的锁进行分解，这称为分段锁。容器里有多把锁，每一把锁用于锁容器其中一部分数据，那么当多线程访问容器里不同数据段的数据时，线程间就不会存在锁竞争，从而可以有效的提高并发访问效率，因此，分段锁也是提升多并发程序性能的重要手段之一。这就是JDK1.7中ConcurrentHashMap使用的锁分段技术。</p>
+<blockquote>
+<p><strong>ConcurrentHashMap原理：</strong></p>
+<p>它内部细分了若干个小的 HashMap，称之为段(Segment)。默认情况下一个 ConcurrentHashMap 是基于粒度更小的分段锁，被进一步细分为 16 个段，既就是锁的并发度。如果需要在 ConcurrentHashMap 添加一项key-value，就仅仅针对数组中的一项进行加锁操作，并不是将整个 HashMap 加锁，而是首先根据 hashcode 得到该key-value应该存放在哪个段中，然后对该段加锁，并完成 put 操作。在多线程环境中，如果多个线程同时进行put操作，只要被加入的key-value不存放在同一个段中，则线程间可以做到真正的并行。</p>
+</blockquote>
+<p>线程安全：ConcurrentHashMap 是一个 Segment 数组， Segment 通过继承ReentrantLock 来进行加锁，所以每次需要加锁的操作锁住的是一个 segment，这样只要保证每个 Segment 是线程安全的，也就实现了全局的线程安全。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091605185.png" alt="分段锁"></p>
+<p>在并发程序中，串行操作是会降低可伸缩性，并且上下文切换也会降低性能。使用独占锁时保护受限资源的时候，基本上是采用串行方式——每次只能有一个线程能访问它。所以对于可伸缩性来说最大的威胁就是独占锁。</p>
+<p>一般有三种方式降低锁的竞争程序：</p>
+<ul>
+<li><p>减少锁的持有时间</p>
+</li>
+<li><p>降低锁的请求频率</p>
+</li>
+<li><p>使用带有协调机制的独占锁，这些机制允许更高的并发性</p>
+</li>
+</ul>
+<h3 id="2-7锁升级-无锁-x2F-偏向锁-x2F-轻量级锁-x2F-重量级锁"><a href="#2-7锁升级-无锁-x2F-偏向锁-x2F-轻量级锁-x2F-重量级锁" class="headerlink" title="2.7锁升级(无锁/偏向锁/轻量级锁/重量级锁)"></a>2.7锁升级(无锁/偏向锁/轻量级锁/重量级锁)</h3><p>JDK1.6 为了提升性能减少获得锁和释放锁所带来的消耗，引入了4种锁的状态：无锁、偏向锁、轻量级锁和重量级锁，它会随着多线程的竞争情况逐渐升级，但不能降级。</p>
+<p>锁的状态是通过对象监视器在对象头中的字段来表明的。四种状态会随着竞争的情况逐渐升级，而且是不可逆的过程，即不可降级。这四种状态都不是Java语言中的锁，而是JVM为了提高锁的获取与释放效率而做的优化（使用synchronized时）</p>
+<h4 id="2-7-1无锁"><a href="#2-7-1无锁" class="headerlink" title="2.7.1无锁"></a>2.7.1无锁</h4><p>无锁状态其实就是上面讲的乐观锁，不再赘述。</p>
+<h4 id="2-7-2偏向锁"><a href="#2-7-2偏向锁" class="headerlink" title="2.7.2偏向锁"></a>2.7.2偏向锁</h4><p>偏向锁是指是指它会偏向于第一个访问锁的线程，如果在运行过程中，只有一个线程访问加锁的资源，不存在多线程竞争的情况，那么线程是不需要重复获取锁的，这种情况下，就会给线程加一个偏向锁,以降低获取锁的代价。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091605894.png" alt="image-20220909145703703"></p>
+<p>偏向锁是JDK6时加入的一种锁优化机制：在无竞争的情况下把整个同步都消除掉，连CAS操作都不去做了。偏是指偏心，它的意思是这个锁会偏向于第一个获得它的线程，如果在接下来的执行过程中，该锁一直没有被其他的线程获取，则持有偏向锁的线程将永远不需要再进行同步。持有偏向锁的线程以后每次进入这个锁相关的同步块时，虚拟机都可以不再进行任何同步操作（例如加锁、解锁及对Mark Word的更新操作等）。</p>
+<p><strong>优点：</strong> 把整个同步都消除掉，连CAS操作都不去做了，优于轻量级锁。</p>
+<p><strong>缺点：</strong> 如果程序中大多数的锁都总是被多个不同的线程访问，那偏向锁就是多余的。</p>
+<h4 id="2-7-3轻量级锁"><a href="#2-7-3轻量级锁" class="headerlink" title="2.7.3轻量级锁"></a>2.7.3轻量级锁</h4><p>轻量级锁是指当锁是偏向锁的时候，被另一个线程所访问，偏向锁就会升级为轻量级锁，其他线程会通过自旋的形式尝试获取锁(等待上一个线程释放锁)。轻量级锁是JDK6时加入的一种锁优化机制： 轻量级锁是在无竞争的情况下使用CAS操作去消除同步使用的互斥量。轻量级是相对于使用操作系统互斥量来实现的重量级锁而言的。轻量级锁在没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗。如果出现两条以上的线程争用同一个锁的情况，那轻量级锁将不会有效，必须膨胀为重量级锁。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091605891.png" alt="image-20220909145609731"></p>
+<p>轻量级锁优缺点:</p>
+<p><strong>优点：</strong> 如果没有竞争，通过CAS操作成功避免了使用互斥量的开销。</p>
+<p><strong>缺点：</strong> 如果存在竞争，除了互斥量本身的开销外，还额外产生了CAS操作的开销，因此在有竞争的情况下，轻量级锁比传统的重量级锁更慢。</p>
+<h4 id="2-7-4重量级锁"><a href="#2-7-4重量级锁" class="headerlink" title="2.7.4重量级锁"></a>2.7.4重量级锁</h4><p>重量级锁是指当锁为轻量级锁的时候，另一个线程虽然是自旋，但自旋不会一直持续下去，当自旋一定次数的时候，还没有获取到锁，就会进入阻塞，该锁膨胀为重量级锁,简单来说就是一个线程持有锁，一个线程在自旋，又来了第三个线程访问时（反正就是竞争继续加大了），轻量级锁就会膨胀为重量级锁，重量级锁会使除了此时拥有锁的线程以外的线程都阻塞，性能降低。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091605647.png" alt="image-20220909144702422"></p>
+<p>升级到重量级锁其实就是互斥锁了，一个线程拿到锁，其余线程都会处于阻塞等待状态。</p>
+<p><strong>重量级锁是一种称谓</strong>：synchronized是通过对象内部的一个叫做监视器锁（monitor）来实现的，监视器锁本身依赖底层的操作系统的Mutex Lock来实现。操作系统实现线程的切换需要从用户态切换到核心态，成本非常高。这种依赖于操作系统 Mutex Lock来实现的锁称为重量级锁。为了优化synchonized，引入了轻量级锁，偏向锁。</p>
+<p>在 Java 中，synchronized 关键字内部实现原理就是锁升级的过程：无锁 –&gt; 偏向锁 –&gt; 轻量级锁 –&gt; 重量级锁。</p>
+<h3 id="2-8自旋锁"><a href="#2-8自旋锁" class="headerlink" title="2.8自旋锁"></a>2.8自旋锁</h3><p>CAS算法是乐观锁的一种实现方式，CAS算法中有涉及到自旋锁</p>
+<h4 id="2-8-1CAS算法"><a href="#2-8-1CAS算法" class="headerlink" title="2.8.1CAS算法"></a>2.8.1CAS算法</h4><p>CAS是英文单词Compare and Swap（比较并交换），是一种无锁算法。无锁编程，即不使用锁的情况下实现多线程之间的变量同步，也就是在没有线程被阻塞的情况下实现变量的同步，所以也叫非阻塞同步。CAS算法涉及到3个操作数</p>
+<ul>
+<li><p>需要读写的内存值V</p>
+</li>
+<li><p>进行比较的值A</p>
+</li>
+<li><p>写入的新值B</p>
+</li>
+</ul>
+<p>更新一个变量的时候，只有当变量的预期值A和内存地址V当中的实际值相同时，才会将内存地址V对应的值修改为B，否则不会执行任何操作。一般情况下是一个自旋操作，即不断地重试</p>
+<h4 id="2-8-2自旋锁"><a href="#2-8-2自旋锁" class="headerlink" title="2.8.2自旋锁"></a>2.8.2自旋锁</h4><p>自旋锁：是指当一个线程在获取锁的时候，如果锁已经被其他线程获取，那么该线程将循环等待，然后不断地判断锁是否能够被成功获取，直到获取到锁才会退出循环。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091605798.png" alt="image-20220909135929702"></p>
+<p>它是为实现保护共享资源而提出一种锁机制。其实，自旋锁与互斥锁比较类似，它们都是为了解决对某项资源的互斥使用。无论是互斥锁，还是自旋锁，在任何时刻，最多只能有一个保持者，也就是说，在任何时刻最多只能有一个执行单元获得锁。但是两者在调度机制上略有不同。对于互斥锁，如果资源已经被占用，资源申请者只能进入睡眠状态。但是自旋锁不会引起调用者睡眠，如果自旋锁已经被别的执行单元保持，调用者就一直循环在那里看是否该自旋锁的保持者已经释放了锁。</p>
+<p>自旋锁的优点：避免了线程切换的开销。挂起线程和恢复线程的操作都需要转入内核态中完成，这些操作给Java虚拟机的并发性能带来了很大的压力。</p>
+<p>自旋锁的缺点： 占用处理器的时间，如果占用的时间很长，会白白消耗处理器资源，而不会做任何有价值的工作，带来性能的浪费。因此自旋等待的时间必须有一定的限度，如果自旋超过了限定的次数仍然没有成功获得锁，就应当使用传统的方式去挂起线程。</p>
+<p>自旋锁次数默认值：10次，可以使用参数-XX:PreBlockSpin来自行更改。</p>
+<p>自适应自旋： 自适应意味着自旋的时间不再是固定的，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。有了自适应自旋，随着程序运行时间的增长及性能监控信息的不断完善，虚拟机对程序锁的状态预测就会越来越精准。</p>
+<h4 id="2-8-3Java实现自旋锁"><a href="#2-8-3Java实现自旋锁" class="headerlink" title="2.8.3Java实现自旋锁"></a>2.8.3Java实现自旋锁</h4><pre><code>public class SpinLock {
+    private AtomicReference&lt;Thread&gt; cas = new AtomicReference&lt;&gt;();
+    public void lock() {
+        Thread current = Thread.currentThread();
+        // 利用CAS
+        while (!cas.compareAndSet(null, current)) {
+            // do nothing
+        }
+    }
 
-<p>如果字符排序规则是utf8mb4_general_ci，则可以查出大写的YOYO的那条数据。</p>
-<p>如果字符排序规则是utf8mb4_bin，则查不出来。</p>
-<p>由此，字符排序规则一定要根据实际的业务场景选择，否则容易出现问题。</p>
-<h2 id="15-大字段"><a href="#15-大字段" class="headerlink" title="15.大字段"></a>15.大字段</h2><p>我们在创建表时，对一些特殊字段，要额外关注，比如：<code>大字段</code>，即占用较多存储空间的字段。</p>
-<p>比如：用户的评论，这就属于一个大字段，但这个字段可长可短。</p>
-<p>但一般会对评论的总长度做限制，比如：最多允许输入500个字符。</p>
-<p>如果直接定义成<code>text</code>类型，可能会浪费存储空间，所以建议将这类字段定义成<code>varchar</code>类型的存储效率更高。</p>
-<p>当然，我还见过更大的字段，即该字段直接保存合同数据。</p>
-<p>一个合同可能会占<code>几Mb</code>。</p>
-<p>在mysql中保存这种数据，从系统设计的角度来说，本身就不太合理。</p>
-<p>像合同这种非常大的数据，可以保存到<code>mongodb</code>中，然后在mysql的业务表中，保存mongodb表的id。</p>
+    public void unlock() {
+        Thread current = Thread.currentThread();
+        cas.compareAndSet(current, null);
+    }
+}
+</code></pre>
+<p>lock()方法利用的CAS，当第一个线程A获取锁的时候，能够成功获取到，不会进入while循环，如果此时线程A没有释放锁，另一个线程B又来获取锁，此时由于不满足CAS，所以就会进入while循环，不会判断是否满足CAS，直到A线程调用unlock()方法释放了该锁</p>
+<h4 id="2-8-4自旋锁存在的问题"><a href="#2-8-4自旋锁存在的问题" class="headerlink" title="2.8.4自旋锁存在的问题"></a>2.8.4自旋锁存在的问题</h4><ul>
+<li><p>如果某个线程持有锁的时间过长，就会导致其他等待获取锁的线程进入循环等待，消耗CPU。使用不当会造成CPU使用率极高</p>
+</li>
+<li><p>上面Java实现的自旋锁不是公平的，即无法满足等待时间最长的线程优先获取锁。不公平的锁就会存在线程饥饿问题</p>
+</li>
+</ul>
+<h4 id="2-8-5自旋锁的优点"><a href="#2-8-5自旋锁的优点" class="headerlink" title="2.8.5自旋锁的优点"></a>2.8.5自旋锁的优点</h4><ul>
+<li><p>自旋锁不会使线程状态发生切换，一直处于用户态，即线程一直都是active的；不会使线程进入阻塞状态，减少了不必要的上下文切换，执行速度快</p>
+</li>
+<li><p>非自旋锁在获取不到锁的时候会进入阻塞状态，从而进入内核态，当获取到锁的时候需要从内核态恢复，需要线程上下文切换（线程被阻塞后便进入内核（Linux）调度状态，这个会导致系统在用户态与内核态之间来回切换，严重影响锁的性能）</p>
+</li>
+</ul>
+<h4 id="2-8-6自旋锁与互斥锁的区别"><a href="#2-8-6自旋锁与互斥锁的区别" class="headerlink" title="2.8.6自旋锁与互斥锁的区别"></a>2.8.6自旋锁与互斥锁的区别</h4><p>自旋锁与互斥锁都是为了实现保护资源共享的机制<br>无论是自旋锁还是互斥锁，在任意时刻，都最多只能有一个保持者<br>获取互斥锁的线程，如果锁已经被占用，则该线程将进入睡眠状态；获取自旋锁的线程则不会睡眠，而是一直循环等待锁释放</p>
+<h4 id="2-8-7自旋锁总结"><a href="#2-8-7自旋锁总结" class="headerlink" title="2.8.7自旋锁总结"></a>2.8.7自旋锁总结</h4><ul>
+<li>自旋锁：线程获取锁的时候，如果锁被其他线程持有，则当前线程将循环等待，直到获取到锁</li>
+<li>自旋锁等待期间，线程的状态不会改变，线程一直是用户态并且是活动的（active）</li>
+<li>自旋锁如果持有锁的时间太长，则会导致其他等待获取锁的线程耗尽CPU</li>
+<li>自旋锁本身无法保证公平性，同时也无法保证可重入性</li>
+<li>基于自旋锁，可以实现具备公平性和可重入性的锁</li>
+</ul>
+<h3 id="2-9锁优化技术-锁粗化、锁消除"><a href="#2-9锁优化技术-锁粗化、锁消除" class="headerlink" title="2.9锁优化技术(锁粗化、锁消除)"></a>2.9锁优化技术(锁粗化、锁消除)</h3><h4 id="2-9-1锁粗化"><a href="#2-9-1锁粗化" class="headerlink" title="2.9.1锁粗化"></a>2.9.1锁粗化</h4><p><strong>锁粗化是一种优化技术</strong>： 如果一系列的连续操作都对同一个对象反复加锁和解锁，甚至加锁操作都是出现在循环体之中，就算真的没有线程竞争，频繁地进行互斥同步操作将会导致不必要的性能损耗，所以就采取了一种方案：把加锁的范围扩展（粗化）到整个操作序列的外部，这样加锁解锁的频率就会大大降低，从而减少了性能损耗。简单来说就是将多个同步块的数量减少，并将单个同步块的作用范围扩大，本质上就是将多次上锁、解锁的请求合并为一次同步请求。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091605595.jpg" alt="锁粗化"></p>
+<p>举个例子，一个循环体中有一个代码同步块，每次循环都会执行加锁解锁操作。</p>
+<pre class="line-numbers language-none"><code class="language-none">private static final Object LOCK = new Object();
+
+for(int i = 0;i &lt; 100; i++) {
+    synchronized(LOCK){
+        // do some magic things
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>经过锁粗化后就变成下面这个样子了：</p>
+<pre class="line-numbers language-none"><code class="language-none"> synchronized(LOCK){
+     for(int i = 0;i &lt; 100; i++) {
+        // do some magic things
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2-9-2锁消除"><a href="#2-9-2锁消除" class="headerlink" title="2.9.2锁消除"></a>2.9.2锁消除</h4><p><strong>锁消除是一种优化技术</strong>：就是把锁干掉。指虚拟机编译器在运行时检测到了共享数据没有竞争的锁,从而将这些锁进行消除。</p>
+<blockquote>
+<p>那如何判断共享数据不会被线程竞争？</p>
+<p>利用<code>逃逸分析技术</code>：分析对象的作用域，如果对象在A方法中定义后，被作为参数传递到B方法中，则称为方法逃逸；如果被其他线程访问，则称为线程逃逸。</p>
+<p>在堆上的某个数据不会逃逸出去被其他线程访问到，就可以把它当作栈上数据对待，认为它是线程私有的，同步加锁就不需要了。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091606403.jpg" alt="锁消除"></p>
+<p>举个例子让大家更好理解。</p>
+<pre class="line-numbers language-none"><code class="language-none">public String test(String s1, String s2){
+    StringBuffer stringBuffer = new StringBuffer();
+    stringBuffer.append(s1);
+    stringBuffer.append(s2);
+    return stringBuffer.toString();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面代码中有一个 test 方法，主要作用是将字符串 s1 和字符串 s2 串联起来。</p>
+<p>test 方法中三个变量s1, s2, stringBuffer， 它们都是局部变量，局部变量是在栈上的，栈是线程私有的，所以就算有多个线程访问 test 方法也是线程安全的。</p>
+<p>我们都知道 StringBuffer 是线程安全的类，append 方法是同步方法，但是 test 方法本来就是线程安全的，为了提升效率，虚拟机帮我们消除了这些同步锁，这个过程就被称为锁消除。</p>
+<pre class="line-numbers language-none"><code class="language-none">StringBuffer.class
+// append 是同步方法
+public synchronized StringBuffer append(String str) {
+    toStringCache = null;
+    super.append(str);
+    return this;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-10-同步锁"><a href="#2-10-同步锁" class="headerlink" title="2.10 同步锁"></a>2.10 同步锁</h3><p>同步锁与互斥锁同义，表示并发执行的多个线程，在同一时间内只允许一个线程访问共享数据。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091606496.png" alt="同步锁"></p>
+<h3 id="2-11死锁"><a href="#2-11死锁" class="headerlink" title="2.11死锁"></a>2.11死锁</h3><p><strong>死锁是一种现象：</strong>如线程A持有资源x，线程B持有资源y，线程A等待线程B释放资源y，线程B等待线程A释放资源x，两个线程都不释放自己持有的资源，则两个线程都获取不到对方的资源，就会造成死锁。</p>
+<p>Java中的死锁不能自行打破，所以线程死锁后，线程不能进行响应。所以一定要注意程序的并发场景，避免造成死锁。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091606522.png" alt="死锁"></p>
+<h3 id="2-12synchronized"><a href="#2-12synchronized" class="headerlink" title="2.12synchronized"></a>2.12synchronized</h3><p>synchronized是Java中的关键字：用来修饰方法、对象实例。属于独占锁、悲观锁、可重入锁、非公平锁。</p>
+<ul>
+<li>1.作用于实例方法时，锁住的是对象的实例(this)；</li>
+<li>2.当作用于静态方法时，锁住的是 Class类，相当于类的一个全局锁， 会锁所有调用该方法的线程；</li>
+<li>3.synchronized 作用于一个非 NULL的对象实例时，锁住的是所有以该对象为锁的代码块。它有多个队列，当多个线程一起访问某个对象监视器的时候，对象监视器会将这些线程存储在不同的容器中。</li>
+</ul>
+<p>每个对象都有个 monitor 对象， 加锁就是在竞争 monitor 对象，代码块加锁是在代码块前后分别加上 monitorenter 和 monitorexit 指令来实现的，方法加锁是通过一个标记位来判断的。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091607883.jpg" alt="synchronized"></p>
+<h3 id="2-13Lock和synchronized的区别"><a href="#2-13Lock和synchronized的区别" class="headerlink" title="2.13Lock和synchronized的区别"></a>2.13Lock和synchronized的区别</h3><p><strong><code>Lock</code>：</strong> 是Java中的接口，可重入锁、悲观锁、独占锁、互斥锁、同步锁。</p>
+<ul>
+<li>1.Lock需要手动获取锁和释放锁。就好比自动挡和手动挡的区别</li>
+<li>2.Lock 是一个接口，而 synchronized 是 Java 中的关键字， synchronized 是内置的语言实现。</li>
+<li>3.synchronized 在发生异常时，会自动释放线程占有的锁，因此不会导致死锁现象发生；而 Lock 在发生异常时，如果没有主动通过 unLock()去释放锁，则很可能造成死锁现象，因此使用 Lock 时需要在 finally 块中释放锁。</li>
+<li>4.Lock 可以让等待锁的线程响应中断，而 synchronized 却不行，使用 synchronized 时，等待的线程会一直等待下去，不能够响应中断。</li>
+<li>5.通过 Lock 可以知道有没有成功获取锁，而 synchronized 却无法办到。</li>
+<li>6.Lock 可以通过实现读写锁提高多个线程进行读操作的效率。</li>
+</ul>
+<p><strong>synchronized的优势：</strong></p>
+<ul>
+<li>足够清晰简单，只需要基础的同步功能时，用synchronized。</li>
+<li>Lock应该确保在finally块中释放锁。如果使用synchronized，JVM确保即使出现异常，锁也能被自动释放。</li>
+<li>使用Lock时，Java虚拟机很难得知哪些锁对象是由特定线程锁持有的。</li>
+</ul>
+<h3 id="2-14ReentrantLock-和synchronized的区别"><a href="#2-14ReentrantLock-和synchronized的区别" class="headerlink" title="2.14ReentrantLock 和synchronized的区别"></a>2.14ReentrantLock 和synchronized的区别</h3><p><strong>ReentrantLock是Java中的类 ：</strong> 继承了Lock类，可重入锁、悲观锁、独占锁、互斥锁、同步锁。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091607573.png" alt="image-20220909155231820"></p>
+<p><strong>相同点：</strong></p>
+<ul>
+<li>1.主要解决共享变量如何安全访问的问题</li>
+<li>2.都是可重入锁，也叫做递归锁，同一线程可以多次获得同一个锁，</li>
+<li>3.保证了线程安全的两大特性：可见性、原子性。</li>
+</ul>
+<p><strong>不同点：</strong></p>
+<ul>
+<li>1.ReentrantLock 就像手动汽车，需要显示的调用lock和unlock方法， synchronized 隐式获得释放锁。</li>
+<li>2.ReentrantLock 可响应中断， synchronized 是不可以响应中断的，ReentrantLock 为处理锁的不可用性提供了更高的灵活性</li>
+<li>3.ReentrantLock 是 API 级别的， synchronized 是 JVM 级别的</li>
+<li>4.ReentrantLock 可以实现公平锁、非公平锁，默认非公平锁，synchronized 是非公平锁，且不可更改。</li>
+<li>5.ReentrantLock 通过 Condition 可以绑定多个条件</li>
+</ul>
+<h2 id="3-常问总结"><a href="#3-常问总结" class="headerlink" title="3.常问总结"></a>3.常问总结</h2><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209091344339.png" alt="锁图"></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
             </div>
@@ -854,7 +932,7 @@ charset="utf-8"></script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Beaumon</a>
+                    <a href="/about" rel="external nofollow noreferrer">Beumon</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -864,7 +942,7 @@ charset="utf-8"></script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/">https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/</a>
+                    <a href="https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/">https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -877,7 +955,7 @@ charset="utf-8"></script>
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Beaumon</a>
+                    <a href="/about" target="_blank">Beumon</a>
                     !
                 </span>
             </div>
@@ -902,8 +980,12 @@ charset="utf-8"></script>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/mysql/">
-                                    <span class="chip bg-color">mysql</span>
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%94%81/">
+                                    <span class="chip bg-color">锁</span>
                                 </a>
                             
                         </div>
@@ -981,7 +1063,7 @@ charset="utf-8"></script>
         repo: 'beaumon.github.io',
         owner: 'Beaumon',
         admin: ["Beaumon"],
-        id: '2022-08-29T21-51-17',
+        id: '2022-09-09T10-36-11',
 		distractionFreeMode: 'true',
 		proxy: 'https://gitalkreslove.introduce.workers.dev/?https://github.com/login/oauth/access_token'
     });
@@ -1012,45 +1094,52 @@ charset="utf-8"></script>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/08/31/cloudflare-githubpages-pei-zhi/">
+                <a href="/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208311930055.png" class="responsive-img" alt="CloudFlare-githubpages配置">
                         
-                        <span class="card-title">CloudFlare-githubpages配置</span>
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="聊聊java中的21种锁">
+                        
+                        <span class="card-title">聊聊java中的21种锁</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CloudFlare+githubpages配置
+                            聊聊java中的21种锁
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
+                            <a href="/categories/java/" class="post-category">
+                                    java
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/cloudflare/">
-                        <span class="chip bg-color">cloudflare</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%94%81/">
+                        <span class="chip bg-color">锁</span>
                     </a>
                     
                 </div>
@@ -1064,30 +1153,31 @@ charset="utf-8"></script>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/">
+                <a href="/2022/09/09/liao-liao-8-chong-jia-gou-mo-shi/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202208292129016.png" class="responsive-img" alt="不蒜子统计不显示问题">
                         
-                        <span class="card-title">不蒜子统计不显示问题</span>
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="聊聊8种架构模式">
+                        
+                        <span class="card-title">聊聊8种架构模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            busuanzi统计不显示的根本原因及解决办法
+                            聊聊8种架构模式
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
+                            <a href="/categories/%E8%81%8A%E8%81%8A/" class="post-category">
+                                    聊聊
                                 </a>
                             
                             
@@ -1097,12 +1187,8 @@ charset="utf-8"></script>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/theme%E4%B8%BB%E9%A2%98/">
-                        <span class="chip bg-color">theme主题</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">
-                        <span class="chip bg-color">不蒜子</span>
+                    <a href="/tags/%E6%9E%B6%E6%9E%84/">
+                        <span class="chip bg-color">架构</span>
                     </a>
                     
                 </div>

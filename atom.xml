@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-09T01:47:31.291Z</updated>
+  <updated>2022-09-09T08:08:55.670Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聊聊java中的21种锁</title>
+    <link href="https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/"/>
+    <id>https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/</id>
+    <published>2022-09-09T02:36:11.000Z</published>
+    <updated>2022-09-09T08:08:55.670Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;聊聊java中的21种锁&quot;&gt;&lt;a href=&quot;#聊聊java中的21种锁&quot; class=&quot;headerlink&quot; title=&quot;聊聊java中的21种锁&quot;&gt;&lt;/a&gt;聊聊java中的21种锁&lt;/h1&gt;&lt;h2 id=&quot;1-概括&quot;&gt;&lt;a href=&quot;#1-概括&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/tags/java/"/>
+    
+    <category term="锁" scheme="https://beaumon.github.io/tags/%E9%94%81/"/>
+    
+  </entry>
   
   <entry>
     <title>聊聊8种架构模式</title>
