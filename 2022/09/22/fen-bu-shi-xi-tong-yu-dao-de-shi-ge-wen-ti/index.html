@@ -775,6 +775,7 @@ charset="utf-8"></script>
 <p>将消息队列里面的消息分摊到多个节点（指某台机器或容器）上，所有节点的消息队列之和就包含了所有消息。</p>
 </blockquote>
 <h3 id="2-1-1-消息队列的坑之非幂等"><a href="#2-1-1-消息队列的坑之非幂等" class="headerlink" title="2.1.1 消息队列的坑之非幂等"></a>2.1.1 消息队列的坑之非幂等</h3><h4 id="2-1-1-1幂等性概念"><a href="#2-1-1-1幂等性概念" class="headerlink" title="2.1.1.1幂等性概念"></a>2.1.1.1幂等性概念</h4><p>所谓幂等性就是无论多少次操作和第一次的操作结果一样。如果消息被多次消费，很有可能造成数据的不一致。</p>
+<p>幂等性详细可以看我的另一篇文章：<a target="_blank" rel="noopener" href="https://beaumon.cf/2022/09/21/liao-liao-mi-deng-xing/">https://beaumon.cf/2022/09/21/liao-liao-mi-deng-xing/</a></p>
 <h4 id="2-1-1-2场景分析"><a href="#2-1-1-2场景分析" class="headerlink" title="2.1.1.2场景分析"></a>2.1.1.2场景分析</h4><p><code>RabbitMQ</code>、<code>RocketMQ</code>、<code>Kafka</code> 消息队列中间件都有可能出现消息重复消费问题。这种问题并不是 MQ 自己保证的，而是需要开发人员来保证。</p>
 <p>这几款消息队列中间都是是全球最牛的分布式消息队列，那肯定考虑到了消息的幂等性。我们以 Kafka 为例，看看 Kafka 是怎么保证消息队列的幂等性。</p>
 <p>Kafka 有一个 <code>偏移量</code> 的概念，代表着消息的序号，每条消息写到消息队列都会有一个偏移量，消费者消费了数据之后，每过一段固定的时间，就会把消费过的消息的偏移量提交一下，表示已经消费过了，下次消费就从偏移量后面开始消费。</p>
@@ -1610,7 +1611,7 @@ charset="utf-8"></script>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">66.4k</span>
+                        class="white-color">66.5k</span>
             
             
             
