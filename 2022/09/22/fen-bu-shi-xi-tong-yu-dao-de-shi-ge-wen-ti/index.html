@@ -1,0 +1,1957 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="分布式系统遇到的十个问题, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="分布式系统遇到的十个问题">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>分布式系统遇到的十个问题 | 是Beaumon的小博客鸭</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="是Beaumon的小博客鸭" type="application/atom+xml">
+</head>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"
+
+charset="utf-8"></script>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <!-- <span class="logo-span">是Beaumon的小博客鸭</span> -->
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>Navigate</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/weather">
+          
+          <i class="fas fa-cloud" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Weather</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">是Beaumon的小博客鸭</div>
+        <div class="logo-desc">
+            
+            个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			Navigate
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/weather " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-cloud" style="position: absolute;left:28px" ></i>
+			      
+		          <span>Weather</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Beaumon/beaumon.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Beaumon/beaumon.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">分布式系统遇到的十个问题</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                                <span class="chip bg-color">分布式</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/java/" class="post-category">
+                                java
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-09-22
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-09-22
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    13.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    46 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="分布式系统遇到的十个问题"><a href="#分布式系统遇到的十个问题" class="headerlink" title="分布式系统遇到的十个问题"></a>分布式系统遇到的十个问题</h1><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220952248.png" alt="img"></p>
+<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>我们都在讨论分布式，特别是面试的时候，不管是招初级软件工程师还是高级，都会要求懂分布式，甚至要求用过。传得沸沸扬扬的分布式到底是什么东东，有什么优势？</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220952909.png" alt="img">风遁·螺旋手里剑</p>
+<p>看过<code>火影</code>的同学肯定知道<code>漩涡鸣人</code>的招牌忍术：<code>多重影分身之术</code>。</p>
+<ul>
+<li>这个术有一个特别厉害的地方，<code>过程和心得</code>：多个分身的感受和经历都是相通的。比如 A 分身去找卡卡西（鸣人的老师）请教问题，那么其他分身也会知道 A 分身问的什么问题。</li>
+<li><code>漩涡鸣人</code>有另外一个超级厉害的忍术，需要由几个影分身完成：<code>风遁·螺旋手里剑。</code>这个忍术是靠三个鸣人一起协作完成的。</li>
+</ul>
+<p>这两个忍术和分布式有什么关系？</p>
+<ul>
+<li>分布在不同地方的系统或服务，是彼此相互关联的。</li>
+<li>分布式系统是分工合作的。</li>
+</ul>
+<p>案例：</p>
+<ul>
+<li>比如 Redis 的<code>哨兵机制</code>，可以知道集群环境下哪台 <code>Redis</code> 节点挂了。</li>
+<li>Kafka/zookeeper的 <code>Leader 选举机制</code>，如果某个节点挂了，会从 <code>follower</code> 中重新选举一个 leader 出来。（leader 作为写数据的入口，follower 作为读的入口）</li>
+</ul>
+<p>那<code>多重影分身之术</code>有什么缺点？</p>
+<ul>
+<li>会消耗大量的查克拉。分布式系统同样具有这个问题，需要几倍的资源来支持。</li>
+</ul>
+<h2 id="1-1对分布式的理解"><a href="#1-1对分布式的理解" class="headerlink" title="1.1对分布式的理解"></a>1.1对分布式的理解</h2><p>要理解分布式系统，主要需要明白一下2个方面：</p>
+<p>1.分布式系统一定是由多个节点组成的系统。其中，节点指的是计算机服务器，而且这些节点一般不是孤立的，而是互通的。</p>
+<p>2.这些连通的节点上部署了我们的节点，并且相互的操作会有协同。</p>
+<p>不同的业务模块部署在不同的服务器上或者同一个业务模块分拆多个子业务，部署在不同的服务器上，解决高并发的问题，提供可扩展性以及高可用性，业务中使用分布式的场景主要有分布式存储以及分布式计算。分布式存储中可以将数据分片到多个节点上，不仅可以提高性能（可扩展性），同时也可以使用多个节点对同一份数据进行备份。</p>
+<p>3.简单概括</p>
+<blockquote>
+<p>是一种工作方式</p>
+<p>若干独立计算机的集合，这些计算机对于用户来说就像单个相关系统</p>
+<p>将不同的业务分布在不同的地方</p>
+</blockquote>
+<h3 id="1-2-1分布式环境的特点"><a href="#1-2-1分布式环境的特点" class="headerlink" title="1.2.1分布式环境的特点"></a>1.2.1分布式环境的特点</h3><p>1.分布性：服务部署空间具有多样性</p>
+<p>2.并发性：程序运行过程中，并发性操作是很常见的。比如同一个分布式系统中的多个节点，同时访问一个共享资源。数据库、分布式存储</p>
+<p>3.无序性：进程之间的消息通信，会出现顺序不一致问题</p>
+<h3 id="1-2-2集群与分布式的区别"><a href="#1-2-2集群与分布式的区别" class="headerlink" title="1.2.2集群与分布式的区别"></a>1.2.2集群与分布式的区别</h3><p>集群：复制模式，每台机器做一样的事。</p>
+<p>分布式：两台机器分工合作，每台机器做的不一样。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220953692.png" alt="img"></p>
+<p>集群相关tips:无论你是 web容器集群还是db集群，按照所要解决的问题可以分为如下几种：</p>
+<p><strong>高可用集群，提升可用性，（容灾、故障转移）， 部署方式有以下三种</strong></p>
+<ol>
+<li>主从方式：主机工作，备机监控。此方式不能有效的利用服务器资源</li>
+<li>互为主从：两服务器同时在线，一台服务器故障可切换到另一台上。此 方式有效的利用服务器资源，但当服务器故障时候，将导致一台服务器上运行多个业务。</li>
+<li>多台服务器主从：大部分服务器在线使用，小部分监控；若有部分服务器故障，可切换到指定的小部分服务器上。此方式为前两种方式的综合。然后多台服务器群集，也增加了管理的复杂度。</li>
+</ol>
+<p>高可用集群的另外一个特点是共享资源，多个节点服务器共享一个存储资源，该存储可在不同节点之间转移。</p>
+<p><strong>负载均衡集群，LoadBalance， 提升吞吐量</strong></p>
+<ol>
+<li>不同节点之间相互独立，不共享任何资源（硬件，网络， 但应用的会话保持需要一定的策略）。</li>
+<li>通过一定算法将客户端的访问请求分配到群集的各个节点上，充分利用每个节点的资源。</li>
+<li>负载均衡扩展了网络设备和服务器带宽，增加吞吐量，加强网络数据处理能。</li>
+<li>每个节点的性能和配置可能不同，根据算法，可以分配不同的权重到不同节点上，以实现不同节点的资源利用。</li>
+</ol>
+<p><strong>并行计算群集，Performance， 减少应答时间</strong></p>
+<ol>
+<li>并行计算或称平行计算是相对于串行计算来说的。</li>
+<li>并行计算的能力的目的是提高计算速度。</li>
+</ol>
+<p>并行计算分为时间计算和空间计算：</p>
+<ol>
+<li>时间计算既是流水线技术，一个处理器分为多个单元，每个单元负责不同任务，这些单元可并行计算。</li>
+<li>空间计算利用多个处理器并发的执行计算。目前PC机的计算能力越来越强，将大量低廉的PC机互联起来，组成一个”大型计算机”以解决复杂的计算任务。Beowulf computers为最典型的空间并行计算。</li>
+</ol>
+<h3 id="1-2-3分布式的架构演进"><a href="#1-2-3分布式的架构演进" class="headerlink" title="1.2.3分布式的架构演进"></a>1.2.3分布式的架构演进</h3><h4 id="1-2-3-1原始分布式时代"><a href="#1-2-3-1原始分布式时代" class="headerlink" title="1.2.3.1原始分布式时代"></a>1.2.3.1原始分布式时代</h4><p>这个时代（20世纪70年代末期到80年代初）的计算机计算能力非常有限（内存只有几百K），所以科学家就寻求通过多台计算机来完成一个功能，这个时代被称为原始分布式时代。</p>
+<p>但是这个时代对分布式系统的尝试并没有取得太大的成绩。但也不是一无所成，这个时代的探索，出现了远程调用，分布式文件系统的雏型，为后续计算机学科的发展奠定了基础。</p>
+<blockquote>
+<p>IBM院士Kyle Brown事后曾评价道，“这次尝试最大的收获就是对RPC、DFS等概念的开创，以及得到了一个价值千金的教训：某个功能能够进行分布式，并不意味着它就应该进行分布式，强行追求透明的分布式操作，只会自寻苦果。”</p>
+<p>无论是<strong>DCE</strong>还是稍后出现的CORBA，从结果来看，都不能称得上成功，因为将一个系统拆分到不同的机器中运行，为解决这样做带来的服务发现、跟踪、通信、容错、隔离、配置、传输、数据一致性和编码复杂度等方面的问题所付出的代价已远远超过了分布式所取得的收益。</p>
+</blockquote>
+<h5 id="1-2-3-1-1关于DCE的一点介绍"><a href="#1-2-3-1-1关于DCE的一点介绍" class="headerlink" title="1.2.3.1.1关于DCE的一点介绍"></a>1.2.3.1.1关于DCE的一点介绍</h5><blockquote>
+<p>DCE是当时业界主流的计算机厂商一起参与，共同制订了名为“分布式运算环境[2]”（Distributed Computing Environment，DCE）的<strong>分布式技术体系</strong>。</p>
+<p>DCE包含一套相对完整的分布式服务组件规范与参考实现，譬如源自NCA（惠普公司）的远程服务调用规范（Remote Procedure Call，RPC），当时被称为DCE/RPC，它与后来Sun公司向互联网工程任务组（Internet Engineering Task Force，IETF）提交的基于通用TCP/IP协议的远程服务标准ONC RPC被认为是现代RPC的共同鼻祖。</p>
+<p>源自AFS（卡内基梅隆大学提出）的分布式文件系统（Distributed File System，DFS）规范，当时被称为DCE/DFS；</p>
+<p>源自Kerberos（麻省理工大学提出）的服务认证规范；</p>
+<p>还有时间服务、命名与目录服务，甚至现在程序中很常用的通用唯一识别符（Universally Unique Identifier，UUID）也是在DCE中发明出来的。</p>
+</blockquote>
+<h5 id="1-2-3-1-2UNIX分布式设计哲学"><a href="#1-2-3-1-2UNIX分布式设计哲学" class="headerlink" title="1.2.3.1.2UNIX分布式设计哲学"></a>1.2.3.1.2UNIX分布式设计哲学</h5><p>保持接口与实现的简单性，比系统的任何其他属性，包括准确性、一致性和完整性，都来得更加重要。</p>
+<p>但是基于那个时代的计算机技术，想要发展符合UNIX设计哲学的分布式技术不太可能，只能是一种美好的愿景。</p>
+<h4 id="1-2-3-2-单体应用时代"><a href="#1-2-3-2-单体应用时代" class="headerlink" title="1.2.3.2 单体应用时代"></a>1.2.3.2 单体应用时代</h4><p>20世纪80年代正是摩尔定律开始稳定发挥作用的黄金时期，微型计算机的性能以每两年增长一倍的惊人速度提升，硬件算力束缚软件规模的链条很快变得松动，信息系统进入以单台或少量几台计算机即可作为服务器来支撑大型信息系统运作的单体时代，<strong>且在很长的一段时间内，单体都将是软件架构的绝对主流。</strong></p>
+<p>在很多书中都将单体架构作为一种反派角色出现，我甚至在面试过程中遇到过面试官在还没了解项目需求的情况下就直接说你们这种单体架构是有问题的。其实没有放之四海而皆准的架构，<strong>单体架构在某些情况下可能是最优选择，单体架构更不应该被打上反派角色。</strong></p>
+<p>比如，对于小型系统，单台机器就足以支撑其良好运行的系统，不仅易于开发、测试、部署，且由于系统中各个功能、模块、方法的调用过程都是进程内调用，不会发生进程间通信（Inter-ProcessCommunication，IPC[1]），因此连运行效率也是最高的。</p>
+<p>那些不顾需求现状，为了微服务而微服务的开发者才是真正的“反派”。</p>
+<p><strong>单体系统的不足，必须在软件的性能需求超过了单机、软件的开发人员规模明显超过了“2 Pizza Team”（6～12人）范畴的前提下才有讨论的价值。</strong></p>
+<p>上面讲到的是单体架构的优点，在互联网时代（复杂系统），单体架构存在两点明显的缺点：</p>
+<ul>
+<li>单机性能难以保证：一个应用中功能越堆越多，单台机器已经难以满足这些功能，摩尔定律失效让堆硬件的做法变成了奢望；</li>
+<li>缺乏自治隔离能力：比如说一部分的代码出现Bug可能会导致整个服务不可用，比如说一小个改动点需要上线，整个系统必须上线；</li>
+<li>还有一个缺点就是单体架构需要技术栈统一，比如说所有功能模块都需要用Java语言来编写。</li>
+</ul>
+<p><strong>单体架构的缺点不在于不可拆分、难以扩展（这种想法不完全正确）。</strong></p>
+<ul>
+<li>从纵向拆分角度来看，现代的单体应用都是会拆分成controller，service和dao层的，不存在不能拆分的说法；</li>
+<li>从横向拆分的角度，单体应用完全可以拆分成多个模块，每个模块负责不同的功能，但是最后还是打成一个包，运行在一个进程中；</li>
+<li>从横向扩展的角度，可以通过负载均衡机制同时部署若干个相同的单体系统副本，以达到分摊流量压力的效果。</li>
+</ul>
+<blockquote>
+<p>微服务取代单体系统成为潮流趋势的根本原因，笔者认为最重要的原因是：单体系统很难兼容“Phoenix”的特性。这种架构风格潜在的要求是希望系统的每一个部件、每一处代码都尽量可靠，尽量不出或少出缺陷。然而战术层面再优秀，也很难弥补战略层面的不足。单体系统靠高质量来保证高可靠性的思路，在小规模软件上还能运作良好，但当系统规模越来越大时，交付一个可靠的单体系统就变得越来越具有挑战性。如本书前言所说，正是随着软件架构演进，构建可靠系统的观念从“追求尽量不出错”到正视“出错是必然”的转变，才是微服务架构得以挑战并逐步取代单体架构的底气所在。</p>
+</blockquote>
+<h4 id="1-2-3-3-SOA架构时代"><a href="#1-2-3-3-SOA架构时代" class="headerlink" title="1.2.3.3 SOA架构时代"></a>1.2.3.3 SOA架构时代</h4><p>SOA架构，面向服务的架构。其包含的许多概念、思想都能在今天的微服务中找到对应的身影了，譬如服务之间的松散耦合、注册、发现、治理，隔离、编排等。</p>
+<p>SOA不能简单视为一种架构风格，而是一套软件设计的基础平台。</p>
+<ul>
+<li>它拥有领导制定技术标准的组织Open CSA；</li>
+<li>有清晰的软件设计的指导原则，譬如服务的封装性、自治、松耦合、可重用、可组合、无状态，等等；</li>
+<li>明确了采用SOAP作为远程调用协议，依靠SOAP协议族（WSDL、UDDI和WS-*协议）来完成服务的发布、发现和治理；</li>
+<li>利用企业服务总线（Enterprise Service Bus，ESB）的消息管道来实现各个子系统之间的交互，令各服务在ESB的调度下无须相互依赖就能相互通信，实现了服务松耦合，也为以后进一步实施业务流程编排（Business Process Management，BPM）提供了基础</li>
+<li>使用服务数据对象（Service Data Object，SDO）来访问和表示数据，使用服务组件架构（Service Component Architecture，SCA）来定义服务封装的形式和服务运行的容器</li>
+</ul>
+<p>但是SOA技术最终还是偃旗息鼓了，最主要的原因还是SOA基于SOAP协议，SOAP协议过于严格的规范定义带来过度的复杂性，而构建在SOAP基础之上的ESB、BPM、SCA、SDO等诸多上层建筑，进一步加剧了这种复杂性。</p>
+<p>SOA自诞生的那一天起，就已经注定只能是少数系统阳春白雪式的精致奢侈品，它可以实现多个异构大型系统之间的复杂集成交互，却很难作为一种具有广泛普适性的软件架构风格来推广。SOA最终没有获得成功的致命伤与当年的EJB如出一辙，尽管有Sun和IBM等一众巨头在背后力挺，EJB仍然败于以Spring、Hibernate为代表的“草根框架”，可见一旦脱离人民群众，终究会淹没在群众的海洋之中，连信息技术也不曾例外。</p>
+<p><strong>SAO的设计理念和简单透明相悖甚远。</strong></p>
+<h4 id="1-2-3-4微服务架构时代"><a href="#1-2-3-4微服务架构时代" class="headerlink" title="1.2.3.4微服务架构时代"></a>1.2.3.4微服务架构时代</h4><p><strong>微服务架构</strong>是一种通过多个小型服务组合来构建单个应用的架构风格，<strong>这些服务围绕业务能力而非特定的技术标准来构建。各个服务可以采用不同的编程语言、不同的数据存储技术，运行在不同的进程之中。</strong>服务采取轻量级的通信机制和自动化的部署机制实现通信与运维。</p>
+<p><strong>微服务和SOA的区别</strong></p>
+<p>从以上微服务的定义和特征中，你应该可以明显地感觉到微服务追求的是更加自由的架构风格，摒弃了几乎所有SOA里可以抛弃的约束和规定，提倡以“实践标准”代替“规范标准”。</p>
+<p>可是，如果没有了统一的规范和约束，以前SOA解决的那些分布式服务的问题，不也就一下子都重新出现了吗？的确如此，对于服务的注册发现、跟踪治理、负载均衡、故障隔离、认证授权、伸缩扩展、传输通信、事务处理等问题，<strong>微服务中将不再有统一的解决方案</strong>。</p>
+<p>即使只讨论Java范围内会使用到的微服务，仅一个服务间远程调用问题，可以列入解决方案的候选清单的就有RMI（Sun/Oracle）、Thrift（Facebook）、Dubbo（阿里巴巴）、gRPC（Google）、Motan2（新浪）、Finagle（Twitter）、brpc（百度）、Arvo（Hadoop）、JSON-RPC、REST，等等；仅一个服务发现问题，可以选择的就有Eureka（Netflix）、Consul（HashiCorp）、Nacos（阿里巴巴）、ZooKeeper（Apache）、etcd（CoreOS）、CoreDNS（CNCF），等等。其他领域也与此类似。</p>
+<p>微服务所带来的自由是一把双刃开锋的宝剑，当软件架构者拿起这把宝剑，一刃指向SOA定下的复杂技术标准，将选择的权力夺回的同一时刻，另外一刃也正朝着自己映出冷冷的寒光。</p>
+<p>在微服务时代，软件研发本身的复杂度确实有所降低。一个简单服务，并不见得会同时面临分布式中的所有问题，也就没有必要背上SOA那百宝袋般沉重的技术包袱。需要解决什么问题，就引入什么工具；团队熟悉什么技术，就使用什么框架。此外，像Spring Cloud这样胶水式的全家桶工具集，通过一致的接口、声明和配置，进一步屏蔽了源自具体工具、框架的复杂性，降低了在不同工具、框架之间切换的成本，所以，作为一个普通的服务开发者，作为一个“螺丝钉”式的程序员，微服务架构是友善的。</p>
+<p>可是，微服务对架构者却是满满的“恶意”，对架构能力的要求已提升到史无前例的程度。技术架构者的第一职责就是决策权衡，有利有弊才需要决策，有取有舍才需要权衡，如果架构者本身的知识面不足以覆盖所需要决策的内容，不清楚其中利弊，恐怕将无可避免地陷入选择困难症的境遇之中。微服务时代充满着自由的气息，微服务时代充斥着迷茫的选择。</p>
+<h4 id="1-2-3-5后微服务时代（云原生时代）"><a href="#1-2-3-5后微服务时代（云原生时代）" class="headerlink" title="1.2.3.5后微服务时代（云原生时代）"></a>1.2.3.5后微服务时代（云原生时代）</h4><p>容器技术给分布式架构提供了新思路。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220953633.png" alt="img"></p>
+<p>当虚拟化的基础设施从单个服务的容器扩展至由多个容器构成的服务集群、通信网络和存储设施时，软件与硬件的界限便已模糊。<strong>一旦虚拟化的硬件能够跟上软件的灵活性，那些与业务无关的技术性问题便有可能从软件层面剥离，悄无声息地在硬件基础设施之内解决，让软件得以只专注业务，真正围绕业务能力构建团队与产品。</strong></p>
+<p>从软件层面独立应对分布式架构所带来的各种问题，发展到应用代码与基础设施软、硬一体，合力应对架构问题，这个新的时代现在常被媒体冠以“云原生”这个颇为抽象的名字加以宣传。云原生时代追求的目标与此前微服务时代追求的目标并没有本质改变，都是在服务架构演进的历史进程中，所以笔者更愿意称云原生时代为“后微服务时代”。</p>
+<p>Kubernetes成为容器战争胜利者标志着后微服务时代的开启，但Kubernetes仍然没能完美解决全部的分布式问题。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220953858.png" alt="img"></p>
+<p>微服务A调用了微服务B的两个服务，称为B1和B2，假设B1表现正常但B2出现了持续的500错，那在达到一定阈值之后就应该对B2进行熔断，以避免产生雪崩效应。如果仅在基础设施层面来处理，这会遇到一个两难问题，切断A到B的网络通路会影响B1的正常调用，不切断则会持续受B2的错误影响。</p>
+<p>为了解决这一类问题，虚拟化的基础设施很快完成了第二次进化，引入了今天被称为“服务网格”（Service Mesh）的“边车代理模式”（Sidecar Proxy）。</p>
+<p>在虚拟化场景中的边车指的是由系统自动在服务容器（通常是指Kubernetes的Pod）中注入一个通信代理服务器，相当于那个挎斗，以类似网络安全里中间人攻击的方式进行流量劫持，在应用毫无感知的情况下，悄然接管应用所有对外通信。这个代理除了实现正常的服务间通信外（称为数据平面通信），还接收来自控制器的指令（称为控制平面通信），根据控制平面中的配置，对数据平面通信的内容进行分析处理，以实现熔断、认证、度量、监控、负载均衡等各种附加功能。通过边车代理模式，便实现了既不需要在应用层面加入额外的处理代码，也提供了几乎不亚于程序代码的精细管理能力。</p>
+<h4 id="1-2-3-6无服务架构时代"><a href="#1-2-3-6无服务架构时代" class="headerlink" title="1.2.3.6无服务架构时代"></a>1.2.3.6无服务架构时代</h4><p>无服务现在还没有一个特别权威的“官方”定义，但它的概念并没有前面提到的各种架构那么复杂，本来无服务也是以“简单”为主要卖点的，它只涉及两块内容：<strong>后端设施（Backend）和函数（Function）</strong>。</p>
+<ul>
+<li>后端设施是指数据库、消息队列、日志、存储等这类用于支撑业务逻辑运行，但本身无业务含义的技术组件，这些后端设施都运行在云中，在无服务中将它们称为“后端即服务”（Backend as a Service，BaaS）。</li>
+<li>函数是指业务逻辑代码，这里函数的概念与粒度都已经很接近于程序编码角度的函数了，其区别是无服务中的函数运行在云端，不必考虑算力问题，也不必考虑容量规划（从技术角度可以不考虑，从计费的角度还是要掂量一下的），在无服务中将其称为“函数即服务”（Function as a Service，FaaS）。</li>
+</ul>
+<h3 id="1-2-4分布式的优势与劣势"><a href="#1-2-4分布式的优势与劣势" class="headerlink" title="1.2.4分布式的优势与劣势"></a>1.2.4分布式的优势与劣势</h3><h4 id="1-2-4-1优势"><a href="#1-2-4-1优势" class="headerlink" title="1.2.4.1优势"></a>1.2.4.1优势</h4><ul>
+<li>多个功能模块揉合在一起的系统进行服务拆分，来解耦服务间的调用,每个项目复杂度降低,团队的职责更加明确；</li>
+<li>扩展更加灵活，复用性高,只需扩容流量特别大项目；</li>
+<li>将模块提供的服务分布到不同的机器或容器里,部署更加灵活，不会因为一个小功能部署就部署所有系统，让整个团队留下来验证；</li>
+<li>独立部署，错误隔离</li>
+</ul>
+<h4 id="1-2-4-2分布式带来的问题"><a href="#1-2-4-2分布式带来的问题" class="headerlink" title="1.2.4.2分布式带来的问题"></a>1.2.4.2分布式带来的问题</h4><ul>
+<li>需要更多优质人才懂分布式，人力成本增加</li>
+<li>运维部署和维护成本显著增加</li>
+<li>多服务间链路变长，开发排查问题难度加大</li>
+<li>网络通信：网络本身的不可靠性，因此会涉及到一些网络通信问题.例如数据幂等性问题、数据的顺序问题等。</li>
+<li>网络分区(脑裂)：当网络发生异常导致分布式系统中部分节点之间的网络延时不断增大，最终导致组成分布式架构的所有节点，只有部分节点能够正常通信，引发了环境高可靠性问题。</li>
+<li>三态：在分布式架构里面多了个状态：超时，所以有三态： 成功、失败、超时,架构设计变得复杂，学习成本高</li>
+<li>分布式事务：ACID(原子性、一致性、隔离性、持久性)</li>
+<li>中心化和去中心化：冷备或者热备</li>
+</ul>
+<p>讲到<code>分布式</code>不得不知道 <code>CAP</code> 定理和 <code>Base</code> 理论，这里给不知道的同学做一个扫盲。</p>
+<h2 id="1-3CAP-定理"><a href="#1-3CAP-定理" class="headerlink" title="1.3CAP 定理"></a>1.3CAP 定理</h2><p>在理论计算机科学中，CAP 定理指出对于一个分布式计算系统来说，不可能同时满足以下三点：</p>
+<ul>
+<li><p><strong>一致性（Consistency）</strong></p>
+</li>
+<li><ul>
+<li>所有节点访问同一份最新的数据副本。</li>
+</ul>
+</li>
+<li><p><strong>可用性（Availability）</strong></p>
+</li>
+<li><ul>
+<li>每次请求都能获取到非错的响应(只要收到用户的请求，服务器就必须给出回应)，但不保证获取的数据为最新数据</li>
+</ul>
+</li>
+<li><p><strong>分区容错性（Partition tolerance）</strong></p>
+</li>
+<li><ul>
+<li>不能在时限内达成数据一致性，就意味着发生了分区的情况，必须就当前操作在 C 和 A 之间做出选择）</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<p><strong>Consistency 和 Availability 的矛盾</strong></p>
+<p>CAP原则的精髓就是要么AP，要么CP，要么AC，但是不存在CAP。如果在某个分布式系统中数据无副本， 那么系统必然满足强一致性条件， 因为只有独一数据，不会出现数据不一致的情况，此时C和P两要素具备，但是如果系统发生了网络分区状况或者宕机，必然导致某些数据不可以访问，此时可用性条件就不能被满足，即在此情况下获得了CP系统，但是CAP不可同时满足。</p>
+<h2 id="1-4BASE-理论"><a href="#1-4BASE-理论" class="headerlink" title="1.4BASE 理论"></a>1.4BASE 理论</h2><p><code>BASE</code> 是 <code>Basically Available</code>（基本可用）、<code>Soft state</code>（软状态）和 <code>Eventually consistent</code>（最终一致性）三个短语的缩写。<code>BASE</code> 理论是对 <code>CAP</code> 中 <code>AP</code> 的一个扩展，通过牺牲强一致性来获得可用性，当出现故障允许部分不可用但要保证核心功能可用，允许数据在一段时间内是不一致的，但最终达到一致状态。满足 <code>BASE</code> 理论的事务，我们称之为<code>柔性事务</code>。</p>
+<ul>
+<li><strong>基本可用 ：</strong> 分布式系统在出现故障时，允许损失部分可用功能，保证核心功能可用。如电商网址交易付款出现问题来，商品依然可以正常浏览。</li>
+<li><strong>软状态：</strong> 由于不要求强一致性，所以BASE允许系统中存在中间状态（也叫软状态），这个状态不影响系统可用性，如订单中的“支付中”、“数据同步中”等状态，待数据最终一致后状态改为“成功”状态。</li>
+<li><strong>最终一致性：</strong> 最终一致是指的经过一段时间后，所有节点数据都将会达到一致。如订单的“支付中”状态，最终会变为“支付成功”或者“支付失败”，使订单状态与实际交易结果达成一致，但需要一定时间的延迟、等待。</li>
+</ul>
+<h1 id="2-分布式的坑"><a href="#2-分布式的坑" class="headerlink" title="2.分布式的坑"></a>2.分布式的坑</h1><h2 id="2-1分布式消息队列的坑"><a href="#2-1分布式消息队列的坑" class="headerlink" title="2.1分布式消息队列的坑"></a>2.1分布式消息队列的坑</h2><blockquote>
+<p>消息队列如何做分布式?</p>
+<p>将消息队列里面的消息分摊到多个节点（指某台机器或容器）上，所有节点的消息队列之和就包含了所有消息。</p>
+</blockquote>
+<h3 id="2-1-1-消息队列的坑之非幂等"><a href="#2-1-1-消息队列的坑之非幂等" class="headerlink" title="2.1.1 消息队列的坑之非幂等"></a>2.1.1 消息队列的坑之非幂等</h3><h4 id="2-1-1-1幂等性概念"><a href="#2-1-1-1幂等性概念" class="headerlink" title="2.1.1.1幂等性概念"></a>2.1.1.1幂等性概念</h4><p>所谓幂等性就是无论多少次操作和第一次的操作结果一样。如果消息被多次消费，很有可能造成数据的不一致。</p>
+<h4 id="2-1-1-2场景分析"><a href="#2-1-1-2场景分析" class="headerlink" title="2.1.1.2场景分析"></a>2.1.1.2场景分析</h4><p><code>RabbitMQ</code>、<code>RocketMQ</code>、<code>Kafka</code> 消息队列中间件都有可能出现消息重复消费问题。这种问题并不是 MQ 自己保证的，而是需要开发人员来保证。</p>
+<p>这几款消息队列中间都是是全球最牛的分布式消息队列，那肯定考虑到了消息的幂等性。我们以 Kafka 为例，看看 Kafka 是怎么保证消息队列的幂等性。</p>
+<p>Kafka 有一个 <code>偏移量</code> 的概念，代表着消息的序号，每条消息写到消息队列都会有一个偏移量，消费者消费了数据之后，每过一段固定的时间，就会把消费过的消息的偏移量提交一下，表示已经消费过了，下次消费就从偏移量后面开始消费。</p>
+<blockquote>
+<p><code>坑：</code>当消费完消息后，还没来得及提交偏移量，系统就被关机了，那么未提交偏移量的消息则会再次被消费。</p>
+</blockquote>
+<p>如下图所示，队列中的数据 A、B、C，对应的偏移量分别为 100、101、102，都被消费者消费了，但是只有数据 A 的偏移量 100 提交成功，另外 2 个偏移量因系统重启而导致未及时提交。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220954888.png" alt="img">系统重启，偏移量未提交</p>
+<p>重启后，消费者又是拿偏移量 100 以后的数据，从偏移量 101 开始拿消息。所以数据 B 和数据 C 被重复消费。</p>
+<p>如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220954146.png" alt="img">重启后，重复消费消息</p>
+<h4 id="2-1-1-3避坑指南"><a href="#2-1-1-3避坑指南" class="headerlink" title="2.1.1.3避坑指南"></a>2.1.1.3避坑指南</h4><ul>
+<li><p>微信支付结果通知场景</p>
+</li>
+<li><ul>
+<li>微信官方文档上提到微信支付通知结果可能会推送多次，需要开发者自行保证幂等性。第一次我们可以直接修改订单状态（如支付中 -&gt; 支付成功），第二次就根据订单状态来判断，如果不是支付中，则不进行订单处理逻辑。</li>
+</ul>
+</li>
+<li><p>插入数据库场景</p>
+</li>
+<li><ul>
+<li>每次插入数据时，先检查下数据库中是否有这条数据的主键 id，如果有，则进行更新操作。</li>
+</ul>
+</li>
+<li><p>写 Redis 场景</p>
+</li>
+<li><ul>
+<li>Redis 的 <code>Set</code> 操作天然幂等性，所以不用考虑 Redis 写数据的问题。</li>
+</ul>
+</li>
+<li><p>其他场景方案</p>
+</li>
+<li><ul>
+<li>生产者发送每条数据时，增加一个全局唯一 id，类似订单 id。每次消费时，先去 Redis 查下是否有这个 id，如果没有，则进行正常处理消息，且将 id 存到 Redis。如果查到有这个 id，说明之前消费过，则不要进行重复处理这条消息。</li>
+<li>不同业务场景，可能会有不同的幂等性方案，大家选择合适的即可，上面的几种方案只是提供常见的解决思路。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-2消息队列的坑之消息丢失"><a href="#2-1-2消息队列的坑之消息丢失" class="headerlink" title="2.1.2消息队列的坑之消息丢失"></a>2.1.2消息队列的坑之消息丢失</h3><blockquote>
+<p><code>坑:</code>消息丢失会带来什么问题？如果是订单下单、支付结果通知、扣费相关的消息丢失，则可能造成财务损失，如果量很大，就会给甲方带来巨大损失。</p>
+</blockquote>
+<p>那消息队列是否能保证消息不丢失呢？答案：否。主要有三种场景会导致消息丢失。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220954673.png" alt="img">消息队列之消息丢失</p>
+<h4 id="2-1-2-1生产者存放消息的过程中丢失消息"><a href="#2-1-2-1生产者存放消息的过程中丢失消息" class="headerlink" title="2.1.2.1生产者存放消息的过程中丢失消息"></a>2.1.2.1生产者存放消息的过程中丢失消息</h4><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220954042.png" alt="img">生产者丢失消息</p>
+<p><strong>解决方案</strong></p>
+<ul>
+<li>事务机制（不推荐，异步方式）</li>
+</ul>
+<p>对于 RabbitMQ 来说，生产者发送数据之前开启 RabbitMQ 的<strong>事务机制</strong><code>channel.txselect</code> ，如果消息没有进队列，则生产者收到异常报错，并进行回滚 <code>channel.txRollback</code>，然后重试发送消息；如果收到了消息，则可以提交事务 <code>channel.txCommit</code>。但这是一个同步的操作，会影响性能。</p>
+<ul>
+<li>confirm 机制（推荐，异步方式）</li>
+</ul>
+<p>我们可以采用另外一种模式：<code>confirm</code> 模式来解决同步机制的性能问题。每次生产者发送的消息都会分配一个唯一的 id，如果写入到了 RabbitMQ 队列中，则 RabbitMQ 会回传一个 <code>ack</code> 消息，说明这个消息接收成功。如果 RabbitMQ 没能处理这个消息，则回调 <code>nack</code> 接口。说明需要重试发送消息。</p>
+<p>也可以自定义超时时间 + 消息 id 来实现超时等待后重试机制。但可能出现的问题是调用 ack 接口时失败了，所以会出现消息被发送两次的问题，这个时候就需要保证消费者消费消息的幂等性。</p>
+<p><code>事务模式</code> 和 <code>confirm</code> 模式的区别：</p>
+<ul>
+<li>事务机制是同步的，提交事务后会被<strong>阻塞</strong>直到提交事务完成后。</li>
+<li>confirm 模式异步接收通知，但可能<strong>接收不到通知</strong>。需要考虑接收不到通知的场景。</li>
+</ul>
+<h4 id="2-1-2-2消息队列丢失消息"><a href="#2-1-2-2消息队列丢失消息" class="headerlink" title="2.1.2.2消息队列丢失消息"></a>2.1.2.2消息队列丢失消息</h4><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220954866.png" alt="img">消息队列丢失消息</p>
+<p>消息队列的消息可以放到内存中，或将内存中的消息转到硬盘（比如数据库）中，一般都是内存和硬盘中都存有消息。如果只是放在内存中，那么当机器重启了，消息就全部丢失了。如果是硬盘中，则可能存在一种极端情况，就是将内存中的数据写到硬盘的期间，消息队列出问题了，未能将消息持久化到硬盘。</p>
+<p><strong>解决方案</strong></p>
+<ul>
+<li>创建 <code>Queue</code> 的时候将其设置为持久化。</li>
+<li>发送消息的时候将消息的 <code>deliveryMode</code> 设置为 2 。</li>
+<li>开启生产者 <code>confirm</code> 模式，可以重试发送消息。</li>
+</ul>
+<h4 id="2-1-2-3消费者丢失消息"><a href="#2-1-2-3消费者丢失消息" class="headerlink" title="2.1.2.3消费者丢失消息"></a>2.1.2.3消费者丢失消息</h4><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220954665.png" alt="img">消费者丢失消息</p>
+<p>消费者刚拿到数据，还没开始处理消息，结果进程因为异常退出了，消费者没有机会再次拿到消息。</p>
+<p><strong>解决方案</strong></p>
+<ul>
+<li>关闭 RabbitMQ 的自动 <code>ack</code>，每次生产者将消息写入消息队列后，就自动回传一个 <code>ack</code> 给生产者。</li>
+<li>消费者处理完消息再主动 <code>ack</code>，告诉消息队列我处理完了。</li>
+</ul>
+<p><strong>问题：</strong> 那这种主动 <code>ack</code> 有什么漏洞？如果 主动 <code>ack</code> 的时候挂了，怎么办？</p>
+<p>则可能会被再次消费，这个时候就需要幂等处理了。</p>
+<p><strong>问题：</strong> 如果这条消息一直被重复消费怎么办？</p>
+<p>则需要有加上重试次数的监测，如果超过一定次数则将消息丢失，记录到异常表或发送异常通知给值班人员。</p>
+<h4 id="2-1-2-4RabbitMQ-消息丢失总结"><a href="#2-1-2-4RabbitMQ-消息丢失总结" class="headerlink" title="2.1.2.4RabbitMQ 消息丢失总结"></a>2.1.2.4RabbitMQ 消息丢失总结</h4><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220954386.png" alt="img">RabbitMQ 丢失消息的处理方案</p>
+<h4 id="2-1-2-5Kafka-消息丢失"><a href="#2-1-2-5Kafka-消息丢失" class="headerlink" title="2.1.2.5Kafka 消息丢失"></a>2.1.2.5Kafka 消息丢失</h4><p><strong>场景：</strong><code>Kafka</code> 的某个 broker（节点）宕机了，重新选举 leader （写入的节点）。如果 leader 挂了，follower 还有些数据未同步完，则 follower 成为 leader 后，消息队列会丢失一部分数据。</p>
+<p><strong>解决方案</strong></p>
+<ul>
+<li>给 topic 设置 <code>replication.factor</code> 参数，值必须大于 1，要求每个 partition 必须有至少 2 个副本。</li>
+<li>给 kafka 服务端设置 <code>min.insyc.replicas</code> 必须大于 1，表示一个 leader 至少一个 follower 还跟自己保持联系。</li>
+</ul>
+<h3 id="2-1-3消息队列的坑之消息乱序"><a href="#2-1-3消息队列的坑之消息乱序" class="headerlink" title="2.1.3消息队列的坑之消息乱序"></a>2.1.3消息队列的坑之消息乱序</h3><blockquote>
+<p><code>坑:</code> 用户先下单成功，然后取消订单，如果顺序颠倒，则最后数据库里面会有一条下单成功的订单。</p>
+</blockquote>
+<p><strong>RabbitMQ 场景：</strong></p>
+<ul>
+<li>生产者向消息队列按照顺序发送了 2 条消息，消息1：增加数据 A，消息2：删除数据 A。</li>
+<li>期望结果：数据 A 被删除。</li>
+<li>但是如果有两个消费者，消费顺序是：消息2、消息 1。则最后结果是增加了数据 A。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955244.png" alt="img">RabbitMQ消息乱序场景</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955797.png" alt="img">RabbitMQ 消息乱序场景</p>
+<p><strong>RabbitMQ 解决方案：</strong></p>
+<ul>
+<li>将 Queue 进行拆分，创建多个内存 Queue，消息 1 和 消息 2 进入同一个 Queue。</li>
+<li>创建多个消费者，每一个消费者对应一个 Queue。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955503.png" alt="img">RabbitMQ 解决方案</p>
+<p><strong>Kafka 场景：</strong></p>
+<ul>
+<li>创建了 topic，有 3 个 partition。</li>
+<li>创建一条订单记录，订单 id 作为 key，订单相关的消息都丢到同一个 partition 中，同一个生产者创建的消息，顺序是正确的。</li>
+<li>为了快速消费消息，会创建多个消费者去处理消息，而为了提高效率，每个消费者可能会创建多个线程来并行的去拿消息及处理消息，处理消息的顺序可能就乱序了。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955378.png" alt="img">Kafka 消息丢失场景</p>
+<p><strong>Kafka 解决方案：</strong></p>
+<ul>
+<li>解决方案和 RabbitMQ 类似，利用多个 内存 Queue，每个线程消费 1个 Queue。</li>
+<li>具有相同 key 的消息 进同一个 Queue。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955480.png" alt="img">Kafka 消息乱序解决方案</p>
+<h3 id="2-1-4消息队列的坑之消息积压"><a href="#2-1-4消息队列的坑之消息积压" class="headerlink" title="2.1.4消息队列的坑之消息积压"></a>2.1.4消息队列的坑之消息积压</h3><p>消息积压：消息队列里面有很多消息来不及消费。</p>
+<p><strong>场景 1：</strong> 消费端出了问题，比如消费者都挂了，没有消费者来消费了，导致消息在队列里面不断积压。</p>
+<p><strong>场景 2：</strong> 消费端出了问题，比如消费者消费的速度太慢了，导致消息不断积压。</p>
+<blockquote>
+<p>坑：比如线上正在做订单活动，下单全部走消息队列，如果消息不断积压，订单都没有下单成功，那么将会损失很多交易。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955341.png" alt="img">消息队列之消息积压</p>
+<p><strong>解决方案：解铃还须系铃人</strong></p>
+<ul>
+<li>修复代码层面消费者的问题，确保后续消费速度恢复或尽可能加快消费的速度。</li>
+<li>停掉现有的消费者。</li>
+<li>临时建立好原先 5 倍的 Queue 数量。</li>
+<li>临时建立好原先 5 倍数量的 消费者。</li>
+<li>将堆积的消息全部转入临时的 Queue，消费者来消费这些 Queue。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955008.png" alt="img">消息积压解决方案</p>
+<h3 id="2-1-5消息队列的坑之消息过期失效"><a href="#2-1-5消息队列的坑之消息过期失效" class="headerlink" title="2.1.5消息队列的坑之消息过期失效"></a>2.1.5消息队列的坑之消息过期失效</h3><blockquote>
+<p><code>坑：</code>RabbitMQ 可以设置过期时间，如果消息超过一定的时间还没有被消费，则会被 RabbitMQ 给清理掉。消息就丢失了。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955190.png" alt="img">消息过期失效</p>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li>准备好批量重导的程序</li>
+<li>手动将消息闲时批量重导</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220955952.png" alt="img">消息过期失效解决方案</p>
+<h3 id="2-1-6消息队列的坑之队列写满"><a href="#2-1-6消息队列的坑之队列写满" class="headerlink" title="2.1.6消息队列的坑之队列写满"></a>2.1.6消息队列的坑之队列写满</h3><blockquote>
+<p><code>坑：</code>当消息队列因消息积压导致的队列快写满，所以不能接收更多的消息了。生产者生产的消息将会被丢弃。</p>
+</blockquote>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li>判断哪些是无用的消息，RabbitMQ 可以进行 <code>Purge Message</code> 操作。</li>
+<li>如果是有用的消息，则需要将消息快速消费，将消息里面的内容转存到数据库。</li>
+<li>准备好程序将转存在数据库中的消息再次重导到消息队列。</li>
+<li>闲时重导消息到消息队列。</li>
+</ul>
+<h2 id="2-2分布式缓存的坑"><a href="#2-2分布式缓存的坑" class="headerlink" title="2.2分布式缓存的坑"></a>2.2分布式缓存的坑</h2><p>在高频访问数据库的场景中，我们会在业务层和数据层之间加入一套缓存机制，来分担数据库的访问压力，毕竟访问磁盘 I/O 的速度是很慢的。比如利用缓存来查数据，可能5ms就能搞定，而去查数据库可能需要 50 ms，差了一个数量级。而在高并发的情况下，数据库还有可能对数据进行加锁，导致访问数据库的速度更慢。</p>
+<p>分布式缓存我们用的最多的就是 Redis了，它可以提供分布式缓存服务。</p>
+<h3 id="2-2-1Redis-数据丢失的坑"><a href="#2-2-1Redis-数据丢失的坑" class="headerlink" title="2.2.1Redis 数据丢失的坑"></a>2.2.1Redis 数据丢失的坑</h3><p><strong>哨兵机制</strong></p>
+<p>Redis 可以实现利用<code>哨兵机制</code>实现集群的高可用。那什么是哨兵机制呢？</p>
+<ul>
+<li>英文名：<code>sentinel</code>，中文名：<code>哨兵</code>。</li>
+<li>集群监控：负责主副进程的正常工作。</li>
+<li>消息通知：负责将故障信息报警给运维人员。</li>
+<li>故障转移：负责将主节点转移到备用节点上。</li>
+<li>配置中心：通知客户端更新主节点地址。</li>
+<li>分布式：有多个哨兵分布在每个主备节点上，互相协同工作。</li>
+<li>分布式选举：需要大部分哨兵都同意，才能进行主备切换。</li>
+<li>高可用：即使部分哨兵节点宕机了，哨兵集群还是能正常工作。</li>
+</ul>
+<blockquote>
+<p><code>坑：</code> 当主节点发生故障时，需要进行主备切换，可能会导致数据丢失。</p>
+</blockquote>
+<h4 id="2-2-1-1异步复制数据导致的数据丢失"><a href="#2-2-1-1异步复制数据导致的数据丢失" class="headerlink" title="2.2.1.1异步复制数据导致的数据丢失"></a>2.2.1.1异步复制数据导致的数据丢失</h4><p>主节点异步同步数据给备用节点的过程中，主节点宕机了，导致有部分数据未同步到备用节点。而这个从节点又被选举为主节点，这个时候就有部分数据丢失了。</p>
+<h4 id="2-2-1-2脑裂导致的数据丢失"><a href="#2-2-1-2脑裂导致的数据丢失" class="headerlink" title="2.2.1.2脑裂导致的数据丢失"></a>2.2.1.2脑裂导致的数据丢失</h4><p>主节点所在机器脱离了集群网络，实际上自身还是运行着的。但哨兵选举出了备用节点作为主节点，这个时候就有两个主节点都在运行，相当于两个大脑在指挥这个集群干活，但到底听谁的呢？这个就是脑裂。</p>
+<p>那怎么脑裂怎么会导致数据丢失呢？如果发生脑裂后，客户端还没来得及切换到新的主节点，连的还是第一个主节点，那么有些数据还是写入到了第一个主节点里面，新的主节点没有这些数据。那等到第一个主节点恢复后，会被作为备用节点连到集群环境，而且自身数据会被清空，重新从新的主节点复制数据。而新的主节点因没有客户端之前写入的数据，所以导致数据丢失了一部分。</p>
+<p><strong>避坑指南</strong></p>
+<ul>
+<li>配置 min-slaves-to-write 1，表示至少有一个备用节点。</li>
+<li>配置 min-slaves-max-lag 10，表示数据复制和同步的延迟不能超过 10 秒。最多丢失 10 秒的数据</li>
+</ul>
+<p>注意：<code>缓存雪崩</code>、<code>缓存穿透</code>、<code>缓存击穿</code>并不是分布式所独有的，单机的时候也会出现。所以不在分布式的坑之列。</p>
+<h2 id="2-3分库分表的坑"><a href="#2-3分库分表的坑" class="headerlink" title="2.3分库分表的坑"></a>2.3分库分表的坑</h2><h3 id="2-3-1分库分表的坑之扩容"><a href="#2-3-1分库分表的坑之扩容" class="headerlink" title="2.3.1分库分表的坑之扩容"></a>2.3.1分库分表的坑之扩容</h3><p><strong>分库、分表、垂直拆分和水平拆分</strong></p>
+<ul>
+<li><p><strong>分库：</strong> 因一个数据库支持的最高并发访问数是有限的，可以将一个数据库的数据拆分到多个库中，来增加最高并发访问数。</p>
+</li>
+<li><p><strong>分表：</strong> 因一张表的数据量太大，用索引来查询数据都搞不定了，所以可以将一张表的数据拆分到多张表，查询时，只用查拆分后的某一张表，SQL 语句的查询性能得到提升。</p>
+</li>
+<li><p>分库分表优势：分库分表后，承受的并发增加了多倍；磁盘使用率大大降低；单表数据量减少，SQL 执行效率明显提升。</p>
+</li>
+<li><p><strong>水平拆分：</strong> 把一个表的数据拆分到多个数据库，每个数据库中的表结构不变。用多个库扛更高的并发。比如订单表每个月有500万条数据累计，每个月都可以进行水平拆分，将上个月的数据放到另外一个数据库。</p>
+</li>
+<li><p><strong>垂直拆分：</strong> 把一个有很多字段的表，拆分成多张表到同一个库或多个库上面。高频访问字段放到一张表，低频访问的字段放到另外一张表。利用数据库缓存来缓存高频访问的行数据。比如将一张很多字段的订单表拆分成几张表分别存不同的字段（可以有冗余字段）。</p>
+</li>
+<li><p><strong>分库、分表的方式：</strong></p>
+</li>
+<li><ul>
+<li>根据租户来分库、分表。</li>
+<li>利用时间范围来分库、分表。</li>
+<li>利用 ID 取模来分库、分表。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><code>坑：</code>分库分表是一个运维层面需要做的事情，有时会采取凌晨宕机开始升级。可能熬夜到天亮，结果升级失败，则需要回滚，其实对技术团队都是一种煎熬。</p>
+</blockquote>
+<p><strong>怎么做成自动的来节省分库分表的时间？</strong></p>
+<ul>
+<li>双写迁移方案：迁移时，新数据的增删改操作在新库和老库都做一遍。</li>
+<li>使用分库分表工具 Sharding-jdbc  来完成分库分表的累活。</li>
+<li>使用程序来对比两个库的数据是否一致，直到数据一致。</li>
+</ul>
+<blockquote>
+<p><code>坑:</code> 分库分表看似光鲜亮丽，但分库分表会引入什么新的问题呢？</p>
+</blockquote>
+<p><strong>垂直拆分带来的问题</strong></p>
+<ul>
+<li>依然存在单表数据量过大的问题。</li>
+<li>部分表无法关联查询，只能通过接口聚合方式解决，提升了开发的复杂度。</li>
+<li>分布式事处理复杂。</li>
+</ul>
+<p><strong>水平拆分带来的问题</strong></p>
+<ul>
+<li>跨库的关联查询性能差。</li>
+<li>数据多次扩容和维护量大。</li>
+<li>跨分片的事务一致性难以保证。</li>
+</ul>
+<h3 id="2-3-2分库分表的坑之唯一-ID"><a href="#2-3-2分库分表的坑之唯一-ID" class="headerlink" title="2.3.2分库分表的坑之唯一 ID"></a>2.3.2分库分表的坑之唯一 ID</h3><p><strong>为什么分库分表需要唯一 ID</strong></p>
+<ul>
+<li>如果要做分库分表，则必须得考虑表主键 ID 是全局唯一的，比如有一张订单表，被分到 A 库和 B 库。如果 两张订单表都是从 1 开始递增，那查询订单数据时就错乱了，很多订单 ID 都是重复的，而这些订单其实不是同一个订单。</li>
+<li>分库的一个期望结果就是将访问数据的次数分摊到其他库，有些场景是需要均匀分摊的，那么数据插入到多个数据库的时候就需要交替生成唯一的 ID 来保证请求均匀分摊到所有数据库。</li>
+</ul>
+<blockquote>
+<p><code>坑:</code> 唯一 ID 的生成方式有 n 种，各有各的用途，别用错了。</p>
+</blockquote>
+<p><strong>生成唯一 ID 的原则</strong></p>
+<ul>
+<li>全局唯一性</li>
+<li>趋势递增</li>
+<li>单调递增</li>
+<li>信息安全</li>
+</ul>
+<p><strong>生成唯一 ID 的几种方式</strong></p>
+<ul>
+<li><p>数据库自增 ID。每个数据库每增加一条记录，自己的 ID 自增 1。</p>
+</li>
+<li><ul>
+<li>多个库的 ID 可能重复，这个方案可以直接否掉了，不适合分库分表后的 ID 生成。</li>
+<li>信息不安全</li>
+<li>缺点</li>
+</ul>
+</li>
+<li><p>适用 <code>UUID</code> 唯一 ID。</p>
+</li>
+<li><ul>
+<li>UUID 太长、占用空间大。</li>
+<li>不具有有序性，作为主键时，在写入数据时，不能产生有顺序的 append 操作，只能进行 insert 操作，导致读取整个 <code>B+</code> 树节点到内存，插入记录后将整个节点写回磁盘，当记录占用空间很大的时候，性能很差。</li>
+<li>缺点</li>
+</ul>
+</li>
+<li><p>获取系统当前时间作为唯一 ID。</p>
+</li>
+<li><ul>
+<li>高并发时，1 ms内可能有多个相同的 ID。</li>
+<li>信息不安全</li>
+<li>缺点</li>
+</ul>
+</li>
+<li><p>Twitter 的 <code>snowflake</code>（雪花算法）：Twitter 开源的分布式 id 生成算法，64 位的 long 型的 id，分为 4 部分</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220956497.png" alt="img">snowflake 算法</p>
+</li>
+<li><p>基本原理和优缺点：</p>
+</li>
+<li><ul>
+<li><p>1 bit：不用，统一为 0</p>
+</li>
+<li><p>41 bits：毫秒时间戳，可以表示 69 年的时间。</p>
+</li>
+<li><p>10 bits：5 bits 代表机房 id，5 个 bits 代表机器 id。最多代表 32 个机房，每个机房最多代表 32 台机器。</p>
+</li>
+<li><p>12 bits：同一毫秒内的 id，最多 4096 个不同 id，自增模式。</p>
+</li>
+<li><p>优点：</p>
+</li>
+<li><ul>
+<li>毫秒数在高位，自增序列在低位，整个ID都是趋势递增的。</li>
+<li>不依赖数据库等第三方系统，以服务的方式部署，稳定性更高，生成ID的性能也是非常高的。</li>
+<li>可以根据自身业务特性分配bit位，非常灵活。</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+</li>
+<li><ul>
+<li>强依赖机器时钟，如果机器上时钟回拨（可以搜索 <strong>2017 年闰秒 7:59:60</strong>），会导致发号重复或者服务会处于不可用状态。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>百度的 <code>UIDGenerator</code> 算法。</p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220956311.png" alt="img">UIDGenerator 算法</p>
+</li>
+<li><ul>
+<li>基于 Snowflake 的优化算法。</li>
+<li>借用未来时间和双 Buffer 来解决时间回拨与生成性能等问题，同时结合 MySQL 进行 ID 分配。</li>
+<li>优点：解决了时间回拨和生成性能问题。</li>
+<li>缺点：依赖 MySQL 数据库。</li>
+</ul>
+</li>
+<li><p>美团的 <code>Leaf-Snowflake</code> 算法。</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220956565.png" alt="img"></p>
+</li>
+<li><ul>
+<li><p>获取 id 是通过代理服务访问数据库获取一批 id（号段）。</p>
+</li>
+<li><p>双缓冲：当前一批的 id 使用 10%时，再访问数据库获取新的一批 id 缓存起来，等上批的 id 用完后直接用。</p>
+</li>
+<li><p>优点：</p>
+</li>
+<li><ul>
+<li>Leaf服务可以很方便的线性扩展，性能完全能够支撑大多数业务场景。</li>
+<li>ID号码是趋势递增的8byte的64位数字，满足上述数据库存储的主键要求。</li>
+<li>容灾性高：Leaf服务内部有号段缓存，即使DB宕机，短时间内Leaf仍能正常对外提供服务。</li>
+<li>可以自定义max_id的大小，非常方便业务从原有的ID方式上迁移过来。</li>
+<li>即使DB宕机，Leaf仍能持续发号一段时间。</li>
+<li>偶尔的网络抖动不会影响下个号段的更新。</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+</li>
+<li><ul>
+<li>ID号码不够随机，能够泄露发号数量的信息，不太安全。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>怎么选择：一般自己的内部系统，雪花算法足够，如果还要更加安全可靠，可以选择百度或美团的生成唯一 ID 的方案。</p>
+<h2 id="2-4分布式事务的坑"><a href="#2-4分布式事务的坑" class="headerlink" title="2.4分布式事务的坑"></a>2.4分布式事务的坑</h2><p><strong>怎么理解事务？</strong></p>
+<ul>
+<li>事务可以简单理解为要么这件事情全部做完，要么这件事情一点都没做，跟没发生一样。</li>
+<li>在分布式的世界中，存在着各个服务之间相互调用，链路可能很长，如果有任何一方执行出错，则需要回滚涉及到的其他服务的相关操作。比如订单服务下单成功，然后调用营销中心发券接口发了一张代金券，但是微信支付扣款失败，则需要退回发的那张券，且需要将订单状态改为异常订单。</li>
+</ul>
+<blockquote>
+<p><code>坑</code>：如何保证分布式中的事务正确执行，是个大难题。</p>
+</blockquote>
+<p><strong>分布式事务的几种主要方式</strong></p>
+<ul>
+<li>XA 方案（两阶段提交方案）</li>
+<li>TCC 方案（try、confirm、cancel）</li>
+<li>SAGA 方案</li>
+<li>可靠消息最终一致性方案</li>
+<li>最大努力通知方案</li>
+</ul>
+<p><strong>XA 方案原理</strong></p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220956989.png" alt="img">XA 方案</p>
+<ul>
+<li>事务管理器负责协调多个数据库的事务，先问问各个数据库准备好了吗？如果准备好了，则在数据库执行操作，如果任一数据库没有准备，则回滚事务。</li>
+<li>适合单体应用，不适合微服务架构。因为每个服务只能访问自己的数据库，不允许交叉访问其他微服务的数据库。</li>
+</ul>
+<p><strong>TCC 方案</strong></p>
+<ul>
+<li>Try 阶段：对各个服务的资源做检测以及对资源进行锁定或者预留。</li>
+<li>Confirm 阶段：各个服务中执行实际的操作。</li>
+<li>Cancel 阶段：如果任何一个服务的业务方法执行出错，需要将之前操作成功的步骤进行回滚。</li>
+</ul>
+<p>应用场景：</p>
+<ul>
+<li>跟支付、交易打交道，必须保证资金正确的场景。</li>
+<li>对于一致性要求高。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>但因为要写很多补偿逻辑的代码，且不易维护，所以其他场景建议不要这么做。</li>
+</ul>
+<p><strong>Sega 方案</strong></p>
+<p>基本原理：</p>
+<ul>
+<li>业务流程中的每个步骤若有一个失败了，则补偿前面操作成功的步骤。</li>
+</ul>
+<p>适用场景：</p>
+<ul>
+<li>业务流程长、业务流程多。</li>
+<li>参与者包含其他公司或遗留系统服务。</li>
+</ul>
+<p>优势：</p>
+<ul>
+<li>第一个阶段提交本地事务、无锁、高性能。</li>
+<li>参与者可异步执行、高吞吐。</li>
+<li>补偿服务易于实现。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不保证事务的隔离性。</li>
+</ul>
+<p><strong>可靠消息一致性方案</strong></p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202209220956329.png" alt="img">可靠消息一致性方案</p>
+<p>基本原理：</p>
+<ul>
+<li>利用消息中间件 <code>RocketMQ</code> 来实现消息事务。</li>
+<li>第一步：A 系统发送一个消息到 MQ，MQ将消息状态标记为 <code>prepared</code>（预备状态，半消息），该消息无法被订阅。</li>
+<li>第二步：MQ 响应 A 系统，告诉 A 系统已经接收到消息了。</li>
+<li>第三步：A 系统执行本地事务。</li>
+<li>第四步：若 A 系统执行本地事务成功，将 <code>prepared</code> 消息改为 <code>commit</code>（提交事务消息），B 系统就可以订阅到消息了。</li>
+<li>第五步：MQ 也会定时轮询所有 <code>prepared</code>的消息，回调 A 系统，让 A 系统告诉 MQ 本地事务处理得怎么样了，是继续等待还是回滚。</li>
+<li>第六步：A 系统检查本地事务的执行结果。</li>
+<li>第七步：若 A 系统执行本地事务失败，则 MQ 收到 <code>Rollback</code> 信号，丢弃消息。若执行本地事务成功，则 MQ 收到 <code>Commit</code> 信号。</li>
+<li>B 系统收到消息后，开始执行本地事务，如果执行失败，则自动不断重试直到成功。或 B 系统采取回滚的方式，同时要通过其他方式通知 A 系统也进行回滚。</li>
+<li>B 系统需要保证幂等性。</li>
+</ul>
+<p><strong>最大努力通知方案</strong></p>
+<p>基本原理：</p>
+<ul>
+<li>系统 A 本地事务执行完之后，发送消息到 MQ。</li>
+<li>MQ 将消息持久化。</li>
+<li>系统 B 如果执行本地事务失败，则<code>最大努力服务</code>会定时尝试重新调用系统 B，尽自己最大的努力让系统 B 重试，重试多次后，还是不行就只能放弃了。转到开发人员去排查以及后续人工补偿。</li>
+</ul>
+<p><strong>几种方案的选择</strong></p>
+<ul>
+<li>跟支付、交易打交道，优先 TCC。</li>
+<li>大型系统，但要求不那么严格，考虑 消息事务或 SAGA 方案。</li>
+<li>单体应用，建议 XA 两阶段提交就可以了。</li>
+<li>最大努力通知方案建议都加上，毕竟不可能一出问题就交给开发排查，先重试几次看能不能成功。</li>
+</ul>
+<p>引文连接：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/qrpz2m7XhYo4l_yHkP1WyQ">https://mp.weixin.qq.com/s/qrpz2m7XhYo4l_yHkP1WyQ</a></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Beaumon</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://beaumon.github.io/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/">https://beaumon.github.io/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Beaumon</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                                    <span class="chip bg-color">分布式</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '370fc4148189dfbed562',
+        clientSecret: 'bbd3b7a6cfe0cd52714100b7641b7053e5c161c4',
+        repo: 'beaumon.github.io',
+        owner: 'Beaumon',
+        admin: ["Beaumon"],
+        id: '2022-09-22T08-36-11',
+		distractionFreeMode: 'true',
+		proxy: 'https://gitalkreslove.introduce.workers.dev/?https://github.com/login/oauth/access_token'
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="分布式系统遇到的十个问题">
+                        
+                        <span class="card-title">分布式系统遇到的十个问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            分布式系统遇到的十个问题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category">
+                                    java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                        <span class="chip bg-color">分布式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/21/liao-liao-mi-deng-xing/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="聊聊幂等性">
+                        
+                        <span class="card-title">聊聊幂等性</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            聊聊幂等性
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%81%8A%E8%81%8A/" class="post-category">
+                                    聊聊
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B9%82%E7%AD%89%E6%80%A7/">
+                        <span class="chip bg-color">幂等性</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <a href="/about" target="_blank">Beaumon</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/Beaumon/beaumon.github.io" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">66.4k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "8";
+                        var startDate = "20";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Beaumon/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:setrcbratin@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2506411404" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2506411404" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/loser-13-29-69" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/loser-13-29-69" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="https://blog.csdn.net/weixin_44834205?spm=1000.2115.3001.5343" class="tooltipped" target="_blank" data-tooltip="关注我的csdn: https://blog.csdn.net/weixin_44834205?spm=1000.2115.3001.5343" data-position="top" data-delay="50">
+        <i class="fab fa-maxcdn"></i>
+    </a>
+
+
+
+    <a href="https://space.bilibili.com/690268778?spm_id_from=333.1007.0.0" class="tooltipped" target="_blank" data-tooltip="关注我的bilibili" " data-position="top" data-delay="50">
+        <i class="fas fa-play-circle"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async="async" src="/libs/others/busuanzi.pure.mini.js"></script>
+
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":50,"vOffset":-5},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+
+</html>

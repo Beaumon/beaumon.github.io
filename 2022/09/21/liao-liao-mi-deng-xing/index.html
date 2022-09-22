@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: MonogoDB, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地">
+    <meta name="keywords" content="聊聊幂等性, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="聊聊幂等性">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: MonogoDB | 是Beaumon的小博客鸭</title>
+    <title>聊聊幂等性 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -485,182 +485,593 @@ charset="utf-8"></script>
 </header>
 
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">聊聊幂等性</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
     <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                码无止境
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-	// 个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDate() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/java/" title="java: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">java
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Markdown/" title="Markdown: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">Markdown
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%95%99%E7%A8%8B/" title="教程: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">教程
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E8%81%8A%E8%81%8A/" title="聊聊: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">聊聊
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/MonogoDB/" title="MonogoDB: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #FEF9E7;">MonogoDB
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/mysql/" title="mysql: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">mysql
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/09/02/monogodb-ru-men/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="MonogoDB入门基础教程">
-                            
-                            <span class="card-title">MonogoDB入门基础教程</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                MongoDB入门基础教程
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/MonogoDB/" class="post-category">
-                                    MonogoDB
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
                     
-                    <div class="card-action article-tags">
+                    <div class="article-tag">
                         
-                        <a href="/tags/MonogoDB/">
-                            <span class="chip bg-color">MonogoDB</span>
-                        </a>
+                            <a href="/tags/%E5%B9%82%E7%AD%89%E6%80%A7/">
+                                <span class="chip bg-color">幂等性</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%81%8A%E8%81%8A/" class="post-category">
+                                聊聊
+                            </a>
                         
                     </div>
                     
                 </div>
             </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-09-21
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-09-22
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="幂等性"><a href="#幂等性" class="headerlink" title="幂等性"></a>幂等性</h1><h2 id="1-幂等的数学概念"><a href="#1-幂等的数学概念" class="headerlink" title="1.幂等的数学概念"></a>1.幂等的数学概念</h2><p>如果在一元运算中，x 为某集合中的任意数，如果满足 f(x) = f(f(x)) ，那么该 f 运算具有幂等性。</p>
+<blockquote>
+<p>绝对值运算 abs(a) = abs(abs(a)) 就是幂等性函数</p>
+</blockquote>
+<p>如果在二元运算中，x 为某集合中的任意数，如果满足 f(x,x) = x，前提是 f 运算的两个参数均为 x，那么我们称 f 运算也有幂等性。</p>
+<blockquote>
+<p> 求大值函数 max(x,x) = x 就是幂等性函数 </p>
+</blockquote>
+<h2 id="2-幂等概述"><a href="#2-幂等概述" class="headerlink" title="2.幂等概述"></a>2.幂等概述</h2><h3 id="2-1幂等业务场景分析"><a href="#2-1幂等业务场景分析" class="headerlink" title="2.1幂等业务场景分析"></a>2.1幂等业务场景分析</h3><p>生产环境经常出现过重复的数据？在排查问题的时候，数据又是正常的。这个是何解呢？怎么会出现这种情况，而且还很难排查问题。 </p>
+<p>原因 ：产生重复数据或数据不一致（假定程序业务代码没问题），绝大部分就是发生了重复的请求，重复请求是指同一个请求因为某些原因被多次提交。导致这个情况会有几种场景：（本质上：多次请求）</p>
+<blockquote>
+<p>1）微服务场景，在我们传统应用架构中调用接口，要么成功，要么失败。但是在微服务架构下，会有第三个情况【未知】，也就是超时。如果超时了，微服务框架会进行重试。<br>2）用户交互的时候多次点击。如：快速点击按钮多次。<br>3）MQ消息中间件，消息重复消费。<br>4）第三方平台的接口（如：支付成功回调接口），因为异常也会导致多次异步回调。<br>5）其他中间件/应用服务根据自身的特性，也有可能进行重试。</p>
+</blockquote>
+<h3 id="2-2接口幂等"><a href="#2-2接口幂等" class="headerlink" title="2.2接口幂等"></a>2.2接口幂等</h3><p>接口的幂等性实际上就是 <strong>接口可重复调用，在调用方多次调用的情况下，接口最终得到的结果是一致的</strong>。更准确的讲：多次调用对系统的产生的影响是一样的，即对资源的作用是一样的，但是返回值允许不同。</p>
+<h3 id="2-3幂等业务场景举例"><a href="#2-3幂等业务场景举例" class="headerlink" title="2.3幂等业务场景举例"></a>2.3幂等业务场景举例</h3><p>场景1：支付场景</p>
+<blockquote>
+<p>1.一个订单创建接口，第一次调用超时了，然后调用方重试了一次<br>2.在订单创建时，我们需要去扣减库存，这时接口发生了超时，调用方重试了一次<br>3.当这笔订单开始支付，在支付请求发出之后，在服务端发生了扣钱操作，接口响应超时了，调用方重试了一次<br>4.一个订单状态更新接口，调用方连续发送了两个消息，一个是已创建，一个是已付款。但是你先接收到已付款，然后又接收到了已创建<br>5.在支付完成订单之后，需要发送一条短信，当一台机器接收到短信发送的消息之后，处理较慢。消息中间件又把消息投递给另外一台机器处理</p>
+</blockquote>
+<p>场景2：一键三连</p>
+<blockquote>
+<p>小破站有一个一键三连的功能，长按可以对up主进行激励，每个人对每个视频只有一个一键三连的机会。就算再喜欢某个视频，多次操作，也只能有一键三连一次。</p>
+</blockquote>
+<p>场景3：统计DAU/MAU</p>
+<blockquote>
+<p>DAU/MAU，又叫日活/月活，是用于反映网站、互联网应用或网络游戏的运营情况的统计指标。所以一个用户当天或者当月登录多次（或者达到某种活跃用户判断机制多次），也只能看作一个活跃用户，不能重复计算。</p>
+</blockquote>
+<h3 id="2-4CRUD与幂等"><a href="#2-4CRUD与幂等" class="headerlink" title="2.4CRUD与幂等"></a>2.4CRUD与幂等</h3><p>有些接口可以天然的实现幂等性，比如查询接口，对于查询来说，查询一次和多次，对于系统来说，没有任何影响，查出的结果也是一样，而其他功能，例如：增加、更新、删除都要保证幂等性。<br>以user表举例</p>
+<p>1、查询，select * from user where xxx，不会对数据产生任何变化，具备幂等性</p>
+<p>2、新增，insert into user(userid, name) values(1, ‘a’)</p>
+<blockquote>
+<p>如 userid 为唯一主键，即重复操作上面的业务，只会插入一条用户数据，具备幂等性</p>
+</blockquote>
+<blockquote>
+<p>如 userid 不是主键，可以重复，那上面业务多次操作，数据都会新增多条，不具备幂等性</p>
+</blockquote>
+<p>3、修改，区分直接赋值和计算赋值</p>
+<blockquote>
+<p>直接赋值，update user set point = 20 where userid = 1，不管执行多少次，point都一样，具备幂等性</p>
+</blockquote>
+<blockquote>
+<p>计算赋值，update user set point = point + 20 where userid = 1，每次操作 point 数据都不一样，不具备幂等性</p>
+</blockquote>
+<p>4、删除，delete from user where userid = 1，多次操作，结果一样，具备幂等性</p>
+<p>因此，我们可以得出，<strong>没有唯一主键约束的数据，和修改计算赋值数据的操作都不具备幂等性</strong> 。</p>
+<h2 id="3-解决方案"><a href="#3-解决方案" class="headerlink" title="3.解决方案"></a>3.解决方案</h2><h3 id="3-1token-redis机制"><a href="#3-1token-redis机制" class="headerlink" title="3.1token + redis机制"></a>3.1token + redis机制</h3><p>token + redis 的幂等方案，适用于绝大部分场景。主要思想：</p>
+<pre class="line-numbers language-none"><code class="language-none">token作为请求的唯一性标示
+redis作为存储token的数据库
+每次请求先去redis查看token是否存在
+不存在，将返回结果缓存到redis
+存在，直接返回缓存结果
+设置缓存有效期<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2乐观锁机制"><a href="#3-2乐观锁机制" class="headerlink" title="3.2乐观锁机制"></a>3.2乐观锁机制</h3><p>乐观锁这里解决了计算赋值型的修改场景</p>
+<pre class="line-numbers language-none"><code class="language-none">update user set point = #{point}+ 20, version = #{version}+ 1 where userid=#{userid} and version=#{version}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p> 加上了版本号后，就让此计算赋值型业务，具备了幂等性</p>
+<p>缺点：就是在操作业务前，需要先查询出当前的version版本,version实例如下：</p>
+<ul>
+<li>多版本控制</li>
+</ul>
+<p>这种方法适合在更新的场景中，比如我们要更新商品的名字，这时我们就可以在更新的接口中增加一个版本号，来做幂等</p>
+<pre class="line-numbers language-none"><code class="language-none">boolean updateGoodsName(int id,String newName,int version);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<p>在实现时可以如下</p>
+<pre class="line-numbers language-none"><code class="language-none">update goods set name=#{newName},version=#{version} where id=#{id} and version&lt;${version}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>状态机控制</li>
+</ul>
+<p>这种方法适合在有状态机流转的情况下，比如就会订单的创建和付款，订单的付款肯定是在之前，这时我们可以通过在设计状态字段时，使用int类型，并且通过值类型的大小来做幂等，比如订单的创建为0，付款成功为10，付款失败为-1。</p>
+<p>在做状态机更新时，我们就这可以这样控制</p>
+<pre class="line-numbers language-none"><code class="language-none">update `order` set status=#{status} where id=#{id} and status&lt;#{status}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="3-3唯一主键机制"><a href="#3-3唯一主键机制" class="headerlink" title="3.3唯一主键机制"></a>3.3唯一主键机制</h3><p>唯一主键机制就是根据业务的操作和内容生成一个全局唯一的主键ID，在执行操作前先根据这个全局唯一的主键ID是否存在，来判断这个操作是否已经执行。如果不存在则把全局ID，存储到存储系统中，比如数据库、redis等。如果存在则表示该方法已经执行。</p>
+<p>从工程的角度来说，使用全局ID做幂等可以作为一个业务的基础的微服务存在，在很多的微服务中都会用到这样的服务，在每个微服务中都完成这样的功能，会存在工作量重复。另外打造一个高可靠的幂等服务还需要考虑很多问题，比如一台机器虽然把全局唯一的主键ID先写入了存储，但是在写入之后挂了，这就需要引入全局唯一的主键ID的超时机制。使用全局唯一ID是一个通用方案，可以支持插入、更新、删除业务操作。但是这个方案看起来很美但是实现起来比较麻烦。</p>
+<p>总而言之，这个机制是利用了数据库的主键唯一约束的特性，解决了在insert场景时幂等问题。但主键的要求不是自增的主键，这样就需要业务生成全局唯一的主键 ID来解决。</p>
+<p>如果是<strong>分库分表场景下，路由规则要保证相同请求下，落点在同一个数据库和同一表中</strong>，要不然数据库主键约束就不起效果了，因为是不同的数据库和表主键不相关。</p>
+<p>因为对主键有一定的要求，这个方案就跟业务有点耦合了，无法用自增主键了。</p>
+<h3 id="3-4去重表机制"><a href="#3-4去重表机制" class="headerlink" title="3.4去重表机制"></a>3.4去重表机制</h3><p>这种方法适用于在业务中有唯一标的插入场景中，比如在以上的支付场景中，如果一个订单只会支付一次，所以订单ID可以作为唯一标识。这时，我们就可以建一张去重表，并且把唯一标识作为唯一索引，在我们实现时，把创建支付单据和写入去去重表，放在一个事务中，如果重复创建，数据库会抛出唯一约束异常，操作就会回滚。</p>
+<p>简单来说，就是 把唯一主键插入去重表，再进行业务操作，且他们在同一个事务中。这个保证了重复请求时，因为去重表有唯一约束，导致请求失败，避免了幂等问题。</p>
+<blockquote>
+<p>这里要注意的是，<strong>去重表和业务表应该在同一库中，这样就保证了在同一个事务，即使业务操作失败了，也会把去重表的数据回滚</strong>。这个很好的保证了数据一致性。</p>
+</blockquote>
+<p>这个方案也是比较常用的，去重表是跟业务无关的，很多业务可以共用同一个去重表，只要规划好唯一主键就行了。</p>
+<h3 id="3-5门票机制"><a href="#3-5门票机制" class="headerlink" title="3.5门票机制"></a>3.5门票机制</h3><p>支付场景：单次支付请求，也就是直接支付了，不需要额外的数据库操作了，这个时候发起异步请求创建一个唯一的ticketId，就是门票，这张门票只能使用一次就作废。</p>
+<p>具体步骤：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.异步请求获取门票
+2.调用支付，传入门票
+3.根据门票ID查询此次操作是否存在，如果存在则表示该操作已经执行过，直接返回结果；如果不存在，支付扣款，保存结果
+4.返回结果到客户端
+如果步骤4通信失败，用户再次发起请求，那么最终结果还是一样的.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Beaumon</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://beaumon.github.io/2022/09/21/liao-liao-mi-deng-xing/">https://beaumon.github.io/2022/09/21/liao-liao-mi-deng-xing/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Beaumon</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%B9%82%E7%AD%89%E6%80%A7/">
+                                    <span class="chip bg-color">幂等性</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
             
         </div>
-    </article>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '370fc4148189dfbed562',
+        clientSecret: 'bbd3b7a6cfe0cd52714100b7641b7053e5c161c4',
+        repo: 'beaumon.github.io',
+        owner: 'Beaumon',
+        admin: ["Beaumon"],
+        id: '2022-09-21T21-51-17',
+		distractionFreeMode: 'true',
+		proxy: 'https://gitalkreslove.introduce.workers.dev/?https://github.com/login/oauth/access_token'
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="分布式系统遇到的十个问题">
+                        
+                        <span class="card-title">分布式系统遇到的十个问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            分布式系统遇到的十个问题
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category">
+                                    java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                        <span class="chip bg-color">分布式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="聊聊java中的21种锁">
+                        
+                        <span class="card-title">聊聊java中的21种锁</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            聊聊java中的21种锁
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category">
+                                    java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%94%81/">
+                        <span class="chip bg-color">锁</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 

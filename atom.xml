@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-09T08:32:36.774Z</updated>
+  <updated>2022-09-22T01:57:42.699Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>分布式系统遇到的十个问题</title>
+    <link href="https://beaumon.github.io/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/"/>
+    <id>https://beaumon.github.io/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/</id>
+    <published>2022-09-22T00:36:11.000Z</published>
+    <updated>2022-09-22T01:57:42.699Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;分布式系统遇到的十个问题&quot;&gt;&lt;a href=&quot;#分布式系统遇到的十个问题&quot; class=&quot;headerlink&quot; title=&quot;分布式系统遇到的十个问题&quot;&gt;&lt;/a&gt;分布式系统遇到的十个问题&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://beaumon.github.io/tags/java/"/>
+    
+    <category term="分布式" scheme="https://beaumon.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>聊聊幂等性</title>
+    <link href="https://beaumon.github.io/2022/09/21/liao-liao-mi-deng-xing/"/>
+    <id>https://beaumon.github.io/2022/09/21/liao-liao-mi-deng-xing/</id>
+    <published>2022-09-21T13:51:17.000Z</published>
+    <updated>2022-09-22T02:00:41.984Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;幂等性&quot;&gt;&lt;a href=&quot;#幂等性&quot; class=&quot;headerlink&quot; title=&quot;幂等性&quot;&gt;&lt;/a&gt;幂等性&lt;/h1&gt;&lt;h2 id=&quot;1-幂等的数学概念&quot;&gt;&lt;a href=&quot;#1-幂等的数学概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="聊聊" scheme="https://beaumon.github.io/categories/%E8%81%8A%E8%81%8A/"/>
+    
+    
+    <category term="幂等性" scheme="https://beaumon.github.io/tags/%E5%B9%82%E7%AD%89%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>聊聊java中的21种锁</title>
     <link href="https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/"/>
     <id>https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/</id>
     <published>2022-09-09T02:36:11.000Z</published>
-    <updated>2022-09-09T08:32:36.774Z</updated>
+    <updated>2022-09-22T00:29:06.145Z</updated>
     
     
       
