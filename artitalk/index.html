@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="galleries, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="keywords" content="artitalk, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
     <meta name="description" content="个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>galleries | 是Beaumon的小博客鸭</title>
+    <title>artitalk | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -507,78 +507,16 @@ charset="utf-8"></script>
 </header>
 
 
-    <link rel="stylesheet" href="/css/gallery.css">
-
-<div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                码无止境
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    <!-- 引用 artitalk -->
+<script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+<!-- 存放说说的容器 -->
+<div id="artitalk_main"></div>
 <script>
-	// 个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDate() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+new Artitalk({
+    appId: 'jysj8Al3AmGIcWiknv3OI4yV-MdYXbMMI', // Your LeanCloud appId
+    appKey: 'trNwlXcME0U80rHeHzT1CXQK' // Your LeanCloud appKey
+})
 </script>
-
-
-    </div>
-</div>
-
-<main class="content">
-    <div class="container">
-        
-        
-        <div class="gallery-wrapper row">
-            
-            
-            <div class="col s6 m4 l4 xl3 gallery-box">
-                <a href="./2022" class="gallery-item" data-aos="zoom-in-up">
-                     <div class="gallery-cover-box" style="background-image: url(https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/blog-avatar.jpg);">
-                    </div>
-                    <p class="gallery-name">
-                        2022
-                    </p>
-                </a>
-            </div>
-            
-        </div>
-        
-    </div>
-</main>
 
     <footer class="page-footer bg-color">
     
