@@ -19,6 +19,7 @@
 
     <title>artitalk | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
     
 
 
@@ -504,13 +505,148 @@ charset="utf-8"></script>
 </header>
 
 
-    <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
-<div id="artitalk_main"></div>
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                码无止境
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
-    new Artitalk({
-        appId: 'jysj8Al3AmGIcWiknv3OI4yV-MdYXbMMI',
-        appKey: 'trNwlXcME0U80rHeHzT1CXQK',
-    })
+	// 个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDate() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+    </div>
+</div>
+
+<style ype="text/css">
+
+#pubShuo {
+
+  margin-right: 5px;
+}
+
+#operare_artitalk .shuoshuo_input_log {
+    outline-style: none;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 12px;
+    background-color: transparent;
+
+    color: #0bb7fbd6;
+    width: 70%;
+    height: 28px;
+    margin-left: 10px;
+}
+
+#artitalk_main {
+
+  margin-top: 5px ;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+#lazy{
+  margin-top: 40px;
+}
+
+</style>
+
+
+<script src="/libs/artitalk/artitalk.min.js"></script>
+
+<article id="articles11" class="container  chip-container">
+  <div class="row ">
+
+      <div class=" card">
+        <div class="card-content" >
+          <div class="tag-title center-align">
+                <i class="fas fa-pen-alt"></i> 说说
+           </div>
+          <div id="artitalk_main"></div>
+        </div>  
+      </div>
+
+  </div>
+</article>
+<script>
+  new Artitalk({
+        appId: "jysj8Al3AmGIcWiknv3OI4yV-MdYXbMMI",
+        appKey: "trNwlXcME0U80rHeHzT1CXQK",
+      
+          serverURL: "https://beaumon.cf",
+      
+      
+          lang: "zh",
+      
+      
+          pageSize: "10",
+      
+      
+      
+          avatarPla: "https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/medias/avatar.jpg",
+      
+      
+          motion: 1,
+      
+      
+      
+      
+      
+      
+          atEmoji: {
+              baiyan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/baiyan.png",
+              bishi: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bishi.png",
+              bizui: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bizui.png",
+              chan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/chan.png",
+              daku: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/daku.png",
+              dalao: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalao.png",
+              dalian: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalian.png",
+              dianzan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dianzan.png",
+              doge: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/doge.png",
+              facai: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/facai.png",
+              fadai: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fadai.png",
+              fanu: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fanu.png",
+           },
+     })
 </script>
 
     <footer class="page-footer bg-color">
