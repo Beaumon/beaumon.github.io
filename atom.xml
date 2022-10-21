@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-09-22T02:05:30.574Z</updated>
+  <updated>2022-10-13T08:27:03.591Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二叉树详解</title>
+    <link href="https://beaumon.github.io/2022/10/13/er-cha-shu-xiang-jie/"/>
+    <id>https://beaumon.github.io/2022/10/13/er-cha-shu-xiang-jie/</id>
+    <published>2022-10-13T00:43:08.000Z</published>
+    <updated>2022-10-13T08:27:03.591Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、树的概念和结构&quot;&gt;&lt;a href=&quot;#一、树的概念和结构&quot; class=&quot;headerlink&quot; title=&quot;一、树的概念和结构&quot;&gt;&lt;/a&gt;一、树的概念和结构&lt;/h1&gt;&lt;h2 id=&quot;1-1树的概念&quot;&gt;&lt;a href=&quot;#1-1树的概念&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构" scheme="https://beaumon.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="二叉树" scheme="https://beaumon.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>分布式系统遇到的十个问题</title>
