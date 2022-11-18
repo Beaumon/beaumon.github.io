@@ -1,3 +1,4 @@
+https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/
 https://beaumon.github.io/2022/10/13/er-cha-shu-xiang-jie/
 https://beaumon.github.io/artitalk/index.html
 https://beaumon.github.io/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/
@@ -12,7 +13,6 @@ https://beaumon.github.io/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/
 https://beaumon.github.io/2022/09/06/spring-boot-zi-ding-yi-starter/
 https://beaumon.github.io/galleries/2022/index.html
 https://beaumon.github.io/galleries/index.html
-https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/
 https://beaumon.github.io/2022/09/02/monogodb-ru-men/
 https://beaumon.github.io/2022/09/01/debug-diao-shi/
 https://beaumon.github.io/movies/index.html

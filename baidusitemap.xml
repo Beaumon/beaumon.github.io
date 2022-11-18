@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/</loc>
+    <lastmod>2022-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://beaumon.github.io/2022/10/13/er-cha-shu-xiang-jie/</loc>
     <lastmod>2022-10-13</lastmod>
   </url>
@@ -43,10 +47,6 @@
   <url>
     <loc>https://beaumon.github.io/2022/09/06/spring-boot-zi-ding-yi-starter/</loc>
     <lastmod>2022-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/</loc>
-    <lastmod>2022-09-03</lastmod>
   </url>
   <url>
     <loc>https://beaumon.github.io/2022/09/02/monogodb-ru-men/</loc>

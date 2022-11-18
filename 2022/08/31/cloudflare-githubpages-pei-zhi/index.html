@@ -570,7 +570,7 @@ charset="utf-8"></script>
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-03
+                    2022-11-18
                 </div>
                 
 
@@ -616,7 +616,7 @@ charset="utf-8"></script>
 <li>接收服务端的响应，同样地我们需要对响应的内容做一些修改再发送给客户端的浏览器。这部分主要是把响应中所有的<a href="https://beaumon.github.io/">github pages</a>出现的部分改换成workers站点的url，否则我们的客户端就获取这些信息之后下一次就会直接访问github pages源站了。这一步可以通过简单的文本查找和替换来实现，我们可以维护一个替换对字典，对响应的内容进行正则查找替换后把响应发送给客户端。</li>
 </ol>
 <h3 id="1-2-DNS简介"><a href="#1-2-DNS简介" class="headerlink" title="1.2 DNS简介"></a>1.2 DNS简介</h3><p>域名系统(Domain Name System,DNS)是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Internet/272794?fromModule=lemma_inlink">Internet</a>上解决网上机器命名的一种系统。它将简单易记的域名转换成可由计算机识别的IP地址，以便客户端对服务器的正常访问，就像拜访朋友要先知道别人家怎么走一样。Internet上当一台<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA/455151?fromModule=lemma_inlink">主机</a>要访问另外一台主机时，必须首先获知其地址，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/TCP/33012?fromModule=lemma_inlink">TCP</a>/IP中的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/IP%E5%9C%B0%E5%9D%80/150859?fromModule=lemma_inlink">IP地址</a>是由四段以“.”分开的数字组成(此处以IPv4的地址为例，IPv6的地址同理)，记起来总是不如名字那么方便，所以，就采用了域名系统来管理名字和IP的对应关系。</p>
-<h3 id="1-3域名介绍"><a href="#1-3域名介绍" class="headerlink" title="1.3域名介绍"></a>1.3域名介绍</h3><h4 id="1-3-1域名的形式"><a href="#1-3-1域名的形式" class="headerlink" title="1.3.1域名的形式"></a>1.3.1域名的形式</h4><p>域名可以划分为各个子域，子域还可以继续划分为子域的子域，这样就形成了顶级域、二级域、三级域等。<br>如下图所示：<br><img src="/CloudFlare-githubpages%E9%85%8D%E7%BD%AE/202208311932762.png" alt="这里写图片描述"><br>其中顶级域名分为：国家顶级域名、通用顶级域名、反向域名。</p>
+<h3 id="1-3域名介绍"><a href="#1-3域名介绍" class="headerlink" title="1.3域名介绍"></a>1.3域名介绍</h3><h4 id="1-3-1域名的形式"><a href="#1-3-1域名的形式" class="headerlink" title="1.3.1域名的形式"></a>1.3.1域名的形式</h4><p>域名可以划分为各个子域，子域还可以继续划分为子域的子域，这样就形成了顶级域、二级域、三级域等。<br>如下图所示：<br><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202211180930046.png" alt="这里写图片描述"><br>其中顶级域名分为：国家顶级域名、通用顶级域名、反向域名。</p>
 <table>
 <thead>
 <tr>
@@ -642,8 +642,8 @@ charset="utf-8"></script>
 <pre class="line-numbers language-go" data-language="go"><code class="language-go">主机名<span class="token punctuation">.</span>次级域名<span class="token punctuation">.</span>顶级域名<span class="token punctuation">.</span>根域名
 baike<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token punctuation">.</span>root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="/CloudFlare-githubpages%E9%85%8D%E7%BD%AE/202208311932481.png" alt="在这里插入图片描述"></p>
-<p>换一种形式展示，如下图所示：<br><img src="/CloudFlare-githubpages%E9%85%8D%E7%BD%AE/202208311931700.png" alt="这里写图片描述"><br>例如 :我们熟悉的，<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
+<p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202211180930713.png" alt="在这里插入图片描述"></p>
+<p>换一种形式展示，如下图所示：<br><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202211180930288.png" alt="这里写图片描述"><br>例如 :我们熟悉的，<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
 <ol>
 <li>com: 一级域名. 表示这是一个企业域名。同级的还有 “net”(网络提供商), “org”(⾮非盈利组织) 等。</li>
 <li>baidu: 二级域名，指公司名。</li>
