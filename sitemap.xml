@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://beaumon.github.io/2022/05/20/hello-world/</loc>
+    
+    <lastmod>2023-03-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://beaumon.github.io/2023/03/04/ruan-kao-bi-ji/</loc>
     
     <lastmod>2023-03-05</lastmod>
@@ -173,15 +182,6 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/2023/03/04/hello-world/</loc>
-    
-    <lastmod>2022-08-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/</loc>
     
     <lastmod>2022-08-29</lastmod>
@@ -313,21 +313,14 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/java/</loc>
-    <lastmod>2023-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://beaumon.github.io/tags/debug/</loc>
-    <lastmod>2023-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://beaumon.github.io/tags/Spring-Boot/</loc>
+    <lastmod>2023-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://beaumon.github.io/tags/java/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -341,6 +334,20 @@
   </url>
   
   <url>
+    <loc>https://beaumon.github.io/tags/debug/</loc>
+    <lastmod>2023-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://beaumon.github.io/tags/Hello-World/</loc>
+    <lastmod>2023-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://beaumon.github.io/tags/theme%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -348,14 +355,14 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/</loc>
+    <loc>https://beaumon.github.io/tags/PicGo/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/PicGo/</loc>
+    <loc>https://beaumon.github.io/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -383,7 +390,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E5%B9%82%E7%AD%89%E6%80%A7/</loc>
+    <loc>https://beaumon.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -404,7 +411,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://beaumon.github.io/tags/%E5%B9%82%E7%AD%89%E6%80%A7/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -418,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://beaumon.github.io/tags/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -462,14 +469,14 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/categories/%E8%81%8A%E8%81%8A/</loc>
+    <loc>https://beaumon.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://beaumon.github.io/categories/%E8%81%8A%E8%81%8A/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
