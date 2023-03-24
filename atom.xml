@@ -6,7 +6,7 @@
   <link href="https://beaumon.github.io/atom.xml" rel="self"/>
   
   <link href="https://beaumon.github.io/"/>
-  <updated>2022-10-13T08:27:03.591Z</updated>
+  <updated>2023-03-05T15:01:44.843Z</updated>
   <id>https://beaumon.github.io/</id>
   
   <author>
@@ -17,11 +17,55 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>软考笔记</title>
+    <link href="https://beaumon.github.io/2023/03/04/ruan-kao-bi-ji/"/>
+    <id>https://beaumon.github.io/2023/03/04/ruan-kao-bi-ji/</id>
+    <published>2023-03-04T03:48:33.000Z</published>
+    <updated>2023-03-05T15:01:44.843Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、计算机组成与体系结构&quot;&gt;&lt;a href=&quot;#一、计算机组成与体系结构&quot; class=&quot;headerlink&quot; title=&quot;一、计算机组成与体系结构&quot;&gt;&lt;/a&gt;一、计算机组成与体系结构&lt;/h1&gt;&lt;h2 id=&quot;1-数据的表示&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="软考笔记" scheme="https://beaumon.github.io/tags/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://beaumon.github.io/2023/03/04/hello-world/"/>
+    <id>https://beaumon.github.io/2023/03/04/hello-world/</id>
+    <published>2023-03-04T03:37:09.434Z</published>
+    <updated>2022-08-30T12:26:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>二叉树详解</title>
     <link href="https://beaumon.github.io/2022/10/13/er-cha-shu-xiang-jie/"/>
     <id>https://beaumon.github.io/2022/10/13/er-cha-shu-xiang-jie/</id>
     <published>2022-10-13T00:43:08.000Z</published>
-    <updated>2022-10-13T08:27:03.591Z</updated>
+    <updated>2022-10-13T08:27:04.000Z</updated>
     
     
       
@@ -46,7 +90,7 @@
     <link href="https://beaumon.github.io/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/"/>
     <id>https://beaumon.github.io/2022/09/22/fen-bu-shi-xi-tong-yu-dao-de-shi-ge-wen-ti/</id>
     <published>2022-09-22T00:36:11.000Z</published>
-    <updated>2022-09-22T02:05:30.574Z</updated>
+    <updated>2022-09-22T02:05:32.000Z</updated>
     
     
       
@@ -73,7 +117,7 @@
     <link href="https://beaumon.github.io/2022/09/21/liao-liao-mi-deng-xing/"/>
     <id>https://beaumon.github.io/2022/09/21/liao-liao-mi-deng-xing/</id>
     <published>2022-09-21T13:51:17.000Z</published>
-    <updated>2022-09-22T02:00:41.984Z</updated>
+    <updated>2022-09-22T02:00:42.000Z</updated>
     
     
       
@@ -98,7 +142,7 @@
     <link href="https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/"/>
     <id>https://beaumon.github.io/2022/09/09/liao-liao-java-zhong-de-21-chong-suo/</id>
     <published>2022-09-09T02:36:11.000Z</published>
-    <updated>2022-09-22T00:29:06.145Z</updated>
+    <updated>2022-09-22T00:29:08.000Z</updated>
     
     
       
@@ -125,7 +169,7 @@
     <link href="https://beaumon.github.io/2022/09/09/liao-liao-8-chong-jia-gou-mo-shi/"/>
     <id>https://beaumon.github.io/2022/09/09/liao-liao-8-chong-jia-gou-mo-shi/</id>
     <published>2022-09-09T01:36:07.000Z</published>
-    <updated>2022-09-09T01:47:31.291Z</updated>
+    <updated>2022-09-09T01:47:32.000Z</updated>
     
     
       
@@ -150,7 +194,7 @@
     <link href="https://beaumon.github.io/2022/09/09/quan-xian-xi-tong-she-ji-fang-an-tu-jie/"/>
     <id>https://beaumon.github.io/2022/09/09/quan-xian-xi-tong-she-ji-fang-an-tu-jie/</id>
     <published>2022-09-09T01:24:18.000Z</published>
-    <updated>2022-09-09T01:30:47.771Z</updated>
+    <updated>2022-09-09T01:30:48.000Z</updated>
     
     
       
@@ -175,7 +219,7 @@
     <link href="https://beaumon.github.io/2022/09/08/bai-piao-ibm-linuxone-fu-wu-qi/"/>
     <id>https://beaumon.github.io/2022/09/08/bai-piao-ibm-linuxone-fu-wu-qi/</id>
     <published>2022-09-08T13:34:35.000Z</published>
-    <updated>2022-09-09T01:14:00.738Z</updated>
+    <updated>2022-09-09T01:14:02.000Z</updated>
     
     
       
@@ -200,7 +244,7 @@
     <link href="https://beaumon.github.io/2022/09/06/spring-boot-zi-ding-yi-starter/"/>
     <id>https://beaumon.github.io/2022/09/06/spring-boot-zi-ding-yi-starter/</id>
     <published>2022-09-06T02:59:38.000Z</published>
-    <updated>2022-09-06T03:08:00.320Z</updated>
+    <updated>2022-09-06T03:08:02.000Z</updated>
     
     
       
@@ -227,7 +271,7 @@
     <link href="https://beaumon.github.io/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/"/>
     <id>https://beaumon.github.io/2022/09/06/spring-boot-zi-dong-zhuang-pei-yuan-li/</id>
     <published>2022-09-06T02:50:38.000Z</published>
-    <updated>2022-09-06T03:11:51.865Z</updated>
+    <updated>2022-09-06T03:11:52.000Z</updated>
     
     
       
@@ -256,7 +300,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/"/>
     <id>https://beaumon.github.io/2022/09/03/typora-shi-yong-jiao-cheng/</id>
     <published>2022-09-03T00:20:16.000Z</published>
-    <updated>2022-09-06T03:13:13.453Z</updated>
+    <updated>2022-09-06T03:13:14.000Z</updated>
     
     
       
@@ -281,7 +325,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/09/02/monogodb-ru-men/"/>
     <id>https://beaumon.github.io/2022/09/02/monogodb-ru-men/</id>
     <published>2022-09-02T02:25:13.000Z</published>
-    <updated>2022-09-02T02:41:14.945Z</updated>
+    <updated>2022-09-02T02:41:16.000Z</updated>
     
     
       
@@ -306,7 +350,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/09/01/debug-diao-shi/"/>
     <id>https://beaumon.github.io/2022/09/01/debug-diao-shi/</id>
     <published>2022-09-01T02:27:50.000Z</published>
-    <updated>2022-09-01T03:16:29.715Z</updated>
+    <updated>2022-09-01T03:16:30.000Z</updated>
     
     
       
@@ -333,7 +377,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/"/>
     <id>https://beaumon.github.io/2022/08/31/cloudflare-githubpages-pei-zhi/</id>
     <published>2022-08-31T11:51:08.000Z</published>
-    <updated>2022-11-18T01:32:48.988Z</updated>
+    <updated>2022-11-18T01:32:50.000Z</updated>
     
     
       
@@ -358,7 +402,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/"/>
     <id>https://beaumon.github.io/2022/08/29/liao-liao-shu-ju-ku-jian-biao-de-15-ge-xiao-ji-qiao/</id>
     <published>2022-08-29T13:51:17.000Z</published>
-    <updated>2022-09-09T01:48:08.308Z</updated>
+    <updated>2022-09-09T01:48:10.000Z</updated>
     
     
       
@@ -383,7 +427,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/"/>
     <id>https://beaumon.github.io/2022/08/29/bu-suan-zi-tong-ji-bu-xian-shi-wen-ti/</id>
     <published>2022-08-29T13:24:44.000Z</published>
-    <updated>2022-08-29T13:29:49.361Z</updated>
+    <updated>2022-08-29T13:29:50.000Z</updated>
     
     
       
@@ -410,7 +454,7 @@ public class</summary>
     <link href="https://beaumon.github.io/2022/08/25/hexo-tu-pian-pei-zhi/"/>
     <id>https://beaumon.github.io/2022/08/25/hexo-tu-pian-pei-zhi/</id>
     <published>2022-08-25T02:10:07.000Z</published>
-    <updated>2022-08-26T00:24:32.718Z</updated>
+    <updated>2022-08-26T00:24:34.000Z</updated>
     
     
       
@@ -429,27 +473,6 @@ public class</summary>
     <category term="theme主题" scheme="https://beaumon.github.io/tags/theme%E4%B8%BB%E9%A2%98/"/>
     
     <category term="PicGo" scheme="https://beaumon.github.io/tags/PicGo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://beaumon.github.io/2022/08/23/hello-world/"/>
-    <id>https://beaumon.github.io/2022/08/23/hello-world/</id>
-    <published>2022-08-23T00:43:27.792Z</published>
-    <updated>2022-08-30T12:26:37.271Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

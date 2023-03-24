@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: 幂等性, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
-    <meta name="description" content="个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地">
+    <meta name="keywords" content="软考笔记, HTML,CSS,JavaScript,Vue,java,linux,Mysql,Redis,SpringMVC,Springboot,SpringCloud,Mycat,Nginx,Tomcat">
+    <meta name="description" content="软考笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: 幂等性 | 是Beaumon的小博客鸭</title>
+    <title>软考笔记 | 是Beaumon的小博客鸭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
     
@@ -505,273 +505,559 @@ charset="utf-8"></script>
 </header>
 
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">软考笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
     <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                码无止境
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-	// 个人博客，记录生活点滴的平台，希望在以后的学习工作中，拥有属于自己的一片广阔天地
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDate() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">软考笔记</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-03-04
+                </div>
                 
-                <a href="/tags/cloudflare/" title="cloudflare: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="cloudflare" style="background-color: #F9EBEA;">cloudflare
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-03-05
+                </div>
                 
-                <a href="/tags/MonogoDB/" title="MonogoDB: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="MonogoDB" style="background-color: #F5EEF8;">MonogoDB
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.4k
+                </div>
                 
-                <a href="/tags/java/" title="java: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="java" style="background-color: #D5F5E3;">java
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
                 
-                <a href="/tags/debug/" title="debug: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="debug" style="background-color: #E8F8F5;">debug
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
-                
-                <a href="/tags/Spring-Boot/" title="Spring Boot: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Spring Boot" style="background-color: #FEF9E7;">Spring Boot
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Typora/" title="Typora: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Typora" style="background-color: #F8F9F9;">Typora
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/theme%E4%B8%BB%E9%A2%98/" title="theme主题: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="theme主题" style="background-color: #82E0AA;">theme主题
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/" title="不蒜子: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="不蒜子" style="background-color: #D7BDE2;">不蒜子
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/PicGo/" title="PicGo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="PicGo" style="background-color: #A3E4D7;">PicGo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" title="二叉树: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="二叉树" style="background-color: #85C1E9;">二叉树
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%9D%83%E9%99%90/" title="权限: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="权限" style="background-color: #F8C471;">权限
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" title="分布式: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="分布式" style="background-color: #F9E79F;">分布式
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%B9%82%E7%AD%89%E6%80%A7/" title="幂等性: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="幂等性" style="background-color: #D5F5E3;">幂等性
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%94%81/" title="锁: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="锁" style="background-color: #E8F8F5;">锁
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%9E%B6%E6%9E%84/" title="架构: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="架构" style="background-color: #F9EBEA;">架构
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/" title="软考笔记: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="软考笔记" style="background-color: #85C1E9;">软考笔记
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/mysql/" title="mysql: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="mysql" style="background-color: #F8C471;">mysql
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="云服务器: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="云服务器" style="background-color: #E8F8F5;">云服务器
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="一、计算机组成与体系结构"><a href="#一、计算机组成与体系结构" class="headerlink" title="一、计算机组成与体系结构"></a>一、计算机组成与体系结构</h1><h2 id="1-数据的表示"><a href="#1-数据的表示" class="headerlink" title="1.数据的表示"></a>1.数据的表示</h2><h3 id="1-1进制转换"><a href="#1-1进制转换" class="headerlink" title="1.1进制转换"></a>1.1进制转换</h3><h4 id="1-1-1R进制转十进制"><a href="#1-1-1R进制转十进制" class="headerlink" title="1.1.1R进制转十进制"></a>1.1.1R进制转十进制</h4><blockquote>
+<p>R进制转十进制使用<strong>按权展开法</strong>，其具体操作方式为**:将R进制数的每一位数值用R形式表示<strong>，即</strong>幂的底数是R，指数为k，k与该位和小数点之间的距离有关<strong>。</strong>当该位位于小数点左边，k值是该位和小数点之间数码的个数<strong>，而</strong>当该位位于小数点右边，k值是负值，其绝对值是该位和小数点之间数码的个数加1**。</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>&amp;二进制：10100.01=1<em>2^4+1</em>2^2+1<em>2^{-2}<br>\<br>&amp;七进制：604.01=6</em>7^2+4<em>7^0+1</em>7^{-2}<br>\end{aligned}<br>$$</p>
+<h4 id="1-1-2十进制转R进制"><a href="#1-1-2十进制转R进制" class="headerlink" title="1.1.2十进制转R进制"></a>1.1.2十进制转R进制</h4><p>十进制转R进制使用<strong>短除法</strong>。</p>
+<pre class="line-numbers language-none"><code class="language-none">例：
+将94转换为二进制数
+2|94   余0
+2|47     1
+2|23     1
+2|11     1
+2|5      1
+2|2      0
+ 1
+得到结果为1011110<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="1-1-3二进制转八进制与十六进制"><a href="#1-1-3二进制转八进制与十六进制" class="headerlink" title="1.1.3二进制转八进制与十六进制"></a>1.1.3二进制转八进制与十六进制</h4><pre class="line-numbers language-none"><code class="language-none">例：
+10 001 110   八进制 1:3
+ 2  1   6
+1000 1110    十六进制1:4
+  8   E
+十六进制转八进制可以先将十六进制转为二进制，再将二进制转为八进制  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-2数据编码"><a href="#1-2数据编码" class="headerlink" title="1.2数据编码"></a>1.2数据编码</h3><blockquote>
+<p>机器数：在计算机中数据和符号全部数字化，最高位为符号位，且用0表示正、1表示负，其它位称为数值位 。把包括符号在内的一个二进制数我们称为机器数，<strong>机器数</strong>： 有<strong>原码、反码和补码</strong>三种表示方法。 </p>
+<p>真值：用“+”、“—”号表示的二进制数。<strong>机器数因为第一位是符号位，所以机器数的形式值就不等于真正的数值</strong>。 为区别起见，将带符号位的机器数对应的真正数值称为机器数的真值。</p>
+<p>例：0000 0001的真值 =   +000 0001 = +1 </p>
+<p>​        1000 0001的真值 =   - 000 0001 = -1</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">原码：是最简单的机器数表示法。其数符位用0表示正，1表示负，其余各位表示真值本身。
+将一个数转为二进制的表达形式 转换不足八位，高位补0，最高位为符号位(正负)正数符号位为0,负数符号位为1，原码是不能直接在机器里做运算的。 1-1的原码是10000010，成为了-2的原码。
+例：十进制数1转为二进制数还是1，如果是8位二进制用1bit位来存储，则会变为00000001。
+反码：如果是正数，反码与原码完全相等，如果是负数，符号位不变，其余各位1变0，0变1按位取反。
+补码：正数的补码同原码，负数的补码为反码加1。
+移码：在补码的基础上把首位做了取反。移码（又叫增码或偏置码）通常用于表示浮点数的阶码，其表示形式与补码相似，只是其符号位用“1”表示正数，用“0”表示负数，数值部分与补码相同。
+
+转换方法
+当真值为正数时，原码、反码、补码 3种机器数的最高位均为0
+当真值为负数时，原码、反码、补码 3种机器数的最高位均为1 
+
+
+当真值为正数时，原码=反码=补码；
+当真值为负数时，三种机器数的符号位相同，均为1，原码的数值位保持“原”样，反码的数值位是原码数值位的“按位取反”，补码的数值位是原码的数值位的“按位取反”后再加1，简称“取反加1”。
+当真值为负数时：补码 = 反码+1
+当真值为负数时：原码 = [补码]取补&nbsp;&nbsp;&nbsp; 
+			 补码 = [原码]取补
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 [-x]补=模 - [x]补
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[x]补=模 - [-x]补&nbsp;&nbsp;&nbsp;&nbsp; 
+比如8bit，模= 28=1_0000_0000
+
+计算机中的算术运算一般可采用补码进行，用补码表示的两个操作数进行算术运算，符号位可直接参加运算，结果仍为补码。 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>$$<br>\begin{aligned}<br>&amp;取值范围\<br>&amp;原码：       -(2^{n-1}-1)<del>2^{n-1}\<br>&amp;反码：-(2^{n-1}-1)</del>2^{n-1}\<br>&amp;补码：-2^{n-1}~2^{n-1}-1<br>\end{aligned}<br>$$</p>
+<h3 id="1-3浮点数运算"><a href="#1-3浮点数运算" class="headerlink" title="1.3浮点数运算"></a>1.3浮点数运算</h3><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202303041640383.png" alt="image-20230304164038138"></p>
+<p>浮点数运算主要包括两部分：指数运算和尾数运算。在IEEE754标准下，指数运算就是阶码的运算，类似于无符号数运算。尾数运算是原码运算。</p>
+<pre class="line-numbers language-none"><code class="language-none">特点:
+1、一般尾数用补码，阶码用移码
+2、阶码的位数决定数的表示范围，位数越多范围越大
+3、尾数的位数决定数的有效精度，位数越多精度越高
+4、对阶时，小数向大数看齐
+5、对阶是通过较小数的尾数右移实现的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="1-3-1浮点数的加减运算"><a href="#1-3-1浮点数的加减运算" class="headerlink" title="1.3.1浮点数的加减运算"></a>1.3.1浮点数的加减运算</h4><p>​    浮点数的加减运算分为5个步骤：对阶、尾数相加、尾数规格化、尾数舍入处理、溢出判断处理。</p>
+<h5 id="1-3-1-1-对阶"><a href="#1-3-1-1-对阶" class="headerlink" title="1.3.1.1 对阶"></a>1.3.1.1 对阶</h5><p>   所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。 当结果大于0说明被加数（被减数）阶数高，则对加数（减数）进行移位对阶。小于0则反之改变被加数（被减数）。</p>
+<h5 id="1-3-1-2-尾数加减"><a href="#1-3-1-2-尾数加减" class="headerlink" title="1.3.1.2 尾数加减"></a>1.3.1.2 尾数加减</h5><p>   将两个操作数的尾数相加减。值得注意的是：在IEEE754标准中，对于规格化数来说在小数点前有一位隐藏位1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减。</p>
+<h5 id="1-3-1-3尾数规格化"><a href="#1-3-1-3尾数规格化" class="headerlink" title="1.3.1.3尾数规格化"></a>1.3.1.3尾数规格化</h5><p>加减完成的尾数形式未必满足IEEE754对于尾数的要求，即保留23位，小数点在第一个1之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。</p>
+<p>左规：将尾数向左移，用于清除第一个1前面出现的0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000 0000）。</p>
+<p>右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111 1111）。</p>
+<h5 id="1-3-1-4尾数的舍入处理"><a href="#1-3-1-4尾数的舍入处理" class="headerlink" title="1.3.1.4尾数的舍入处理"></a>1.3.1.4尾数的舍入处理</h5><p>在对阶和右规的时候，最右边的数字会被移出。为了保证最后计算的精度，把这些数字在过程中保存，等到最后进行舍入。有两个问题值得注意：</p>
+<p>1） 保留多少附加位合适？</p>
+<p>2）最终对附加位怎么进行舍入？</p>
+<p>在IEEE754中保留了保护位，舍入位，粘位三位作为附加位。</p>
+<h5 id="1-3-1-5-溢出判断"><a href="#1-3-1-5-溢出判断" class="headerlink" title="1.3.1.5 溢出判断"></a>1.3.1.5 溢出判断</h5><p>   在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于127）和下溢（指数小于等于-126）。</p>
+<h4 id="1-3-2浮点数乘除运算"><a href="#1-3-2浮点数乘除运算" class="headerlink" title="1.3.2浮点数乘除运算"></a>1.3.2浮点数乘除运算</h4><p>浮点数乘除和定点数乘除相同，在正式运算前会对操作数进行预处理。对于乘法如果有一个操作数为0则结果为0。对于浮点数除法，若被除数为0，则结果为0。除数为0分两种情况，第一种是被除数非零，第二种是被除数为0。</p>
+<p>除数为0，被除数不为0：结果为无穷大。在IEEE 754标准下就是阶码全为1，尾数全为0。</p>
+<p>除数为0，被除数为0：结果是NAN（not a number)。在IEEE 754标准下就是阶码全为1，尾数非0。</p>
+<h5 id="1-3-2-1浮点数的乘法"><a href="#1-3-2-1浮点数的乘法" class="headerlink" title="1.3.2.1浮点数的乘法"></a>1.3.2.1浮点数的乘法</h5><p>  浮点数的乘法运算主要分为四步：尾数相乘指数相加、尾数规格化、尾数舍入处理、溢出处理判断。</p>
+<pre><code>1）尾数相乘，指数相加：
+    尾数相乘即为原码相乘，这个具体的过程请参考另一篇文章：定点数运算（于文末给出网址）。值得注意的是，对于规格化浮点数要记得恢复隐藏位。指数相加可以直接运用移码的计算方法：
+2）尾数规格化：
+    对于两个操作数的尾数一定都是大于1的（隐藏位导致），所以最终得到的结果，小数点前会有两位共三种情况（01，11，10）。若为01则不需规格化，11和10则需右规一位。注意对于IEEE754标准浮点数乘法不需要左规。
+3）尾数舍入处理：
+    两个小数相乘，尾数自然更多，但位置是有限的，需要对尾数进行舍入，具体的舍入规则参照浮点数加减的舍入规则即可。
+4）溢出处理判断：
+    乘法的溢出有两种可能：阶码相加减时，以及尾数右规时。右规与上文相同。
+</code></pre>
+<h5 id="1-3-2-2浮点数除法"><a href="#1-3-2-2浮点数除法" class="headerlink" title="1.3.2.2浮点数除法"></a>1.3.2.2浮点数除法</h5><p>   浮点数除法大致分为4步：尾数相除阶相减、尾数规格化、尾数舍入、溢出判断处理。由于除法大部分与乘法相似，所以此处只列出不同部分。</p>
+<p>在尾数规格化步骤中：当除法运算完成后，若小数点前为0，则需进行左规以保证小数点前具有隐藏位1。</p>
+<h3 id="1-4CPU结构"><a href="#1-4CPU结构" class="headerlink" title="1.4CPU结构"></a>1.4CPU结构</h3><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202303051919924.png" alt="image-20230305191948128"></p>
+<h3 id="1-5Flynn分类法"><a href="#1-5Flynn分类法" class="headerlink" title="1.5Flynn分类法"></a>1.5Flynn分类法</h3><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202303051939605.png" alt="image-20230305193903557"></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Beaumon</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://beaumon.github.io/2023/03/04/ruan-kao-bi-ji/">https://beaumon.github.io/2023/03/04/ruan-kao-bi-ji/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Beaumon</a>
+                    !
+                </span>
+            </div>
+        
     </div>
-</div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">软考笔记</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="幂等性" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/09/21/liao-liao-mi-deng-xing/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="聊聊幂等性">
-                            
-                            <span class="card-title">聊聊幂等性</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%81%8A%E8%81%8A/" class="post-category">
-                                聊聊
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+</div>
+
                 </div>
             </div>
             
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
         </div>
-    </article>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '370fc4148189dfbed562',
+        clientSecret: 'bbd3b7a6cfe0cd52714100b7641b7053e5c161c4',
+        repo: 'beaumon.github.io',
+        owner: 'Beaumon',
+        admin: ["Beaumon"],
+        id: '2023-03-04T11-48-33',
+		distractionFreeMode: 'true',
+		proxy: 'https://gitalkreslove.introduce.workers.dev/?https://github.com/login/oauth/access_token'
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/03/04/ruan-kao-bi-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="软考笔记">
+                        
+                        <span class="card-title">软考笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            软考笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Beaumon
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">软考笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/03/04/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            beaumon
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 
