@@ -306,7 +306,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/MonogoDB/</loc>
+    <loc>https://beaumon.github.io/tags/java/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -320,7 +320,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/java/</loc>
+    <loc>https://beaumon.github.io/tags/MonogoDB/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -362,14 +362,14 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/</loc>
+    <loc>https://beaumon.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <loc>https://beaumon.github.io/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,13 +397,6 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E9%94%81/</loc>
-    <lastmod>2023-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://beaumon.github.io/tags/%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -411,7 +404,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E5%B9%82%E7%AD%89%E6%80%A7/</loc>
+    <loc>https://beaumon.github.io/tags/%E9%94%81/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -419,6 +412,13 @@
   
   <url>
     <loc>https://beaumon.github.io/tags/mysql/</loc>
+    <lastmod>2023-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://beaumon.github.io/tags/%E5%B9%82%E7%AD%89%E6%80%A7/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -441,14 +441,14 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/categories/MonogoDB/</loc>
+    <loc>https://beaumon.github.io/categories/java/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/categories/java/</loc>
+    <loc>https://beaumon.github.io/categories/MonogoDB/</loc>
     <lastmod>2023-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
