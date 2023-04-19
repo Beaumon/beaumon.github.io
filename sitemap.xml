@@ -369,7 +369,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E6%9D%83%E9%99%90/</loc>
+    <loc>https://beaumon.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
     <lastmod>2023-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -383,7 +383,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <loc>https://beaumon.github.io/tags/%E6%9D%83%E9%99%90/</loc>
     <lastmod>2023-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -404,14 +404,14 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E9%94%81/</loc>
+    <loc>https://beaumon.github.io/tags/%E5%B9%82%E7%AD%89%E6%80%A7/</loc>
     <lastmod>2023-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/tags/%E5%B9%82%E7%AD%89%E6%80%A7/</loc>
+    <loc>https://beaumon.github.io/tags/%E9%94%81/</loc>
     <lastmod>2023-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -455,7 +455,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/categories/mysql/</loc>
+    <loc>https://beaumon.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2023-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -469,7 +469,7 @@
   </url>
   
   <url>
-    <loc>https://beaumon.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://beaumon.github.io/categories/mysql/</loc>
     <lastmod>2023-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
