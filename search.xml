@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Docker安装mysql8</title>
+      <link href="/2024/10/17/docker-bu-shu-mysql/"/>
+      <url>/2024/10/17/docker-bu-shu-mysql/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Docker安装mysql8"><a href="#Docker安装mysql8" class="headerlink" title="Docker安装mysql8"></a>Docker安装mysql8</h1><blockquote><p>​<strong>版本根据自己需求选择：这里是8.0.20</strong></p></blockquote><p>先看结果</p><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202402271357222.png" alt="image-20240227101312723"></p><p><img src="https://raw.githubusercontent.com/beaumon/cloud-picture/master/img/202402271357267.png" alt="image-20240227101417493"></p><blockquote><p>详细步骤如下</p></blockquote><p><strong>1.下载mysql8镜像</strong></p><pre class="line-numbers language-none"><code class="language-none">docker pull mysql:8.0.20<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>2.启动镜像</strong></p><pre class="line-numbers language-none"><code class="language-none">docker run -p 3307:3306 --name mysql8 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:8.0.20<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>3.配置挂载</strong></p><pre class="line-numbers language-none"><code class="language-none">创建挂载目录（请检查保证创建成功）mkdir -p /docker/mysql8.0.20/拷贝配置文件到创建的目录下docker cp  mysql8:/etc/mysql /docker/mysql8.0.20/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.删除原有容器</strong></p><pre class="line-numbers language-none"><code class="language-none">docker stop mysql8docker rm -f mysql8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>5.启动mysql挂载配置文件，数据持久化到宿主主机</strong></p><pre class="line-numbers language-none"><code class="language-none">新增my.cnf,进入到上面挂载目录下、因为已经做了cp复制。到目录下新增cd /docker/mysql8.0.20/mysql/conf.dvim my.cnf------------------------------------------------手动分割线----------------------------------------------------复制下面的内容[mysqld]user=mysqlcharacter-set-server=utf8default_authentication_plugin=mysql_native_passwordsecure_file_priv=/var/lib/mysqlexpire_logs_days=7sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTIONmax_connections=1000 [client]default-character-set=utf8 [mysql]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.run</strong></p><pre class="line-numbers language-none"><code class="language-none">运行命令：docker run \-p 3307:3306 \--name mysql8 \--privileged=true \--restart unless-stopped \-v /docker/mysql8.0.20/mysql:/etc/mysql \-v /docker/mysql8.0.20/logs:/logs \-v /docker/mysql8.0.20/data:/var/lib/mysql \-v /etc/localtime:/etc/localtime \-e MYSQL_ROOT_PASSWORD=123456 \-d mysql:8.0.20------------------------------------------------手动分割线----------------------------------------------------可编写sh脚本启动vim docker_mysql8.0.20.sh脚本代码：#!/bin/shdocker run \-p 3307:3306 \--name mysql8 \--privileged=true \--restart unless-stopped \-v /docker/mysql8.0.20/mysql:/etc/mysql \-v /docker/mysql8.0.20/logs:/logs \-v /docker/mysql8.0.20/data:/var/lib/mysql \-v /etc/localtime:/etc/localtime \-e MYSQL_ROOT_PASSWORD=123456 \-d mysql:8.0.20------------------------------------------------手动分割线----------------------------------------------------参数解释:-p 端口映射 【这里有个特殊的地方是把3306映射给了3307、后续链接数据库的时候用3307链接不用3306】--name mysql8  名称是mysql8--privileged=true 挂载文件权限设置--restart unless-stopped 设置 开机后自动重启容器-v /docker/mysql8.0.20/mysql:/etc/mysql \ 挂载配置文件【路径是上面创建的挂载路径】-v /docker/mysql8.0.20/logs:/logs \  挂载日志【路径是上面创建的挂载路径】-v /docker/mysql8.0.20/data:/var/lib/mysql \ 挂载数据文件 持久化到主机【路径是上面创建的挂载路径】-v /etc/localtime:/etc/localtime 容器时间与宿主机同步-e MYSQL_ROOT_PASSWORD=123456 设置密码-d mysql:8.0.20 后台启动mysql------------------------------------------------手动分割线----------------------------------------------------执行脚本:sh docker_mysql8.0.20.sh------------------------------------------------手动分割线----------------------------------------------------检查是否启动成功：docker ps <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.配置链接信息</strong></p><pre class="line-numbers language-none"><code class="language-none">进入mysql8 容器docker exec -it mysql8 bash在容器内登录mysqlmysql -u root -p设置远程连接权限grant all PRIVILEGES on *.* to root@'%' WITH GRANT OPTION;使用mysql数据库use mysqlMySQL5.7设置用户密码命令ALTER user 'root'@'%' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;MySQL8.0设置用户密码命令ALTER user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软考笔记</title>
       <link href="/2023/03/04/ruan-kao-bi-ji/"/>
       <url>/2023/03/04/ruan-kao-bi-ji/</url>
@@ -218,9 +243,9 @@
       
         <tags>
             
-            <tag> Spring Boot </tag>
-            
             <tag> java </tag>
+            
+            <tag> Spring Boot </tag>
             
         </tags>
       
@@ -245,9 +270,9 @@
       
         <tags>
             
-            <tag> Spring Boot </tag>
-            
             <tag> java </tag>
+            
+            <tag> Spring Boot </tag>
             
         </tags>
       
